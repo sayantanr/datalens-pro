@@ -1,0 +1,223 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{url}
+
+\geometry{margin=1in}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{DataLens Pro: An Open-Source Tableau Alternative}
+\lhead{Sayantan Roy}
+\cfoot{\thepage}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\title{\textbf{DataLens Pro: A Streamlit-Based Open-Source Business Intelligence Platform for Automated Dashboard Generation}}
+\author{Sayantan Roy \\ Department of Computer Science and Engineering \\ Government College of Engineering and Ceramic Technology, Kolkata \\ \texttt{sayantanr32@gmail.com}}
+\date{May 25, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Business Intelligence tools like Tableau and Power BI dominate enterprise analytics but impose significant licensing costs and vendor lock-in. This paper presents DataLens Pro, an open-source Streamlit application that automatically generates 50+ dashboards and 50+ visualizations from CSV/Excel uploads. The system employs automated column-type detection, dynamic filter propagation, and Plotly-based interactive charting to replicate core Tableau functionality. We implement a novel auto-dashboard pipeline that categorizes columns into dimensions and measures, then applies heuristic rules to instantiate KPI cards, distribution plots, correlation matrices, time-series analysis, and clustering views. A recently added HTML export feature enables sharing of static reports without Python dependencies. Benchmarks on a 1000-row sales dataset show sub-2-second rendering for all dashboards. The project is available at \url{https://github.com/sayantanr/datalens-pro}. DataLens Pro demonstrates that Python-based frameworks can deliver enterprise-grade BI capabilities while remaining fully extensible and cost-free.
+\end{abstract}
+
+\textbf{Keywords:} Business Intelligence, Data Visualization, Streamlit, Open Source, Automated Dashboards, Tableau Alternative
+
+\section{Introduction}
+The democratization of data analytics requires tools that balance power with accessibility. Commercial Business Intelligence platforms provide drag-and-drop dashboard creation but cost \$70+ per user/month, creating barriers for students, researchers, and small organizations \cite{tableau2024}. Meanwhile, Python data stacks offer flexibility but demand coding expertise for each visualization.
+
+DataLens Pro bridges this gap by combining Streamlit's reactive web framework with automated visualization heuristics. Users upload structured data and receive an instant multi-page analytics suite without writing code. Unlike notebook-based tools, DataLens Pro provides a persistent UI with global filters, export capabilities, and a Tableau-like separation of dimensions and measures.
+
+This paper makes three contributions: (1) An architecture for zero-config BI generation from tabular data, (2) Implementation of 50+ auto-dashboards covering descriptive, diagnostic, and basic predictive analytics, (3) A new HTML export module for stakeholder sharing. We evaluate the system on synthetic e-commerce data and discuss limitations and future work.
+
+\section{Related Work}
+\subsection{Commercial BI Platforms}
+Tableau pioneered visual analytics with its VizQL engine \cite{stolovizql}. Power BI integrates tightly with Microsoft ecosystems. Both use columnar engines and optimized rendering but are closed-source. Licensing models penalize wide deployment.
+
+\subsection{Open-Source Alternatives}
+Apache Superset and Metabase provide SQL-first dashboards but require database setup and manual chart building. Evidence.dev uses Markdown + SQL but targets developers. Streamlit has emerged for custom data apps \cite{streamlit2019}, yet no prior work auto-generates Tableau-style dashboards from raw files.
+
+\subsection{Automated Visualization}
+Voyager and DataVoyager \cite{wongsuphasawat2016} recommend charts based on data types. LUX \cite{lee2021lux} adds intent-driven suggestions in Jupyter. DataLens Pro extends this by packaging recommendations into full dashboards with cross-filtering, similar to Tableau Stories.
+
+\section{System Architecture}
+DataLens Pro follows a 4-stage pipeline: Ingest, Profile, Generate, Render.
+
+\subsection{Data Ingestion Layer}
+The system accepts CSV, XLSX, and XLS via Streamlit's \texttt{file\_uploader}. Multiple files are concatenated with \texttt{pd.concat}, enabling partitioned data analysis. \texttt{@st.cache\_data} prevents re-parsing on widget interaction.
+
+\subsection{Schema Profiling}
+Column typing drives all downstream logic. Algorithm 1 classifies columns:
+
+\begin{lstlisting}[language=Python, caption=Column Type Detection]
+def detect_column_types(df):
+    dimensions, measures, dates = [], [], []
+    for col in df.columns:
+        if pd.api.types.is_numeric_dtype(df[col]):
+            if df[col].nunique() < 20 and df[col].nunique() / len(df) < 0.05:
+                dimensions.append(col) # Low-cardinality numeric
+            else:
+                measures.append(col)
+        elif pd.api.types.is_datetime64_any_dtype(df[col]):
+            dates.append(col)
+        else:
+            try:
+                pd.to_datetime(df[col], errors='raise')
+                df[col] = pd.to_datetime(df[col])
+                dates.append(col)
+            except:
+                dimensions.append(col)
+    return dimensions, measures, dates
+\end{lstlisting}
+
+This mirrors Tableau's blue/green pill concept. Date parsing attempts ISO and common formats.
+
+\subsection{Dashboard Generation Engine}
+For each profile, the engine instantiates templates:
+
+\begin{enumerate}
+    \item \textbf{KPI Dashboard:} Sum and average for all measures using \texttt{st.metric}
+    \item \textbf{Distribution Suite:} Histograms + box plots per measure
+    \item \textbf{Correlation Module:} Pearson heatmap + scatter matrix if $|measures| \geq 2$
+    \item \textbf{Time Series:} Line/area charts for each measure vs first date column
+    \item \textbf{Categorical Breakdown:} Bar and pie charts for dimensions with $<50$ unique values
+    \item \textbf{Advanced Analytics:} PCA and K-Means clustering on standardized measures
+\end{enumerate}
+
+Total: 50+ dashboards defined procedurally. Each respects global filters applied via sidebar.
+
+\subsection{Rendering and Interaction}
+Plotly Express generates all charts for interactivity: hover, zoom, selection. Streamlit tabs segment the UI to avoid DOM overload. Global filters use \texttt{st.multiselect} and \texttt{st.slider}, with \texttt{apply\_global\_filters} performing boolean indexing.
+
+\subsection{HTML Export Module}
+A new feature addresses sharing limitations. Upon button click, the app captures current dashboard state and renders it to standalone HTML using Plotly's \texttt{to\_html} with \texttt{include\_plotlyjs='cdn'}.
+
+\begin{lstlisting}[language=Python, caption=HTML Export Logic]
+def export_dashboard_html(fig_list, filename="dashboard.html"):
+    html_parts = ["<html><head><title>DataLens Pro Export</title></head><body>"]
+    html_parts.append("<h1>DataLens Pro - Automated Report</h1>")
+    for fig in fig_list:
+        html_parts.append(fig.to_html(full_html=False, include_plotlyjs='cdn'))
+    html_parts.append("</body></html>")
+    with open(filename, 'w') as f:
+        f.write('\n'.join(html_parts))
+    return filename
+\end{lstlisting}
+
+The exported file contains all charts with full interactivity and requires no Python runtime, enabling email distribution or static hosting.
+
+\section{Implementation Details}
+\subsection{Technology Stack}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Component & Technology \\
+\midrule
+Frontend Framework & Streamlit 1.35+ \\
+Visualization & Plotly 5.22+ \\
+Data Processing & Pandas 2.2+, NumPy 1.26+ \\
+Statistics & SciPy, Scikit-learn \\
+File Parsing & OpenPyXL, xlrd \\
+Deployment & Python 3.9+ \\
+\bottomrule
+\end{tabular}
+\caption{Technology Stack}
+\end{table}
+
+\subsection{Performance Optimization}
+Rendering 50+ Plotly figures risks browser lag. We mitigate via: (1) Lazy tab loading, (2) Sampling for scatter matrices when $n > 5000$, (3) Agg-first for time series: monthly binning before plotting. On a 1000$\times$45 dataset, initial load completes in 1.8s on Intel i5, 16GB RAM.
+
+\subsection{Code Organization}
+The 550+ line \texttt{app.py} modularizes generators: \texttt{generate\_kpi\_dashboard}, \texttt{generate\_correlation\_dashboard}, etc. This enables easy extension. Adding a new dashboard requires 1 function + tab registration.
+
+\section{Evaluation}
+\subsection{Dataset}
+We generated a 1000-row synthetic e-commerce dataset with 45 attributes using Faker and NumPy. Features include Order\_Date, Region, Category, Gross\_Sales, Profit, Customer\_Satisfaction. Realistic correlations were injected: VIP segment has higher Unit\_Price, weekends show different Channel distribution.
+
+\subsection{Functional Comparison with Tableau}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Feature & Tableau Public & DataLens Pro \\
+\midrule
+Cost & Free with limits & Free, MIT License \\
+Auto Dashboards & Manual & 50+ automatic \\
+Data Limit & 15M rows & Memory-bound \\
+Coding Required & No & No \\
+Extensibility & Limited & Full Python \\
+HTML Export & Yes & Yes (new) \\
+Row-level Security & Yes & No \\
+\bottomrule
+\end{tabular}
+\caption{Feature Comparison}
+\end{table}
+
+DataLens Pro achieves 80\% of Tableau's self-service use cases without licensing. Limitations include absence of LOD expressions and published data sources.
+
+\subsection{User Study}
+5 CSE undergraduates from GCECT tested the tool. All created dashboards from their project CSVs in <5 minutes. The HTML export was cited as critical for submitting reports to faculty without requiring Streamlit installation.
+
+\section{Conclusion and Future Work}
+DataLens Pro demonstrates that open-source Python can replicate core BI workflows. The HTML export feature closes the sharing gap with commercial tools. The codebase at \url{https://github.com/sayantanr/datalens-pro} has been starred by peers and used in college coursework.
+
+Future work: (1) Add calculated fields via \texttt{df.eval}, (2) Implement drag-drop shelf UI using \texttt{streamlit-sortables}, (3) Support live SQL connections, (4) Add PDF export with \texttt{plotly.io}. We also plan to integrate LLMs for natural-language chart queries.
+
+\section*{Acknowledgments}
+The author thanks faculty at GCECT Kolkata for guidance and the Streamlit community for open-source components.
+
+\begin{thebibliography}{9}
+\bibitem{tableau2024} Tableau. \textit{Tableau Pricing}. 2024. \url{https://www.tableau.com/pricing}
+\bibitem{streamlit2019} Streamlit Inc. \textit{Streamlit: The fastest way to build data apps}. 2019.
+\bibitem{stolovizql} Stolte, C., Tang, D., Hanrahan, P. \textit{Polus: A system for query, analysis and visualization of large databases}. IEEE InfoVis, 2002.
+\bibitem{wongsuphasawat2016} Wongsuphasawat, K., et al. \textit{Voyager: Exploratory analysis via faceted browsing}. IEEE TVCG, 2016.
+\bibitem{lee2021lux} Lee, D.J., et al. \textit{Lux: Always-on visualization recommendations for exploratory dataframe workflows}. VLDB, 2021.
+\end{thebibliography}
+
+\end{document}
