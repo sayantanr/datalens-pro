@@ -9,8 +9,58 @@ import scipy.stats as stats
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-import warnings
-warnings.filterwarnings('ignore')
+import io
+
+def generate_html_report(df, dimensions, measures, dates):
+    """Generate a single colourful HTML report containing key tables and Plotly figures."""
+    html_parts = []
+    # Basic page header with styling
+    html_parts.append("""
+    <style>
+        body {font-family: 'Arial', sans-serif; margin: 20px; background-color: #f9f9f9; color: #333;}
+        h1, h2 {color: #1f77b4;}
+        table {border-collapse: collapse; width: 100%; margin-bottom: 20px;}
+        th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+        th {background-color: #667eea; color: white;}
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+    """)
+    html_parts.append("<h1>DataLens Pro Dashboard Export</h1>")
+
+    # Data preview (first 100 rows)
+    html_parts.append("<h2>Data Preview (first 100 rows)</h2>")
+    html_parts.append(df.head(100).to_html(index=False, border=0, classes='table'))
+
+    # KPI overview table for first few measures
+    if len(measures) > 0:
+        html_parts.append("<h2>KPI Overview</h2>")
+        kpi_rows = []
+        for measure in measures[:5]:
+            total = df[measure].sum()
+            avg = df[measure].mean()
+            kpi_rows.append(f"<tr><td>{measure}</td><td>{total:,.2f}</td><td>{avg:,.2f}</td></tr>")
+        kpi_table = "<table><tr><th>Measure</th><th>Total</th><th>Avg</th></tr>" + "".join(kpi_rows) + "</table>"
+        html_parts.append(kpi_table)
+
+    # Sample distribution plots for measures
+    import plotly.express as px
+    html_parts.append("<h2>Sample Distribution Plots</h2>")
+    for measure in measures[:5]:
+        fig = px.histogram(df, x=measure, nbins=30, title=f"{measure} Distribution")
+        html_parts.append(fig.to_html(full_html=False, include_plotlyjs='cdn'))
+
+    # Correlation heatmap if enough numeric columns
+    if len(measures) >= 2:
+        html_parts.append("<h2>Correlation Heatmap</h2>")
+        corr = df[measures].corr()
+        fig = px.imshow(corr, text_auto='.2f', aspect="auto", title="Correlation Heatmap")
+        html_parts.append(fig.to_html(full_html=False, include_plotlyjs='cdn'))
+
+    # Assemble full HTML
+    full_html = "<!DOCTYPE html><html><head><meta charset='utf-8'><title>Dashboard Export</title></head><body>" + "\n".join(html_parts) + "</body></html>"
+    return full_html
+
+# Export button moved into main (see later in `main()`)
 
 st.set_page_config(
     page_title="DataLens Pro - Tableau Replacement",
@@ -396,6 +446,16 @@ def main():
 
         # Apply filters
         df_filtered = apply_global_filters(df, filters)
+
+        # HTML Export button
+        if st.sidebar.button("Export Dashboard (HTML)"):
+            html_report = generate_html_report(df_filtered, dimensions, measures, dates)
+            st.sidebar.download_button(
+                label="Download HTML",
+                data=html_report,
+                file_name="dashboard.html",
+                mime="text/html"
+            )
 
         # Data Preview
         with st.expander("📋 Data Preview & Info", expanded=False):
