@@ -1,0 +1,4882 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Dashboard Export</title></head><body>
+    <style>
+        body {font-family: 'Arial', sans-serif; margin: 20px; background-color: #f9f9f9; color: #333;}
+        h1, h2 {color: #1f77b4;}
+        table {border-collapse: collapse; width: 100%; margin-bottom: 20px;}
+        th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+        th {background-color: #667eea; color: white;}
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+    
+<h1>DataLens Pro Dashboard Export</h1>
+<h2>Data Preview (first 100 rows)</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Order_ID</th>
+      <th>Order_Date</th>
+      <th>Ship_Date</th>
+      <th>Delivery_Date</th>
+      <th>Order_Month</th>
+      <th>Order_Quarter</th>
+      <th>Order_Year</th>
+      <th>Is_Weekend</th>
+      <th>Is_Holiday</th>
+      <th>Customer_ID</th>
+      <th>Customer_Name</th>
+      <th>Customer_Age</th>
+      <th>Customer_Gender</th>
+      <th>Customer_Segment</th>
+      <th>Customer_City</th>
+      <th>Customer_State</th>
+      <th>Customer_Region</th>
+      <th>Customer_Rating</th>
+      <th>Days_Since_Last_Order</th>
+      <th>Product_Category</th>
+      <th>Product_Subcategory</th>
+      <th>Product_Name</th>
+      <th>Product_SKU</th>
+      <th>Supplier</th>
+      <th>Sales_Channel</th>
+      <th>Payment_Method</th>
+      <th>Shipping_Method</th>
+      <th>Quantity</th>
+      <th>Unit_Price</th>
+      <th>Unit_Cost</th>
+      <th>Gross_Sales</th>
+      <th>Discount_Percent</th>
+      <th>Discount_Amount</th>
+      <th>Tax_Amount</th>
+      <th>Shipping_Cost</th>
+      <th>Net_Sales</th>
+      <th>Profit</th>
+      <th>Profit_Margin_Percent</th>
+      <th>Marketing_Campaign</th>
+      <th>Ad_Spend</th>
+      <th>Ad_Clicks</th>
+      <th>Returned</th>
+      <th>Return_Reason</th>
+      <th>Customer_Satisfaction</th>
+      <th>Delivery_Days</th>
+      <th>Review_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ORD100000</td>
+      <td>2026-03-10</td>
+      <td>2026-03-13</td>
+      <td>2026-03-16</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST31747</td>
+      <td>Allison Hill</td>
+      <td>35</td>
+      <td>Other</td>
+      <td>Corporate</td>
+      <td>East Jill</td>
+      <td>Utah</td>
+      <td>Central</td>
+      <td>4.2</td>
+      <td>304</td>
+      <td>Sports</td>
+      <td>Fitness</td>
+      <td>User-centric needs-based array</td>
+      <td>SKU-9600-FNOG</td>
+      <td>Johnson, Gonzalez and Santos</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>2</td>
+      <td>75.97</td>
+      <td>33.78</td>
+      <td>151.94</td>
+      <td>5</td>
+      <td>7.60</td>
+      <td>25.98</td>
+      <td>37.45</td>
+      <td>170.32</td>
+      <td>76.78</td>
+      <td>50.53</td>
+      <td>Clearance</td>
+      <td>6.22</td>
+      <td>9</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100001</td>
+      <td>2024-09-16</td>
+      <td>2024-09-17</td>
+      <td>2024-09-24</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST89129</td>
+      <td>Connie Lawrence</td>
+      <td>35</td>
+      <td>Male</td>
+      <td>VIP</td>
+      <td>Port Lindachester</td>
+      <td>Michigan</td>
+      <td>Central</td>
+      <td>2.0</td>
+      <td>46</td>
+      <td>Home &amp; Garden</td>
+      <td>Outdoor</td>
+      <td>Grass-roots coherent data-warehouse</td>
+      <td>SKU-5116-GWWM</td>
+      <td>Roman-Blair</td>
+      <td>Retail Store</td>
+      <td>UPI</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>178.51</td>
+      <td>75.71</td>
+      <td>178.51</td>
+      <td>30</td>
+      <td>53.55</td>
+      <td>22.49</td>
+      <td>11.45</td>
+      <td>147.45</td>
+      <td>49.25</td>
+      <td>27.59</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100002</td>
+      <td>2024-06-19</td>
+      <td>2024-06-22</td>
+      <td>2024-06-25</td>
+      <td>2024-06-01</td>
+      <td>Q2 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST67132</td>
+      <td>Valerie Gray</td>
+      <td>18</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Mariastad</td>
+      <td>Oregon</td>
+      <td>South</td>
+      <td>3.5</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Fiction</td>
+      <td>Ergonomic tertiary architecture</td>
+      <td>SKU-0341-OGYR</td>
+      <td>Reid-Diaz</td>
+      <td>Online</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>36.03</td>
+      <td>21.45</td>
+      <td>36.03</td>
+      <td>5</td>
+      <td>1.80</td>
+      <td>6.16</td>
+      <td>24.59</td>
+      <td>40.39</td>
+      <td>12.78</td>
+      <td>35.47</td>
+      <td>Clearance</td>
+      <td>16.67</td>
+      <td>3</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>6</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100003</td>
+      <td>2025-03-02</td>
+      <td>2025-03-09</td>
+      <td>2025-03-18</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>True</td>
+      <td>CUST21542</td>
+      <td>Daniel Adams</td>
+      <td>31</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>New Cynthiaside</td>
+      <td>Washington</td>
+      <td>East</td>
+      <td>2.3</td>
+      <td>165</td>
+      <td>Sports</td>
+      <td>Apparel</td>
+      <td>Fully-configurable cohesive Local Area Network</td>
+      <td>SKU-6483-RUXX</td>
+      <td>Perez Inc</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>146.01</td>
+      <td>75.95</td>
+      <td>146.01</td>
+      <td>15</td>
+      <td>21.90</td>
+      <td>22.34</td>
+      <td>5.80</td>
+      <td>146.45</td>
+      <td>48.16</td>
+      <td>32.98</td>
+      <td>Summer Sale</td>
+      <td>32.88</td>
+      <td>17</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>16</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100004</td>
+      <td>2025-01-30</td>
+      <td>2025-02-05</td>
+      <td>2025-02-13</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST36680</td>
+      <td>Jennifer Jones</td>
+      <td>30</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Jasonfort</td>
+      <td>Montana</td>
+      <td>Central</td>
+      <td>2.1</td>
+      <td>0</td>
+      <td>Electronics</td>
+      <td>Laptops</td>
+      <td>Stand-alone logistical circuit</td>
+      <td>SKU-4238-IQVL</td>
+      <td>Hurst-Ross</td>
+      <td>Retail Store</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>611.78</td>
+      <td>383.55</td>
+      <td>1223.56</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>220.24</td>
+      <td>0.00</td>
+      <td>1443.80</td>
+      <td>456.46</td>
+      <td>37.31</td>
+      <td>Clearance</td>
+      <td>44.04</td>
+      <td>15</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100005</td>
+      <td>2025-01-08</td>
+      <td>2025-01-09</td>
+      <td>2025-01-18</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST39451</td>
+      <td>Zachary Hicks</td>
+      <td>34</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Port Brandonville</td>
+      <td>Georgia</td>
+      <td>South</td>
+      <td>5.0</td>
+      <td>58</td>
+      <td>Toys</td>
+      <td>Puzzles</td>
+      <td>Self-enabling cohesive utilization</td>
+      <td>SKU-6916-YMDH</td>
+      <td>Maddox-Valencia</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>67.18</td>
+      <td>33.13</td>
+      <td>67.18</td>
+      <td>20</td>
+      <td>13.44</td>
+      <td>9.67</td>
+      <td>23.07</td>
+      <td>63.41</td>
+      <td>20.61</td>
+      <td>30.68</td>
+      <td>Clearance</td>
+      <td>46.63</td>
+      <td>9</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>10</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100006</td>
+      <td>2024-10-14</td>
+      <td>2024-10-18</td>
+      <td>2024-10-22</td>
+      <td>2024-10-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST76616</td>
+      <td>Nathan Maldonado</td>
+      <td>46</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Kaylamouth</td>
+      <td>Delaware</td>
+      <td>West</td>
+      <td>4.0</td>
+      <td>69</td>
+      <td>Sports</td>
+      <td>Apparel</td>
+      <td>Implemented intermediate complexity</td>
+      <td>SKU-7048-WLGG</td>
+      <td>Evans, Fowler and Lynch</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>79.00</td>
+      <td>44.66</td>
+      <td>79.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>14.22</td>
+      <td>43.20</td>
+      <td>93.22</td>
+      <td>34.34</td>
+      <td>43.47</td>
+      <td>New Year</td>
+      <td>46.71</td>
+      <td>16</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100007</td>
+      <td>2024-09-06</td>
+      <td>2024-09-13</td>
+      <td>2024-09-16</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST73483</td>
+      <td>Phillip Ryan</td>
+      <td>40</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>New Mariotown</td>
+      <td>Delaware</td>
+      <td>Central</td>
+      <td>2.4</td>
+      <td>282</td>
+      <td>Home &amp; Garden</td>
+      <td>Decor</td>
+      <td>Multi-lateral fault-tolerant encoding</td>
+      <td>SKU-0391-FUFE</td>
+      <td>Cannon, Anderson and Alvarez</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>199.18</td>
+      <td>119.11</td>
+      <td>199.18</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>35.85</td>
+      <td>38.14</td>
+      <td>235.03</td>
+      <td>80.07</td>
+      <td>40.20</td>
+      <td>Black Friday</td>
+      <td>49.04</td>
+      <td>7</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100008</td>
+      <td>2026-04-17</td>
+      <td>2026-04-24</td>
+      <td>2026-05-01</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST96991</td>
+      <td>Deborah Brennan</td>
+      <td>29</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Brandtside</td>
+      <td>Wisconsin</td>
+      <td>North</td>
+      <td>4.2</td>
+      <td>333</td>
+      <td>Clothing</td>
+      <td>Shoes</td>
+      <td>Upgradable system-worthy customer loyalty</td>
+      <td>SKU-4657-HCHP</td>
+      <td>Brown Inc</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>68.18</td>
+      <td>36.95</td>
+      <td>68.18</td>
+      <td>15</td>
+      <td>10.23</td>
+      <td>10.43</td>
+      <td>49.04</td>
+      <td>68.38</td>
+      <td>21.00</td>
+      <td>30.80</td>
+      <td>Black Friday</td>
+      <td>25.11</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100009</td>
+      <td>2025-12-04</td>
+      <td>2025-12-10</td>
+      <td>2025-12-13</td>
+      <td>2025-12-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST95823</td>
+      <td>Crystal Robinson</td>
+      <td>45</td>
+      <td>Other</td>
+      <td>VIP</td>
+      <td>Lake Crystalbury</td>
+      <td>California</td>
+      <td>North</td>
+      <td>4.9</td>
+      <td>38</td>
+      <td>Food</td>
+      <td>Frozen</td>
+      <td>Automated full-range archive</td>
+      <td>SKU-8347-NIIU</td>
+      <td>Johnston, Sanchez and Kennedy</td>
+      <td>Mobile App</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>23.28</td>
+      <td>12.50</td>
+      <td>46.56</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>8.38</td>
+      <td>23.47</td>
+      <td>54.94</td>
+      <td>21.56</td>
+      <td>46.31</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100010</td>
+      <td>2024-08-22</td>
+      <td>2024-08-26</td>
+      <td>2024-09-01</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST73956</td>
+      <td>Brandon Hopkins</td>
+      <td>24</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Rodneymouth</td>
+      <td>Washington</td>
+      <td>East</td>
+      <td>4.5</td>
+      <td>18</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Business-focused systematic projection</td>
+      <td>SKU-1065-ZGPM</td>
+      <td>Herrera and Sons</td>
+      <td>Phone</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>77.16</td>
+      <td>50.76</td>
+      <td>77.16</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>13.89</td>
+      <td>30.87</td>
+      <td>91.05</td>
+      <td>26.40</td>
+      <td>34.21</td>
+      <td>Black Friday</td>
+      <td>37.34</td>
+      <td>13</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100011</td>
+      <td>2026-01-19</td>
+      <td>2026-01-26</td>
+      <td>2026-01-27</td>
+      <td>2026-01-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST59131</td>
+      <td>Donald Wright</td>
+      <td>23</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>South Lindseyside</td>
+      <td>Connecticut</td>
+      <td>East</td>
+      <td>2.7</td>
+      <td>125</td>
+      <td>Sports</td>
+      <td>Team Sports</td>
+      <td>Business-focused solution-oriented moratorium</td>
+      <td>SKU-0132-AFEN</td>
+      <td>Barrera-Martin</td>
+      <td>Phone</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>184.55</td>
+      <td>76.37</td>
+      <td>184.55</td>
+      <td>10</td>
+      <td>18.45</td>
+      <td>29.90</td>
+      <td>26.56</td>
+      <td>196.00</td>
+      <td>89.73</td>
+      <td>48.62</td>
+      <td>Black Friday</td>
+      <td>8.75</td>
+      <td>19</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100012</td>
+      <td>2025-07-31</td>
+      <td>2025-08-04</td>
+      <td>2025-08-09</td>
+      <td>2025-07-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST97404</td>
+      <td>James House</td>
+      <td>39</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Mitchellside</td>
+      <td>Texas</td>
+      <td>West</td>
+      <td>1.0</td>
+      <td>238</td>
+      <td>Toys</td>
+      <td>Action Figures</td>
+      <td>Universal mobile collaboration</td>
+      <td>SKU-3430-LVID</td>
+      <td>Edwards, Williams and Woods</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>81.40</td>
+      <td>36.05</td>
+      <td>81.40</td>
+      <td>5</td>
+      <td>4.07</td>
+      <td>13.92</td>
+      <td>45.06</td>
+      <td>91.25</td>
+      <td>41.28</td>
+      <td>50.71</td>
+      <td>Summer Sale</td>
+      <td>22.09</td>
+      <td>11</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>9</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100013</td>
+      <td>2024-06-26</td>
+      <td>2024-06-30</td>
+      <td>2024-07-08</td>
+      <td>2024-06-01</td>
+      <td>Q2 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST59986</td>
+      <td>Kim Brown</td>
+      <td>34</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Port Jacobland</td>
+      <td>Utah</td>
+      <td>East</td>
+      <td>3.3</td>
+      <td>0</td>
+      <td>Toys</td>
+      <td>Dolls</td>
+      <td>Front-line impactful capability</td>
+      <td>SKU-9399-CNFA</td>
+      <td>Silva, Mills and Donovan</td>
+      <td>Partner</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>49.48</td>
+      <td>24.28</td>
+      <td>49.48</td>
+      <td>15</td>
+      <td>7.42</td>
+      <td>7.57</td>
+      <td>28.74</td>
+      <td>49.63</td>
+      <td>17.78</td>
+      <td>35.93</td>
+      <td>Summer Sale</td>
+      <td>48.90</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100014</td>
+      <td>2024-06-24</td>
+      <td>2024-06-27</td>
+      <td>2024-07-01</td>
+      <td>2024-06-01</td>
+      <td>Q2 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST56179</td>
+      <td>Mike Allen</td>
+      <td>48</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Andersonport</td>
+      <td>New Jersey</td>
+      <td>Central</td>
+      <td>1.9</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Fiction</td>
+      <td>Intuitive web-enabled archive</td>
+      <td>SKU-0799-GEIN</td>
+      <td>Baker, Mahoney and Ibarra</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>49.76</td>
+      <td>32.34</td>
+      <td>199.04</td>
+      <td>15</td>
+      <td>29.86</td>
+      <td>30.45</td>
+      <td>9.51</td>
+      <td>199.63</td>
+      <td>39.82</td>
+      <td>20.01</td>
+      <td>Summer Sale</td>
+      <td>45.17</td>
+      <td>20</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>7</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100015</td>
+      <td>2024-08-28</td>
+      <td>2024-08-29</td>
+      <td>2024-09-03</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST64460</td>
+      <td>Jaclyn Moore</td>
+      <td>41</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Cherylhaven</td>
+      <td>Alabama</td>
+      <td>North</td>
+      <td>1.7</td>
+      <td>67</td>
+      <td>Food</td>
+      <td>Frozen</td>
+      <td>Synchronized neutral framework</td>
+      <td>SKU-1241-GVJJ</td>
+      <td>Campbell-Clark</td>
+      <td>Phone</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>3</td>
+      <td>24.89</td>
+      <td>15.42</td>
+      <td>74.67</td>
+      <td>20</td>
+      <td>14.93</td>
+      <td>10.75</td>
+      <td>39.33</td>
+      <td>70.49</td>
+      <td>13.48</td>
+      <td>18.05</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>6</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100016</td>
+      <td>2025-01-03</td>
+      <td>2025-01-10</td>
+      <td>2025-01-15</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST54396</td>
+      <td>Michael Farrell</td>
+      <td>38</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Kington</td>
+      <td>Colorado</td>
+      <td>East</td>
+      <td>4.2</td>
+      <td>239</td>
+      <td>Food</td>
+      <td>Beverages</td>
+      <td>Sharable interactive focus group</td>
+      <td>SKU-0052-OQKV</td>
+      <td>Arnold-Patterson</td>
+      <td>Online</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>3</td>
+      <td>34.92</td>
+      <td>23.86</td>
+      <td>104.76</td>
+      <td>20</td>
+      <td>20.95</td>
+      <td>15.09</td>
+      <td>48.14</td>
+      <td>98.90</td>
+      <td>12.23</td>
+      <td>11.67</td>
+      <td>Clearance</td>
+      <td>48.36</td>
+      <td>17</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100017</td>
+      <td>2025-01-18</td>
+      <td>2025-01-21</td>
+      <td>2025-01-26</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST93695</td>
+      <td>Benjamin Ware</td>
+      <td>35</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>New Barry</td>
+      <td>Mississippi</td>
+      <td>North</td>
+      <td>4.8</td>
+      <td>55</td>
+      <td>Food</td>
+      <td>Frozen</td>
+      <td>Reduced neutral circuit</td>
+      <td>SKU-6204-XYCW</td>
+      <td>Fleming Ltd</td>
+      <td>Online</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>4</td>
+      <td>15.43</td>
+      <td>6.74</td>
+      <td>61.72</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>11.11</td>
+      <td>33.74</td>
+      <td>72.83</td>
+      <td>34.76</td>
+      <td>56.32</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100018</td>
+      <td>2025-10-24</td>
+      <td>2025-10-28</td>
+      <td>2025-10-30</td>
+      <td>2025-10-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST14877</td>
+      <td>Richard Henson</td>
+      <td>18</td>
+      <td>Male</td>
+      <td>Corporate</td>
+      <td>Dicksonberg</td>
+      <td>Kansas</td>
+      <td>West</td>
+      <td>2.2</td>
+      <td>252</td>
+      <td>Clothing</td>
+      <td>Men</td>
+      <td>Diverse context-sensitive installation</td>
+      <td>SKU-0256-ZQVZ</td>
+      <td>Adams Ltd</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>139.13</td>
+      <td>68.27</td>
+      <td>556.52</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>100.17</td>
+      <td>0.00</td>
+      <td>656.69</td>
+      <td>283.44</td>
+      <td>50.93</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100019</td>
+      <td>2026-01-31</td>
+      <td>2026-02-02</td>
+      <td>2026-02-09</td>
+      <td>2026-01-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST74139</td>
+      <td>Shane Garrison</td>
+      <td>37</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>East Lisa</td>
+      <td>New Jersey</td>
+      <td>Central</td>
+      <td>3.5</td>
+      <td>143</td>
+      <td>Sports</td>
+      <td>Outdoor</td>
+      <td>Monitored fault-tolerant utilization</td>
+      <td>SKU-3303-ZVRE</td>
+      <td>Bell-Hicks</td>
+      <td>Retail Store</td>
+      <td>Net Banking</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>107.06</td>
+      <td>66.66</td>
+      <td>107.06</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>19.27</td>
+      <td>1.64</td>
+      <td>126.33</td>
+      <td>40.40</td>
+      <td>37.74</td>
+      <td>Clearance</td>
+      <td>47.53</td>
+      <td>11</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>9</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100020</td>
+      <td>2024-06-21</td>
+      <td>2024-06-22</td>
+      <td>2024-06-30</td>
+      <td>2024-06-01</td>
+      <td>Q2 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST37801</td>
+      <td>Sarah Rivera</td>
+      <td>51</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>North Natalieview</td>
+      <td>Idaho</td>
+      <td>North</td>
+      <td>3.6</td>
+      <td>305</td>
+      <td>Books</td>
+      <td>Academic</td>
+      <td>Reduced empowering alliance</td>
+      <td>SKU-1965-UYUB</td>
+      <td>Joyce, Wilson and Lam</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>5</td>
+      <td>32.41</td>
+      <td>14.81</td>
+      <td>162.05</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>29.17</td>
+      <td>48.55</td>
+      <td>191.22</td>
+      <td>88.00</td>
+      <td>54.30</td>
+      <td>Black Friday</td>
+      <td>39.35</td>
+      <td>6</td>
+      <td>True</td>
+      <td>Not Needed</td>
+      <td>1</td>
+      <td>9</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100021</td>
+      <td>2025-12-20</td>
+      <td>2025-12-27</td>
+      <td>2025-12-30</td>
+      <td>2025-12-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST88116</td>
+      <td>Andrew Graham</td>
+      <td>47</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>West Ryan</td>
+      <td>Texas</td>
+      <td>South</td>
+      <td>1.0</td>
+      <td>74</td>
+      <td>Clothing</td>
+      <td>Bags</td>
+      <td>Managed regional functionalities</td>
+      <td>SKU-1484-QAUZ</td>
+      <td>Phillips, Martinez and Fisher</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>2</td>
+      <td>127.57</td>
+      <td>59.95</td>
+      <td>255.14</td>
+      <td>5</td>
+      <td>12.76</td>
+      <td>43.63</td>
+      <td>49.38</td>
+      <td>286.01</td>
+      <td>122.48</td>
+      <td>48.01</td>
+      <td>Summer Sale</td>
+      <td>33.05</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100022</td>
+      <td>2024-12-14</td>
+      <td>2024-12-15</td>
+      <td>2024-12-18</td>
+      <td>2024-12-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST78955</td>
+      <td>Megan Orr</td>
+      <td>19</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Richardtown</td>
+      <td>Maryland</td>
+      <td>Central</td>
+      <td>1.5</td>
+      <td>0</td>
+      <td>Home &amp; Garden</td>
+      <td>Kitchen</td>
+      <td>Horizontal demand-driven Internet solution</td>
+      <td>SKU-9957-CCRN</td>
+      <td>Kennedy, Santana and Flynn</td>
+      <td>Online</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>137.71</td>
+      <td>62.28</td>
+      <td>137.71</td>
+      <td>5</td>
+      <td>6.89</td>
+      <td>23.55</td>
+      <td>3.18</td>
+      <td>154.37</td>
+      <td>68.54</td>
+      <td>49.77</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100023</td>
+      <td>2026-03-21</td>
+      <td>2026-03-28</td>
+      <td>2026-04-06</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST94323</td>
+      <td>Bradley Robertson</td>
+      <td>38</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Clarencebury</td>
+      <td>Utah</td>
+      <td>South</td>
+      <td>4.9</td>
+      <td>31</td>
+      <td>Sports</td>
+      <td>Equipment</td>
+      <td>Integrated directional workforce</td>
+      <td>SKU-3200-PENX</td>
+      <td>Gibson Ltd</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>191.27</td>
+      <td>79.00</td>
+      <td>765.08</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>137.71</td>
+      <td>0.00</td>
+      <td>902.79</td>
+      <td>449.08</td>
+      <td>58.70</td>
+      <td>Clearance</td>
+      <td>34.30</td>
+      <td>15</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>16</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100024</td>
+      <td>2026-05-13</td>
+      <td>2026-05-16</td>
+      <td>2026-05-26</td>
+      <td>2026-05-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST81874</td>
+      <td>Michelle Cruz</td>
+      <td>40</td>
+      <td>Female</td>
+      <td>Wholesale</td>
+      <td>Sancheztown</td>
+      <td>Wisconsin</td>
+      <td>East</td>
+      <td>3.8</td>
+      <td>195</td>
+      <td>Electronics</td>
+      <td>Phones</td>
+      <td>Visionary bi-directional time-frame</td>
+      <td>SKU-6328-DDJP</td>
+      <td>Bryant Group</td>
+      <td>Partner</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>858.30</td>
+      <td>360.23</td>
+      <td>858.30</td>
+      <td>10</td>
+      <td>85.83</td>
+      <td>139.04</td>
+      <td>0.00</td>
+      <td>911.51</td>
+      <td>412.24</td>
+      <td>48.03</td>
+      <td>New Year</td>
+      <td>22.69</td>
+      <td>19</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>13</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100025</td>
+      <td>2025-12-04</td>
+      <td>2025-12-08</td>
+      <td>2025-12-12</td>
+      <td>2025-12-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST69441</td>
+      <td>Victoria Larson</td>
+      <td>53</td>
+      <td>Male</td>
+      <td>Wholesale</td>
+      <td>Salazarhaven</td>
+      <td>Nevada</td>
+      <td>Central</td>
+      <td>2.6</td>
+      <td>48</td>
+      <td>Food</td>
+      <td>Snacks</td>
+      <td>Reactive local complexity</td>
+      <td>SKU-7743-ORXX</td>
+      <td>Washington, Allen and Gonzales</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>29.13</td>
+      <td>13.53</td>
+      <td>116.52</td>
+      <td>10</td>
+      <td>11.65</td>
+      <td>18.88</td>
+      <td>15.63</td>
+      <td>123.75</td>
+      <td>50.75</td>
+      <td>43.55</td>
+      <td>New Year</td>
+      <td>47.68</td>
+      <td>15</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100026</td>
+      <td>2025-07-28</td>
+      <td>2025-07-31</td>
+      <td>2025-08-03</td>
+      <td>2025-07-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST86869</td>
+      <td>Cynthia Rogers</td>
+      <td>29</td>
+      <td>Female</td>
+      <td>Wholesale</td>
+      <td>East Edwardfurt</td>
+      <td>Vermont</td>
+      <td>North</td>
+      <td>4.8</td>
+      <td>287</td>
+      <td>Food</td>
+      <td>Snacks</td>
+      <td>Distributed tertiary data-warehouse</td>
+      <td>SKU-1665-IDAD</td>
+      <td>Wall Group</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>3</td>
+      <td>20.46</td>
+      <td>12.75</td>
+      <td>61.38</td>
+      <td>15</td>
+      <td>9.21</td>
+      <td>9.39</td>
+      <td>16.48</td>
+      <td>61.56</td>
+      <td>13.92</td>
+      <td>22.68</td>
+      <td>Clearance</td>
+      <td>43.40</td>
+      <td>1</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100027</td>
+      <td>2025-01-05</td>
+      <td>2025-01-11</td>
+      <td>2025-01-19</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST24184</td>
+      <td>Lauren Dominguez</td>
+      <td>40</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Woodsstad</td>
+      <td>Maryland</td>
+      <td>North</td>
+      <td>2.4</td>
+      <td>0</td>
+      <td>Home &amp; Garden</td>
+      <td>Decor</td>
+      <td>Versatile human-resource instruction set</td>
+      <td>SKU-8893-FORB</td>
+      <td>Johnson-Rogers</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>198.70</td>
+      <td>92.16</td>
+      <td>198.70</td>
+      <td>10</td>
+      <td>19.87</td>
+      <td>32.19</td>
+      <td>27.81</td>
+      <td>211.02</td>
+      <td>86.67</td>
+      <td>43.62</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>14</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100028</td>
+      <td>2025-08-27</td>
+      <td>2025-08-28</td>
+      <td>2025-09-07</td>
+      <td>2025-08-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST45054</td>
+      <td>Jennifer Martin</td>
+      <td>26</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Calhounside</td>
+      <td>Alaska</td>
+      <td>Central</td>
+      <td>1.1</td>
+      <td>139</td>
+      <td>Food</td>
+      <td>Gourmet</td>
+      <td>Object-based optimizing open system</td>
+      <td>SKU-0162-DLDQ</td>
+      <td>Murphy-Gibson</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>2</td>
+      <td>25.91</td>
+      <td>15.36</td>
+      <td>51.82</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>9.33</td>
+      <td>35.13</td>
+      <td>61.15</td>
+      <td>21.10</td>
+      <td>40.72</td>
+      <td>New Year</td>
+      <td>0.31</td>
+      <td>4</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>11</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100029</td>
+      <td>2026-01-18</td>
+      <td>2026-01-22</td>
+      <td>2026-01-29</td>
+      <td>2026-01-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST30631</td>
+      <td>Shawn Ramirez</td>
+      <td>47</td>
+      <td>Male</td>
+      <td>Wholesale</td>
+      <td>Kingland</td>
+      <td>New Mexico</td>
+      <td>North</td>
+      <td>2.5</td>
+      <td>166</td>
+      <td>Electronics</td>
+      <td>Laptops</td>
+      <td>Ameliorated value-added moratorium</td>
+      <td>SKU-0531-XPCW</td>
+      <td>Herring and Sons</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>341.76</td>
+      <td>191.09</td>
+      <td>683.52</td>
+      <td>5</td>
+      <td>34.18</td>
+      <td>116.88</td>
+      <td>0.00</td>
+      <td>766.22</td>
+      <td>267.16</td>
+      <td>39.09</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>11</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100030</td>
+      <td>2025-03-05</td>
+      <td>2025-03-09</td>
+      <td>2025-03-16</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST67939</td>
+      <td>Lisa Allen</td>
+      <td>41</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Caldwellshire</td>
+      <td>Indiana</td>
+      <td>Central</td>
+      <td>2.7</td>
+      <td>0</td>
+      <td>Clothing</td>
+      <td>Women</td>
+      <td>Persistent tangible extranet</td>
+      <td>SKU-5299-VTHX</td>
+      <td>Oconnell Inc</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>5</td>
+      <td>35.97</td>
+      <td>15.27</td>
+      <td>179.85</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>32.37</td>
+      <td>10.78</td>
+      <td>212.22</td>
+      <td>103.50</td>
+      <td>57.55</td>
+      <td>Clearance</td>
+      <td>5.54</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>11</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100031</td>
+      <td>2024-05-31</td>
+      <td>2024-06-01</td>
+      <td>2024-06-02</td>
+      <td>2024-05-01</td>
+      <td>Q2 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST37686</td>
+      <td>Tanya Johnston</td>
+      <td>47</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Sandersborough</td>
+      <td>California</td>
+      <td>North</td>
+      <td>4.1</td>
+      <td>130</td>
+      <td>Toys</td>
+      <td>Board Games</td>
+      <td>Reverse-engineered system-worthy product</td>
+      <td>SKU-3149-ZHYK</td>
+      <td>Reed Group</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>32.94</td>
+      <td>22.90</td>
+      <td>32.94</td>
+      <td>10</td>
+      <td>3.29</td>
+      <td>5.34</td>
+      <td>14.47</td>
+      <td>34.99</td>
+      <td>6.75</td>
+      <td>20.49</td>
+      <td>Clearance</td>
+      <td>8.78</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100032</td>
+      <td>2024-11-04</td>
+      <td>2024-11-05</td>
+      <td>2024-11-12</td>
+      <td>2024-11-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>True</td>
+      <td>CUST20205</td>
+      <td>Andrea Holland</td>
+      <td>35</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Port Robertfort</td>
+      <td>Connecticut</td>
+      <td>East</td>
+      <td>4.4</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Comics</td>
+      <td>Optional high-level productivity</td>
+      <td>SKU-7262-UHPR</td>
+      <td>Morton, Medina and Webb</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Same Day</td>
+      <td>4</td>
+      <td>16.10</td>
+      <td>10.60</td>
+      <td>64.40</td>
+      <td>30</td>
+      <td>19.32</td>
+      <td>8.11</td>
+      <td>28.79</td>
+      <td>53.19</td>
+      <td>2.68</td>
+      <td>4.16</td>
+      <td>New Year</td>
+      <td>5.76</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100033</td>
+      <td>2026-05-09</td>
+      <td>2026-05-10</td>
+      <td>2026-05-17</td>
+      <td>2026-05-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST41891</td>
+      <td>Nicholas Adams</td>
+      <td>46</td>
+      <td>Male</td>
+      <td>Corporate</td>
+      <td>Port Sarah</td>
+      <td>Louisiana</td>
+      <td>West</td>
+      <td>2.7</td>
+      <td>205</td>
+      <td>Food</td>
+      <td>Gourmet</td>
+      <td>Organized dynamic system engine</td>
+      <td>SKU-7996-VBFU</td>
+      <td>Freeman LLC</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>32.46</td>
+      <td>21.94</td>
+      <td>129.84</td>
+      <td>20</td>
+      <td>25.97</td>
+      <td>18.70</td>
+      <td>26.20</td>
+      <td>122.57</td>
+      <td>16.11</td>
+      <td>12.41</td>
+      <td>New Year</td>
+      <td>11.08</td>
+      <td>5</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100034</td>
+      <td>2025-07-31</td>
+      <td>2025-08-03</td>
+      <td>2025-08-09</td>
+      <td>2025-07-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST94599</td>
+      <td>Gina Beard</td>
+      <td>40</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Angelahaven</td>
+      <td>Illinois</td>
+      <td>Central</td>
+      <td>4.3</td>
+      <td>120</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Configurable disintermediate success</td>
+      <td>SKU-6783-SEPT</td>
+      <td>West-Smith</td>
+      <td>Phone</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>53.20</td>
+      <td>35.74</td>
+      <td>53.20</td>
+      <td>5</td>
+      <td>2.66</td>
+      <td>9.10</td>
+      <td>5.14</td>
+      <td>59.64</td>
+      <td>14.80</td>
+      <td>27.82</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100035</td>
+      <td>2025-05-08</td>
+      <td>2025-05-12</td>
+      <td>2025-05-22</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST91857</td>
+      <td>Jared Sanchez</td>
+      <td>42</td>
+      <td>Other</td>
+      <td>Corporate</td>
+      <td>Thomashaven</td>
+      <td>Minnesota</td>
+      <td>West</td>
+      <td>2.3</td>
+      <td>321</td>
+      <td>Clothing</td>
+      <td>Shoes</td>
+      <td>Optimized value-added neural-net</td>
+      <td>SKU-5574-TQOH</td>
+      <td>Lee, Wilson and Herrera</td>
+      <td>Retail Store</td>
+      <td>Cash</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>120.53</td>
+      <td>75.69</td>
+      <td>120.53</td>
+      <td>5</td>
+      <td>6.03</td>
+      <td>20.61</td>
+      <td>15.81</td>
+      <td>135.11</td>
+      <td>38.81</td>
+      <td>32.20</td>
+      <td>Clearance</td>
+      <td>31.57</td>
+      <td>8</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100036</td>
+      <td>2025-03-05</td>
+      <td>2025-03-06</td>
+      <td>2025-03-12</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST20057</td>
+      <td>Cathy Robinson</td>
+      <td>44</td>
+      <td>Other</td>
+      <td>VIP</td>
+      <td>Hillshire</td>
+      <td>Wisconsin</td>
+      <td>North</td>
+      <td>3.6</td>
+      <td>46</td>
+      <td>Home &amp; Garden</td>
+      <td>Outdoor</td>
+      <td>Progressive radical forecast</td>
+      <td>SKU-1343-XLTA</td>
+      <td>Ferguson, Hill and Mccann</td>
+      <td>Retail Store</td>
+      <td>Cash</td>
+      <td>Same Day</td>
+      <td>1</td>
+      <td>134.50</td>
+      <td>72.03</td>
+      <td>134.50</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>24.21</td>
+      <td>30.75</td>
+      <td>158.71</td>
+      <td>62.47</td>
+      <td>46.45</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100037</td>
+      <td>2024-10-31</td>
+      <td>2024-11-02</td>
+      <td>2024-11-03</td>
+      <td>2024-10-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST55015</td>
+      <td>Melissa Martinez</td>
+      <td>44</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Garciatown</td>
+      <td>Oregon</td>
+      <td>South</td>
+      <td>4.9</td>
+      <td>43</td>
+      <td>Sports</td>
+      <td>Equipment</td>
+      <td>Horizontal methodical matrices</td>
+      <td>SKU-7520-QEHE</td>
+      <td>Vasquez-Ray</td>
+      <td>Retail Store</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>2</td>
+      <td>91.44</td>
+      <td>49.62</td>
+      <td>182.88</td>
+      <td>10</td>
+      <td>18.29</td>
+      <td>29.63</td>
+      <td>25.23</td>
+      <td>194.22</td>
+      <td>65.35</td>
+      <td>35.73</td>
+      <td>Clearance</td>
+      <td>49.55</td>
+      <td>16</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100038</td>
+      <td>2024-12-31</td>
+      <td>2025-01-07</td>
+      <td>2025-01-13</td>
+      <td>2024-12-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST16863</td>
+      <td>Brittany Shepherd</td>
+      <td>32</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Christopherbury</td>
+      <td>Delaware</td>
+      <td>East</td>
+      <td>4.2</td>
+      <td>331</td>
+      <td>Clothing</td>
+      <td>Kids</td>
+      <td>Realigned well-modulated instruction set</td>
+      <td>SKU-9993-XHYC</td>
+      <td>Evans-Chapman</td>
+      <td>Phone</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>140.15</td>
+      <td>72.35</td>
+      <td>140.15</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>25.23</td>
+      <td>16.73</td>
+      <td>165.38</td>
+      <td>67.80</td>
+      <td>48.38</td>
+      <td>Clearance</td>
+      <td>14.21</td>
+      <td>19</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>13</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100039</td>
+      <td>2025-05-04</td>
+      <td>2025-05-10</td>
+      <td>2025-05-17</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST21104</td>
+      <td>Keith Brown</td>
+      <td>38</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Port Jaredborough</td>
+      <td>Kentucky</td>
+      <td>South</td>
+      <td>2.2</td>
+      <td>192</td>
+      <td>Electronics</td>
+      <td>Accessories</td>
+      <td>Switchable attitude-oriented complexity</td>
+      <td>SKU-3281-KAAC</td>
+      <td>Wheeler, Carter and Hall</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>1166.75</td>
+      <td>575.29</td>
+      <td>1166.75</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>210.02</td>
+      <td>0.00</td>
+      <td>1376.77</td>
+      <td>591.46</td>
+      <td>50.69</td>
+      <td>Black Friday</td>
+      <td>33.51</td>
+      <td>16</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>13</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100040</td>
+      <td>2024-09-06</td>
+      <td>2024-09-08</td>
+      <td>2024-09-14</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST73736</td>
+      <td>Michele Gibson</td>
+      <td>29</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>West Kristin</td>
+      <td>South Dakota</td>
+      <td>North</td>
+      <td>1.8</td>
+      <td>70</td>
+      <td>Books</td>
+      <td>Academic</td>
+      <td>Reverse-engineered stable website</td>
+      <td>SKU-3618-OPJR</td>
+      <td>Jones and Sons</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>2</td>
+      <td>30.63</td>
+      <td>13.91</td>
+      <td>61.26</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>11.03</td>
+      <td>7.75</td>
+      <td>72.29</td>
+      <td>33.44</td>
+      <td>54.59</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100041</td>
+      <td>2024-08-27</td>
+      <td>2024-08-29</td>
+      <td>2024-09-01</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST91885</td>
+      <td>Linda Holloway</td>
+      <td>40</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Scottmouth</td>
+      <td>Vermont</td>
+      <td>Central</td>
+      <td>4.2</td>
+      <td>84</td>
+      <td>Electronics</td>
+      <td>Cameras</td>
+      <td>Innovative tangible initiative</td>
+      <td>SKU-4887-CFMC</td>
+      <td>Navarro-Munoz</td>
+      <td>Retail Store</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>381.05</td>
+      <td>195.48</td>
+      <td>762.10</td>
+      <td>30</td>
+      <td>228.63</td>
+      <td>96.02</td>
+      <td>0.00</td>
+      <td>629.49</td>
+      <td>142.51</td>
+      <td>18.70</td>
+      <td>Clearance</td>
+      <td>18.21</td>
+      <td>7</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100042</td>
+      <td>2025-06-18</td>
+      <td>2025-06-25</td>
+      <td>2025-07-03</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST35430</td>
+      <td>Darryl Craig</td>
+      <td>44</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Port Emilyview</td>
+      <td>Oregon</td>
+      <td>South</td>
+      <td>2.5</td>
+      <td>0</td>
+      <td>Home &amp; Garden</td>
+      <td>Tools</td>
+      <td>Balanced well-modulated system engine</td>
+      <td>SKU-2787-RLLB</td>
+      <td>Olsen, Costa and Harrison</td>
+      <td>Mobile App</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>188.16</td>
+      <td>92.73</td>
+      <td>188.16</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>33.87</td>
+      <td>47.36</td>
+      <td>222.03</td>
+      <td>95.43</td>
+      <td>50.72</td>
+      <td>New Year</td>
+      <td>38.91</td>
+      <td>16</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>15</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100043</td>
+      <td>2024-09-01</td>
+      <td>2024-09-07</td>
+      <td>2024-09-15</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST82684</td>
+      <td>Frank Garcia</td>
+      <td>48</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>West Robert</td>
+      <td>New York</td>
+      <td>Central</td>
+      <td>4.7</td>
+      <td>0</td>
+      <td>Clothing</td>
+      <td>Women</td>
+      <td>Horizontal stable initiative</td>
+      <td>SKU-8071-UQUH</td>
+      <td>Hancock-Bryan</td>
+      <td>Online</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>46.61</td>
+      <td>22.14</td>
+      <td>46.61</td>
+      <td>10</td>
+      <td>4.66</td>
+      <td>7.55</td>
+      <td>35.57</td>
+      <td>49.50</td>
+      <td>19.81</td>
+      <td>42.50</td>
+      <td>New Year</td>
+      <td>4.19</td>
+      <td>5</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>14</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100044</td>
+      <td>2025-05-27</td>
+      <td>2025-06-03</td>
+      <td>2025-06-11</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST13495</td>
+      <td>Sean Murray</td>
+      <td>19</td>
+      <td>Male</td>
+      <td>VIP</td>
+      <td>East Aprilfort</td>
+      <td>South Dakota</td>
+      <td>West</td>
+      <td>2.7</td>
+      <td>202</td>
+      <td>Books</td>
+      <td>Non-Fiction</td>
+      <td>Organic well-modulated application</td>
+      <td>SKU-3482-SCSF</td>
+      <td>Johnson Ltd</td>
+      <td>Partner</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>17.09</td>
+      <td>11.50</td>
+      <td>17.09</td>
+      <td>10</td>
+      <td>1.71</td>
+      <td>2.77</td>
+      <td>25.10</td>
+      <td>18.15</td>
+      <td>3.88</td>
+      <td>22.70</td>
+      <td>New Year</td>
+      <td>11.23</td>
+      <td>10</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>15</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100045</td>
+      <td>2025-05-12</td>
+      <td>2025-05-16</td>
+      <td>2025-05-19</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST71487</td>
+      <td>Cynthia Moore</td>
+      <td>32</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>New Rickybury</td>
+      <td>Delaware</td>
+      <td>South</td>
+      <td>2.8</td>
+      <td>0</td>
+      <td>Food</td>
+      <td>Beverages</td>
+      <td>Persistent bottom-line project</td>
+      <td>SKU-2748-TRAE</td>
+      <td>Sanchez-Arnold</td>
+      <td>Online</td>
+      <td>Cash</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>8.65</td>
+      <td>5.84</td>
+      <td>8.65</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1.56</td>
+      <td>0.26</td>
+      <td>10.21</td>
+      <td>2.81</td>
+      <td>32.49</td>
+      <td>Black Friday</td>
+      <td>27.44</td>
+      <td>19</td>
+      <td>True</td>
+      <td>Not Needed</td>
+      <td>1</td>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100046</td>
+      <td>2026-02-02</td>
+      <td>2026-02-06</td>
+      <td>2026-02-16</td>
+      <td>2026-02-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST24530</td>
+      <td>Thomas Romero</td>
+      <td>34</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Port Chad</td>
+      <td>Wyoming</td>
+      <td>South</td>
+      <td>4.3</td>
+      <td>0</td>
+      <td>Electronics</td>
+      <td>Cameras</td>
+      <td>Operative global toolset</td>
+      <td>SKU-8404-UTLL</td>
+      <td>Burns, Hernandez and Ryan</td>
+      <td>Retail Store</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>551.15</td>
+      <td>228.36</td>
+      <td>551.15</td>
+      <td>5</td>
+      <td>27.56</td>
+      <td>94.25</td>
+      <td>0.00</td>
+      <td>617.84</td>
+      <td>295.23</td>
+      <td>53.57</td>
+      <td>Summer Sale</td>
+      <td>31.60</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>14</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100047</td>
+      <td>2025-02-19</td>
+      <td>2025-02-23</td>
+      <td>2025-02-26</td>
+      <td>2025-02-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST21221</td>
+      <td>Juan Daniels</td>
+      <td>23</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Cantuborough</td>
+      <td>Vermont</td>
+      <td>North</td>
+      <td>3.1</td>
+      <td>0</td>
+      <td>Home &amp; Garden</td>
+      <td>Tools</td>
+      <td>Front-line object-oriented info-mediaries</td>
+      <td>SKU-3605-VETZ</td>
+      <td>Hughes-Alvarado</td>
+      <td>Retail Store</td>
+      <td>Debit Card</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>207.55</td>
+      <td>98.00</td>
+      <td>207.55</td>
+      <td>10</td>
+      <td>20.76</td>
+      <td>33.62</td>
+      <td>18.03</td>
+      <td>220.41</td>
+      <td>88.79</td>
+      <td>42.78</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>7</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100048</td>
+      <td>2024-07-08</td>
+      <td>2024-07-11</td>
+      <td>2024-07-16</td>
+      <td>2024-07-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST56805</td>
+      <td>Veronica Simpson</td>
+      <td>38</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>East Wayneshire</td>
+      <td>Michigan</td>
+      <td>West</td>
+      <td>4.2</td>
+      <td>0</td>
+      <td>Electronics</td>
+      <td>Audio</td>
+      <td>Cross-platform leadingedge attitude</td>
+      <td>SKU-8702-APJE</td>
+      <td>Harrington-Baker</td>
+      <td>Retail Store</td>
+      <td>Net Banking</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>293.53</td>
+      <td>151.48</td>
+      <td>293.53</td>
+      <td>10</td>
+      <td>29.35</td>
+      <td>47.55</td>
+      <td>17.24</td>
+      <td>311.73</td>
+      <td>112.70</td>
+      <td>38.39</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100049</td>
+      <td>2025-09-07</td>
+      <td>2025-09-09</td>
+      <td>2025-09-17</td>
+      <td>2025-09-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST72722</td>
+      <td>Jennifer Miller</td>
+      <td>33</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Melissaside</td>
+      <td>Missouri</td>
+      <td>East</td>
+      <td>3.5</td>
+      <td>69</td>
+      <td>Clothing</td>
+      <td>Men</td>
+      <td>Intuitive responsive structure</td>
+      <td>SKU-7809-EPOR</td>
+      <td>Bright-Francis</td>
+      <td>Online</td>
+      <td>Net Banking</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>95.52</td>
+      <td>61.52</td>
+      <td>95.52</td>
+      <td>5</td>
+      <td>4.78</td>
+      <td>16.33</td>
+      <td>3.16</td>
+      <td>107.07</td>
+      <td>29.22</td>
+      <td>30.59</td>
+      <td>Summer Sale</td>
+      <td>14.67</td>
+      <td>1</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100050</td>
+      <td>2025-11-25</td>
+      <td>2025-11-29</td>
+      <td>2025-12-04</td>
+      <td>2025-11-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>True</td>
+      <td>CUST94790</td>
+      <td>Brett Schultz</td>
+      <td>41</td>
+      <td>Female</td>
+      <td>Corporate</td>
+      <td>South Garrettport</td>
+      <td>Alaska</td>
+      <td>Central</td>
+      <td>1.8</td>
+      <td>182</td>
+      <td>Home &amp; Garden</td>
+      <td>Decor</td>
+      <td>Balanced fresh-thinking utilization</td>
+      <td>SKU-0455-BJPH</td>
+      <td>Knight-Sparks</td>
+      <td>Partner</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>155.57</td>
+      <td>100.28</td>
+      <td>155.57</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>28.00</td>
+      <td>43.11</td>
+      <td>183.57</td>
+      <td>55.29</td>
+      <td>35.54</td>
+      <td>Summer Sale</td>
+      <td>39.97</td>
+      <td>13</td>
+      <td>True</td>
+      <td>Not Needed</td>
+      <td>2</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100051</td>
+      <td>2024-09-29</td>
+      <td>2024-10-06</td>
+      <td>2024-10-15</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST20828</td>
+      <td>Bob Pitts</td>
+      <td>30</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>South Roberta</td>
+      <td>Georgia</td>
+      <td>South</td>
+      <td>3.9</td>
+      <td>0</td>
+      <td>Sports</td>
+      <td>Outdoor</td>
+      <td>Focused maximized productivity</td>
+      <td>SKU-4740-ZDSR</td>
+      <td>Moore, Alexander and Reed</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>3</td>
+      <td>119.39</td>
+      <td>65.58</td>
+      <td>358.17</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>64.47</td>
+      <td>3.95</td>
+      <td>422.64</td>
+      <td>161.43</td>
+      <td>45.07</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>16</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100052</td>
+      <td>2025-06-16</td>
+      <td>2025-06-21</td>
+      <td>2025-06-28</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST68183</td>
+      <td>Margaret Coleman</td>
+      <td>28</td>
+      <td>Female</td>
+      <td>Wholesale</td>
+      <td>Stephenport</td>
+      <td>Illinois</td>
+      <td>East</td>
+      <td>2.4</td>
+      <td>21</td>
+      <td>Electronics</td>
+      <td>Phones</td>
+      <td>Networked mission-critical benchmark</td>
+      <td>SKU-3695-KSSS</td>
+      <td>Spence Ltd</td>
+      <td>Retail Store</td>
+      <td>UPI</td>
+      <td>Overnight</td>
+      <td>2</td>
+      <td>910.92</td>
+      <td>448.13</td>
+      <td>1821.84</td>
+      <td>15</td>
+      <td>273.28</td>
+      <td>278.74</td>
+      <td>0.00</td>
+      <td>1827.30</td>
+      <td>652.30</td>
+      <td>35.80</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>12</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100053</td>
+      <td>2024-08-13</td>
+      <td>2024-08-18</td>
+      <td>2024-08-21</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST28714</td>
+      <td>Adam Grimes</td>
+      <td>31</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>New Julieport</td>
+      <td>Wyoming</td>
+      <td>North</td>
+      <td>4.4</td>
+      <td>347</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Focused real-time website</td>
+      <td>SKU-5339-QRWU</td>
+      <td>Becker, Taylor and Davis</td>
+      <td>Partner</td>
+      <td>Credit Card</td>
+      <td>Same Day</td>
+      <td>1</td>
+      <td>64.48</td>
+      <td>33.65</td>
+      <td>64.48</td>
+      <td>15</td>
+      <td>9.67</td>
+      <td>9.87</td>
+      <td>39.07</td>
+      <td>64.68</td>
+      <td>21.16</td>
+      <td>32.82</td>
+      <td>New Year</td>
+      <td>18.11</td>
+      <td>18</td>
+      <td>True</td>
+      <td>Defective</td>
+      <td>1</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100054</td>
+      <td>2025-12-11</td>
+      <td>2025-12-16</td>
+      <td>2025-12-19</td>
+      <td>2025-12-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST62171</td>
+      <td>Amanda Kramer</td>
+      <td>53</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>New Michaelberg</td>
+      <td>Colorado</td>
+      <td>East</td>
+      <td>2.3</td>
+      <td>142</td>
+      <td>Clothing</td>
+      <td>Shoes</td>
+      <td>Implemented fresh-thinking synergy</td>
+      <td>SKU-6232-YIXH</td>
+      <td>Mcintyre, Rivas and Scott</td>
+      <td>Phone</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>2</td>
+      <td>74.64</td>
+      <td>46.94</td>
+      <td>149.28</td>
+      <td>15</td>
+      <td>22.39</td>
+      <td>22.84</td>
+      <td>12.48</td>
+      <td>149.73</td>
+      <td>33.01</td>
+      <td>22.11</td>
+      <td>Clearance</td>
+      <td>25.89</td>
+      <td>17</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100055</td>
+      <td>2025-03-21</td>
+      <td>2025-03-27</td>
+      <td>2025-04-04</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST27790</td>
+      <td>Karen Drake</td>
+      <td>38</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Lindamouth</td>
+      <td>California</td>
+      <td>West</td>
+      <td>4.4</td>
+      <td>0</td>
+      <td>Food</td>
+      <td>Organic</td>
+      <td>Digitized web-enabled definition</td>
+      <td>SKU-6851-YZAQ</td>
+      <td>Martinez, Richardson and Curry</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Pickup</td>
+      <td>4</td>
+      <td>13.94</td>
+      <td>8.13</td>
+      <td>55.76</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>10.04</td>
+      <td>22.60</td>
+      <td>65.80</td>
+      <td>23.24</td>
+      <td>41.68</td>
+      <td>Summer Sale</td>
+      <td>40.53</td>
+      <td>10</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>14</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100056</td>
+      <td>2026-02-27</td>
+      <td>2026-03-06</td>
+      <td>2026-03-09</td>
+      <td>2026-02-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST93584</td>
+      <td>James Little</td>
+      <td>25</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Danielbury</td>
+      <td>New Mexico</td>
+      <td>Central</td>
+      <td>1.7</td>
+      <td>185</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Assimilated regional open architecture</td>
+      <td>SKU-5931-ODST</td>
+      <td>Ortiz, Taylor and Shah</td>
+      <td>Partner</td>
+      <td>PayPal</td>
+      <td>Express</td>
+      <td>2</td>
+      <td>55.45</td>
+      <td>37.01</td>
+      <td>110.90</td>
+      <td>5</td>
+      <td>5.54</td>
+      <td>18.96</td>
+      <td>25.44</td>
+      <td>124.32</td>
+      <td>31.34</td>
+      <td>28.26</td>
+      <td>Black Friday</td>
+      <td>11.84</td>
+      <td>15</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>10</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100057</td>
+      <td>2026-02-17</td>
+      <td>2026-02-19</td>
+      <td>2026-03-01</td>
+      <td>2026-02-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST18617</td>
+      <td>Johnathan Davis</td>
+      <td>23</td>
+      <td>Other</td>
+      <td>VIP</td>
+      <td>South Shawn</td>
+      <td>Texas</td>
+      <td>East</td>
+      <td>2.2</td>
+      <td>245</td>
+      <td>Books</td>
+      <td>Comics</td>
+      <td>User-friendly tangible moratorium</td>
+      <td>SKU-6926-PGFN</td>
+      <td>Crosby-Ramirez</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>35.87</td>
+      <td>24.93</td>
+      <td>35.87</td>
+      <td>5</td>
+      <td>1.79</td>
+      <td>6.13</td>
+      <td>26.28</td>
+      <td>40.21</td>
+      <td>9.15</td>
+      <td>25.51</td>
+      <td>Summer Sale</td>
+      <td>6.27</td>
+      <td>10</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100058</td>
+      <td>2025-05-30</td>
+      <td>2025-06-06</td>
+      <td>2025-06-15</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST33850</td>
+      <td>Claudia Wallace</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Wholesale</td>
+      <td>Port Michael</td>
+      <td>Utah</td>
+      <td>Central</td>
+      <td>4.1</td>
+      <td>66</td>
+      <td>Sports</td>
+      <td>Apparel</td>
+      <td>Multi-layered needs-based project</td>
+      <td>SKU-5064-MHDF</td>
+      <td>Lewis, Fowler and Maddox</td>
+      <td>Online</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>95.12</td>
+      <td>63.10</td>
+      <td>95.12</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>17.12</td>
+      <td>21.63</td>
+      <td>112.24</td>
+      <td>32.02</td>
+      <td>33.66</td>
+      <td>Summer Sale</td>
+      <td>25.91</td>
+      <td>9</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>16</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100059</td>
+      <td>2026-01-06</td>
+      <td>2026-01-09</td>
+      <td>2026-01-11</td>
+      <td>2026-01-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST93238</td>
+      <td>Gavin Zhang</td>
+      <td>31</td>
+      <td>Other</td>
+      <td>VIP</td>
+      <td>North Maria</td>
+      <td>Oklahoma</td>
+      <td>East</td>
+      <td>4.8</td>
+      <td>140</td>
+      <td>Home &amp; Garden</td>
+      <td>Kitchen</td>
+      <td>Expanded optimizing data-warehouse</td>
+      <td>SKU-3529-ARJI</td>
+      <td>King, Thompson and Guerrero</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>287.40</td>
+      <td>159.70</td>
+      <td>287.40</td>
+      <td>15</td>
+      <td>43.11</td>
+      <td>43.97</td>
+      <td>6.26</td>
+      <td>288.26</td>
+      <td>84.59</td>
+      <td>29.43</td>
+      <td>Summer Sale</td>
+      <td>25.13</td>
+      <td>5</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100060</td>
+      <td>2024-12-07</td>
+      <td>2024-12-14</td>
+      <td>2024-12-24</td>
+      <td>2024-12-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>True</td>
+      <td>CUST13718</td>
+      <td>Adrian Tyler</td>
+      <td>29</td>
+      <td>Female</td>
+      <td>Corporate</td>
+      <td>New Mario</td>
+      <td>Idaho</td>
+      <td>Central</td>
+      <td>1.3</td>
+      <td>328</td>
+      <td>Clothing</td>
+      <td>Women</td>
+      <td>Fundamental actuating capacity</td>
+      <td>SKU-6811-ECXX</td>
+      <td>Wheeler, Hayes and Walker</td>
+      <td>Online</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>116.48</td>
+      <td>67.74</td>
+      <td>116.48</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>20.97</td>
+      <td>38.55</td>
+      <td>137.45</td>
+      <td>48.74</td>
+      <td>41.84</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>17</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100061</td>
+      <td>2026-05-16</td>
+      <td>2026-05-22</td>
+      <td>2026-05-27</td>
+      <td>2026-05-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST99783</td>
+      <td>Monica Kerr</td>
+      <td>35</td>
+      <td>Other</td>
+      <td>Corporate</td>
+      <td>Stephentown</td>
+      <td>Arkansas</td>
+      <td>West</td>
+      <td>2.6</td>
+      <td>232</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Polarized impactful interface</td>
+      <td>SKU-1771-FUMJ</td>
+      <td>Martinez PLC</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>79.73</td>
+      <td>44.94</td>
+      <td>79.73</td>
+      <td>5</td>
+      <td>3.99</td>
+      <td>13.63</td>
+      <td>3.65</td>
+      <td>89.37</td>
+      <td>30.80</td>
+      <td>38.63</td>
+      <td>Clearance</td>
+      <td>23.22</td>
+      <td>10</td>
+      <td>True</td>
+      <td>Late Delivery</td>
+      <td>2</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100062</td>
+      <td>2024-08-04</td>
+      <td>2024-08-07</td>
+      <td>2024-08-16</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST51827</td>
+      <td>Kimberly Nguyen</td>
+      <td>44</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Shawnchester</td>
+      <td>Connecticut</td>
+      <td>East</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>Home &amp; Garden</td>
+      <td>Decor</td>
+      <td>Total bifurcated projection</td>
+      <td>SKU-8367-OAVD</td>
+      <td>Perry-Davis</td>
+      <td>Online</td>
+      <td>Net Banking</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>294.09</td>
+      <td>129.17</td>
+      <td>294.09</td>
+      <td>10</td>
+      <td>29.41</td>
+      <td>47.64</td>
+      <td>6.13</td>
+      <td>312.32</td>
+      <td>135.51</td>
+      <td>46.08</td>
+      <td>Summer Sale</td>
+      <td>2.53</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100063</td>
+      <td>2024-07-10</td>
+      <td>2024-07-12</td>
+      <td>2024-07-15</td>
+      <td>2024-07-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST77466</td>
+      <td>Maurice Brooks</td>
+      <td>56</td>
+      <td>Female</td>
+      <td>Wholesale</td>
+      <td>Lake Sandra</td>
+      <td>California</td>
+      <td>East</td>
+      <td>2.9</td>
+      <td>157</td>
+      <td>Clothing</td>
+      <td>Women</td>
+      <td>Cross-group attitude-oriented array</td>
+      <td>SKU-6152-JDLJ</td>
+      <td>Rivera, Martinez and Gomez</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Pickup</td>
+      <td>1</td>
+      <td>142.05</td>
+      <td>87.55</td>
+      <td>142.05</td>
+      <td>30</td>
+      <td>42.62</td>
+      <td>17.90</td>
+      <td>24.87</td>
+      <td>117.33</td>
+      <td>11.88</td>
+      <td>8.36</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100064</td>
+      <td>2026-04-02</td>
+      <td>2026-04-07</td>
+      <td>2026-04-15</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST11071</td>
+      <td>Nicole Parrish</td>
+      <td>39</td>
+      <td>Male</td>
+      <td>Wholesale</td>
+      <td>West Carolinestad</td>
+      <td>Connecticut</td>
+      <td>East</td>
+      <td>4.4</td>
+      <td>220</td>
+      <td>Clothing</td>
+      <td>Bags</td>
+      <td>Re-engineered motivating data-warehouse</td>
+      <td>SKU-2731-WJXH</td>
+      <td>Andrews-Aguirre</td>
+      <td>Online</td>
+      <td>Net Banking</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>35.84</td>
+      <td>17.36</td>
+      <td>35.84</td>
+      <td>30</td>
+      <td>10.75</td>
+      <td>4.52</td>
+      <td>6.70</td>
+      <td>29.61</td>
+      <td>7.73</td>
+      <td>21.57</td>
+      <td>Clearance</td>
+      <td>18.30</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>13</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100065</td>
+      <td>2025-01-13</td>
+      <td>2025-01-18</td>
+      <td>2025-01-26</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST46663</td>
+      <td>Vanessa Cardenas</td>
+      <td>28</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>New Sarahview</td>
+      <td>Alaska</td>
+      <td>East</td>
+      <td>4.3</td>
+      <td>319</td>
+      <td>Books</td>
+      <td>Non-Fiction</td>
+      <td>Enterprise-wide encompassing standardization</td>
+      <td>SKU-4550-LJKQ</td>
+      <td>Jones-Figueroa</td>
+      <td>Retail Store</td>
+      <td>PayPal</td>
+      <td>Same Day</td>
+      <td>1</td>
+      <td>40.16</td>
+      <td>16.95</td>
+      <td>40.16</td>
+      <td>10</td>
+      <td>4.02</td>
+      <td>6.51</td>
+      <td>34.02</td>
+      <td>42.65</td>
+      <td>19.19</td>
+      <td>47.78</td>
+      <td>Clearance</td>
+      <td>18.66</td>
+      <td>10</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>13</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100066</td>
+      <td>2025-03-17</td>
+      <td>2025-03-18</td>
+      <td>2025-03-19</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>True</td>
+      <td>CUST53652</td>
+      <td>Anna Moreno</td>
+      <td>64</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Barnesmouth</td>
+      <td>Hawaii</td>
+      <td>South</td>
+      <td>4.2</td>
+      <td>0</td>
+      <td>Food</td>
+      <td>Beverages</td>
+      <td>Multi-layered fault-tolerant success</td>
+      <td>SKU-5991-DJKW</td>
+      <td>Williams, Miller and Ramos</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>4</td>
+      <td>25.57</td>
+      <td>13.31</td>
+      <td>102.28</td>
+      <td>20</td>
+      <td>20.46</td>
+      <td>14.73</td>
+      <td>25.97</td>
+      <td>96.55</td>
+      <td>28.58</td>
+      <td>27.94</td>
+      <td>Black Friday</td>
+      <td>16.40</td>
+      <td>19</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100067</td>
+      <td>2024-08-14</td>
+      <td>2024-08-19</td>
+      <td>2024-08-28</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST83783</td>
+      <td>Lawrence Perry</td>
+      <td>28</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Port William</td>
+      <td>Minnesota</td>
+      <td>East</td>
+      <td>2.2</td>
+      <td>8</td>
+      <td>Sports</td>
+      <td>Equipment</td>
+      <td>Optional bifurcated forecast</td>
+      <td>SKU-9784-COZM</td>
+      <td>Smith LLC</td>
+      <td>Retail Store</td>
+      <td>Net Banking</td>
+      <td>Pickup</td>
+      <td>1</td>
+      <td>135.00</td>
+      <td>74.55</td>
+      <td>135.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>24.30</td>
+      <td>18.42</td>
+      <td>159.30</td>
+      <td>60.45</td>
+      <td>44.78</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100068</td>
+      <td>2025-01-18</td>
+      <td>2025-01-25</td>
+      <td>2025-02-04</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST16731</td>
+      <td>Pamela Duran</td>
+      <td>27</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Marktown</td>
+      <td>New York</td>
+      <td>East</td>
+      <td>3.3</td>
+      <td>87</td>
+      <td>Books</td>
+      <td>Children</td>
+      <td>User-friendly intermediate conglomeration</td>
+      <td>SKU-2683-GJQZ</td>
+      <td>Jones-Hensley</td>
+      <td>Retail Store</td>
+      <td>Net Banking</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>60.85</td>
+      <td>38.63</td>
+      <td>60.85</td>
+      <td>15</td>
+      <td>9.13</td>
+      <td>9.31</td>
+      <td>26.21</td>
+      <td>61.03</td>
+      <td>13.09</td>
+      <td>21.51</td>
+      <td>Black Friday</td>
+      <td>41.08</td>
+      <td>7</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>17</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100069</td>
+      <td>2024-09-05</td>
+      <td>2024-09-07</td>
+      <td>2024-09-14</td>
+      <td>2024-09-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST63788</td>
+      <td>Albert Morse</td>
+      <td>43</td>
+      <td>Female</td>
+      <td>VIP</td>
+      <td>Barbarashire</td>
+      <td>Montana</td>
+      <td>South</td>
+      <td>3.0</td>
+      <td>313</td>
+      <td>Toys</td>
+      <td>Educational</td>
+      <td>Triple-buffered scalable instruction set</td>
+      <td>SKU-4160-UKZN</td>
+      <td>Collier-Gillespie</td>
+      <td>Partner</td>
+      <td>Net Banking</td>
+      <td>Overnight</td>
+      <td>2</td>
+      <td>18.83</td>
+      <td>9.30</td>
+      <td>37.66</td>
+      <td>5</td>
+      <td>1.88</td>
+      <td>6.44</td>
+      <td>46.03</td>
+      <td>42.22</td>
+      <td>17.18</td>
+      <td>45.62</td>
+      <td>Black Friday</td>
+      <td>25.93</td>
+      <td>17</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100070</td>
+      <td>2025-06-18</td>
+      <td>2025-06-23</td>
+      <td>2025-06-29</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST98587</td>
+      <td>Ryan Sanchez</td>
+      <td>18</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Warrenfurt</td>
+      <td>Maryland</td>
+      <td>East</td>
+      <td>4.1</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Children</td>
+      <td>User-friendly global definition</td>
+      <td>SKU-5218-OHHG</td>
+      <td>Bullock LLC</td>
+      <td>Online</td>
+      <td>Net Banking</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>60.33</td>
+      <td>32.45</td>
+      <td>60.33</td>
+      <td>15</td>
+      <td>9.05</td>
+      <td>9.23</td>
+      <td>36.05</td>
+      <td>60.51</td>
+      <td>18.83</td>
+      <td>31.21</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100071</td>
+      <td>2025-03-05</td>
+      <td>2025-03-08</td>
+      <td>2025-03-13</td>
+      <td>2025-03-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST74094</td>
+      <td>Tyler Brewer</td>
+      <td>54</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>East Curtis</td>
+      <td>Kentucky</td>
+      <td>Central</td>
+      <td>2.3</td>
+      <td>178</td>
+      <td>Clothing</td>
+      <td>Kids</td>
+      <td>Exclusive context-sensitive portal</td>
+      <td>SKU-2127-DWKW</td>
+      <td>Cole, Glass and Cunningham</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>65.82</td>
+      <td>44.92</td>
+      <td>65.82</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>11.85</td>
+      <td>28.02</td>
+      <td>77.67</td>
+      <td>20.90</td>
+      <td>31.75</td>
+      <td>New Year</td>
+      <td>6.09</td>
+      <td>17</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100072</td>
+      <td>2025-09-01</td>
+      <td>2025-09-07</td>
+      <td>2025-09-09</td>
+      <td>2025-09-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST67983</td>
+      <td>Lori Lin</td>
+      <td>32</td>
+      <td>Other</td>
+      <td>Corporate</td>
+      <td>Edwardland</td>
+      <td>New Mexico</td>
+      <td>South</td>
+      <td>3.6</td>
+      <td>245</td>
+      <td>Food</td>
+      <td>Organic</td>
+      <td>Organic responsive framework</td>
+      <td>SKU-4905-GETD</td>
+      <td>Johnson-Wood</td>
+      <td>Mobile App</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>5</td>
+      <td>16.21</td>
+      <td>7.88</td>
+      <td>81.05</td>
+      <td>5</td>
+      <td>4.05</td>
+      <td>13.86</td>
+      <td>10.70</td>
+      <td>90.86</td>
+      <td>37.60</td>
+      <td>46.39</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100073</td>
+      <td>2026-03-06</td>
+      <td>2026-03-07</td>
+      <td>2026-03-16</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST40518</td>
+      <td>Matthew Madden</td>
+      <td>45</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>New Brookefurt</td>
+      <td>New Jersey</td>
+      <td>Central</td>
+      <td>1.2</td>
+      <td>211</td>
+      <td>Clothing</td>
+      <td>Men</td>
+      <td>Reduced neutral utilization</td>
+      <td>SKU-0793-UMEG</td>
+      <td>Rosario Group</td>
+      <td>Partner</td>
+      <td>PayPal</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>118.91</td>
+      <td>56.10</td>
+      <td>118.91</td>
+      <td>10</td>
+      <td>11.89</td>
+      <td>19.26</td>
+      <td>16.51</td>
+      <td>126.28</td>
+      <td>50.92</td>
+      <td>42.82</td>
+      <td>Summer Sale</td>
+      <td>48.23</td>
+      <td>5</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100074</td>
+      <td>2025-06-02</td>
+      <td>2025-06-09</td>
+      <td>2025-06-11</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST40437</td>
+      <td>Steven Cooper</td>
+      <td>52</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>New Debbieton</td>
+      <td>Kansas</td>
+      <td>East</td>
+      <td>3.1</td>
+      <td>19</td>
+      <td>Sports</td>
+      <td>Team Sports</td>
+      <td>Triple-buffered leadingedge intranet</td>
+      <td>SKU-8892-XXSY</td>
+      <td>Schroeder-Shelton</td>
+      <td>Online</td>
+      <td>PayPal</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>91.39</td>
+      <td>54.26</td>
+      <td>91.39</td>
+      <td>15</td>
+      <td>13.71</td>
+      <td>13.98</td>
+      <td>45.66</td>
+      <td>91.66</td>
+      <td>23.42</td>
+      <td>25.63</td>
+      <td>Summer Sale</td>
+      <td>49.86</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>9</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100075</td>
+      <td>2024-11-07</td>
+      <td>2024-11-08</td>
+      <td>2024-11-14</td>
+      <td>2024-11-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST94058</td>
+      <td>Mark Cook</td>
+      <td>38</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Codyfurt</td>
+      <td>Maine</td>
+      <td>North</td>
+      <td>3.2</td>
+      <td>252</td>
+      <td>Toys</td>
+      <td>Board Games</td>
+      <td>Function-based uniform protocol</td>
+      <td>SKU-9251-LQJW</td>
+      <td>Ponce-Hale</td>
+      <td>Phone</td>
+      <td>UPI</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>18.15</td>
+      <td>10.35</td>
+      <td>18.15</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>3.27</td>
+      <td>44.46</td>
+      <td>21.42</td>
+      <td>7.80</td>
+      <td>42.98</td>
+      <td>Clearance</td>
+      <td>13.64</td>
+      <td>3</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>7</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100076</td>
+      <td>2025-06-08</td>
+      <td>2025-06-11</td>
+      <td>2025-06-16</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST35318</td>
+      <td>Kurt Hurley</td>
+      <td>50</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Angelicamouth</td>
+      <td>Florida</td>
+      <td>East</td>
+      <td>1.7</td>
+      <td>0</td>
+      <td>Toys</td>
+      <td>Dolls</td>
+      <td>Synchronized tangible support</td>
+      <td>SKU-8168-XBXT</td>
+      <td>Bean LLC</td>
+      <td>Mobile App</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>67.80</td>
+      <td>27.41</td>
+      <td>67.80</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>12.20</td>
+      <td>42.81</td>
+      <td>80.00</td>
+      <td>40.39</td>
+      <td>59.57</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100077</td>
+      <td>2025-05-23</td>
+      <td>2025-05-25</td>
+      <td>2025-05-26</td>
+      <td>2025-05-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST40870</td>
+      <td>Katelyn Perez</td>
+      <td>18</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>East Chris</td>
+      <td>Connecticut</td>
+      <td>South</td>
+      <td>2.8</td>
+      <td>136</td>
+      <td>Sports</td>
+      <td>Fitness</td>
+      <td>Profit-focused zero administration moratorium</td>
+      <td>SKU-8059-IMYJ</td>
+      <td>White Ltd</td>
+      <td>Partner</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>197.07</td>
+      <td>107.06</td>
+      <td>197.07</td>
+      <td>15</td>
+      <td>29.56</td>
+      <td>30.15</td>
+      <td>47.70</td>
+      <td>197.66</td>
+      <td>60.45</td>
+      <td>30.67</td>
+      <td>Summer Sale</td>
+      <td>13.08</td>
+      <td>11</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100078</td>
+      <td>2024-12-25</td>
+      <td>2024-12-30</td>
+      <td>2025-01-04</td>
+      <td>2024-12-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST93717</td>
+      <td>Rhonda Martin</td>
+      <td>18</td>
+      <td>Male</td>
+      <td>Corporate</td>
+      <td>Williamsstad</td>
+      <td>Utah</td>
+      <td>West</td>
+      <td>4.7</td>
+      <td>151</td>
+      <td>Electronics</td>
+      <td>Phones</td>
+      <td>Up-sized disintermediate intranet</td>
+      <td>SKU-9473-IPTZ</td>
+      <td>Mckee-Lee</td>
+      <td>Phone</td>
+      <td>Debit Card</td>
+      <td>Pickup</td>
+      <td>1</td>
+      <td>556.81</td>
+      <td>290.45</td>
+      <td>556.81</td>
+      <td>20</td>
+      <td>111.36</td>
+      <td>80.18</td>
+      <td>0.00</td>
+      <td>525.63</td>
+      <td>155.00</td>
+      <td>27.84</td>
+      <td>Black Friday</td>
+      <td>47.87</td>
+      <td>15</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100079</td>
+      <td>2026-04-11</td>
+      <td>2026-04-15</td>
+      <td>2026-04-24</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST38627</td>
+      <td>Laura Alexander</td>
+      <td>37</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Kimberlyhaven</td>
+      <td>North Dakota</td>
+      <td>East</td>
+      <td>4.0</td>
+      <td>348</td>
+      <td>Toys</td>
+      <td>Puzzles</td>
+      <td>Operative cohesive customer loyalty</td>
+      <td>SKU-9240-PEXJ</td>
+      <td>Dawson PLC</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>46.61</td>
+      <td>26.32</td>
+      <td>93.22</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>16.78</td>
+      <td>37.74</td>
+      <td>110.00</td>
+      <td>40.58</td>
+      <td>43.53</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>13</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100080</td>
+      <td>2025-02-22</td>
+      <td>2025-03-01</td>
+      <td>2025-03-10</td>
+      <td>2025-02-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST36497</td>
+      <td>Dominique Hines</td>
+      <td>31</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Shannonhaven</td>
+      <td>Georgia</td>
+      <td>North</td>
+      <td>3.3</td>
+      <td>0</td>
+      <td>Toys</td>
+      <td>Board Games</td>
+      <td>Optional background definition</td>
+      <td>SKU-7506-DZGX</td>
+      <td>Hughes Inc</td>
+      <td>Online</td>
+      <td>Cash</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>81.71</td>
+      <td>35.43</td>
+      <td>81.71</td>
+      <td>10</td>
+      <td>8.17</td>
+      <td>13.24</td>
+      <td>7.49</td>
+      <td>86.78</td>
+      <td>38.11</td>
+      <td>46.64</td>
+      <td>Clearance</td>
+      <td>5.81</td>
+      <td>6</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>16</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100081</td>
+      <td>2026-05-13</td>
+      <td>2026-05-15</td>
+      <td>2026-05-24</td>
+      <td>2026-05-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST83912</td>
+      <td>Alfred Galvan</td>
+      <td>25</td>
+      <td>Other</td>
+      <td>New</td>
+      <td>Laceyberg</td>
+      <td>Arizona</td>
+      <td>Central</td>
+      <td>1.2</td>
+      <td>0</td>
+      <td>Sports</td>
+      <td>Fitness</td>
+      <td>Horizontal methodical standardization</td>
+      <td>SKU-2779-AFBQ</td>
+      <td>Conley PLC</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>111.28</td>
+      <td>46.37</td>
+      <td>111.28</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>20.03</td>
+      <td>23.12</td>
+      <td>131.31</td>
+      <td>64.91</td>
+      <td>58.33</td>
+      <td>Clearance</td>
+      <td>12.72</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100082</td>
+      <td>2026-04-24</td>
+      <td>2026-04-29</td>
+      <td>2026-04-30</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST19046</td>
+      <td>Lisa Henderson</td>
+      <td>31</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>Johnville</td>
+      <td>Arkansas</td>
+      <td>North</td>
+      <td>4.9</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Fiction</td>
+      <td>Front-line intangible productivity</td>
+      <td>SKU-9711-FMIB</td>
+      <td>Robertson, Allen and Thomas</td>
+      <td>Online</td>
+      <td>Debit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>33.68</td>
+      <td>20.55</td>
+      <td>33.68</td>
+      <td>5</td>
+      <td>1.68</td>
+      <td>5.76</td>
+      <td>23.60</td>
+      <td>37.76</td>
+      <td>11.45</td>
+      <td>34.00</td>
+      <td>Black Friday</td>
+      <td>38.29</td>
+      <td>20</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>6</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100083</td>
+      <td>2026-03-19</td>
+      <td>2026-03-25</td>
+      <td>2026-04-03</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST55582</td>
+      <td>Lucas Allen</td>
+      <td>23</td>
+      <td>Female</td>
+      <td>VIP</td>
+      <td>Lopezland</td>
+      <td>North Dakota</td>
+      <td>West</td>
+      <td>1.5</td>
+      <td>275</td>
+      <td>Sports</td>
+      <td>Apparel</td>
+      <td>Multi-lateral asymmetric moderator</td>
+      <td>SKU-8888-BYEC</td>
+      <td>Hughes, Brooks and Burgess</td>
+      <td>Online</td>
+      <td>Cash</td>
+      <td>Same Day</td>
+      <td>2</td>
+      <td>100.10</td>
+      <td>60.54</td>
+      <td>200.20</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>36.04</td>
+      <td>19.65</td>
+      <td>236.24</td>
+      <td>79.12</td>
+      <td>39.52</td>
+      <td>Summer Sale</td>
+      <td>37.81</td>
+      <td>9</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>15</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100084</td>
+      <td>2024-08-06</td>
+      <td>2024-08-09</td>
+      <td>2024-08-12</td>
+      <td>2024-08-01</td>
+      <td>Q3 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST24790</td>
+      <td>Austin Allen</td>
+      <td>31</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Port Bonniemouth</td>
+      <td>Florida</td>
+      <td>West</td>
+      <td>1.1</td>
+      <td>0</td>
+      <td>Sports</td>
+      <td>Equipment</td>
+      <td>Balanced heuristic moratorium</td>
+      <td>SKU-5277-OLZI</td>
+      <td>Baldwin Group</td>
+      <td>Online</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>3</td>
+      <td>171.74</td>
+      <td>81.45</td>
+      <td>515.22</td>
+      <td>10</td>
+      <td>51.52</td>
+      <td>83.47</td>
+      <td>0.00</td>
+      <td>547.17</td>
+      <td>219.35</td>
+      <td>42.57</td>
+      <td>Summer Sale</td>
+      <td>12.03</td>
+      <td>2</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100085</td>
+      <td>2026-02-07</td>
+      <td>2026-02-09</td>
+      <td>2026-02-10</td>
+      <td>2026-02-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST40715</td>
+      <td>Dakota Moody</td>
+      <td>31</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>West Sarahhaven</td>
+      <td>Montana</td>
+      <td>Central</td>
+      <td>3.2</td>
+      <td>28</td>
+      <td>Electronics</td>
+      <td>Audio</td>
+      <td>Quality-focused methodical extranet</td>
+      <td>SKU-0345-XDPV</td>
+      <td>Martinez-Richardson</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>922.02</td>
+      <td>610.07</td>
+      <td>922.02</td>
+      <td>10</td>
+      <td>92.20</td>
+      <td>149.37</td>
+      <td>0.00</td>
+      <td>979.19</td>
+      <td>219.75</td>
+      <td>23.83</td>
+      <td>Black Friday</td>
+      <td>40.79</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100086</td>
+      <td>2026-03-06</td>
+      <td>2026-03-12</td>
+      <td>2026-03-21</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST49387</td>
+      <td>Natalie Kline</td>
+      <td>36</td>
+      <td>Female</td>
+      <td>Wholesale</td>
+      <td>Morganburgh</td>
+      <td>New York</td>
+      <td>South</td>
+      <td>2.1</td>
+      <td>285</td>
+      <td>Books</td>
+      <td>Academic</td>
+      <td>Team-oriented modular hub</td>
+      <td>SKU-8416-FBML</td>
+      <td>Carter, Garcia and Murphy</td>
+      <td>Mobile App</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>27.59</td>
+      <td>12.22</td>
+      <td>27.59</td>
+      <td>5</td>
+      <td>1.38</td>
+      <td>4.72</td>
+      <td>47.43</td>
+      <td>30.93</td>
+      <td>13.99</td>
+      <td>50.71</td>
+      <td>Clearance</td>
+      <td>27.79</td>
+      <td>1</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>15</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100087</td>
+      <td>2024-11-16</td>
+      <td>2024-11-19</td>
+      <td>2024-11-26</td>
+      <td>2024-11-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST80507</td>
+      <td>Jeremy Robbins</td>
+      <td>26</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>Lake Scott</td>
+      <td>New Hampshire</td>
+      <td>East</td>
+      <td>2.9</td>
+      <td>115</td>
+      <td>Food</td>
+      <td>Gourmet</td>
+      <td>Balanced upward-trending help-desk</td>
+      <td>SKU-9640-EQOZ</td>
+      <td>Palmer-Brady</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>28.39</td>
+      <td>14.83</td>
+      <td>28.39</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>5.11</td>
+      <td>15.04</td>
+      <td>33.50</td>
+      <td>13.56</td>
+      <td>47.76</td>
+      <td>Summer Sale</td>
+      <td>28.12</td>
+      <td>13</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100088</td>
+      <td>2025-11-22</td>
+      <td>2025-11-23</td>
+      <td>2025-12-01</td>
+      <td>2025-11-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST22119</td>
+      <td>Andre Allison</td>
+      <td>37</td>
+      <td>Male</td>
+      <td>Wholesale</td>
+      <td>Johnsonland</td>
+      <td>Kansas</td>
+      <td>South</td>
+      <td>3.1</td>
+      <td>97</td>
+      <td>Clothing</td>
+      <td>Shoes</td>
+      <td>Vision-oriented secondary hierarchy</td>
+      <td>SKU-5690-MJRC</td>
+      <td>Watson-Hines</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>60.60</td>
+      <td>30.24</td>
+      <td>60.60</td>
+      <td>10</td>
+      <td>6.06</td>
+      <td>9.82</td>
+      <td>2.58</td>
+      <td>64.36</td>
+      <td>24.30</td>
+      <td>40.10</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100089</td>
+      <td>2025-01-30</td>
+      <td>2025-02-02</td>
+      <td>2025-02-07</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST12009</td>
+      <td>Kendra Sanders</td>
+      <td>55</td>
+      <td>Female</td>
+      <td>VIP</td>
+      <td>Johnville</td>
+      <td>Alaska</td>
+      <td>Central</td>
+      <td>1.8</td>
+      <td>97</td>
+      <td>Clothing</td>
+      <td>Bags</td>
+      <td>User-centric contextually-based methodology</td>
+      <td>SKU-8681-QXQT</td>
+      <td>Lewis-Carr</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>56.04</td>
+      <td>25.93</td>
+      <td>56.04</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>10.09</td>
+      <td>48.10</td>
+      <td>66.13</td>
+      <td>30.11</td>
+      <td>53.73</td>
+      <td>Black Friday</td>
+      <td>34.78</td>
+      <td>6</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100090</td>
+      <td>2024-11-08</td>
+      <td>2024-11-11</td>
+      <td>2024-11-16</td>
+      <td>2024-11-01</td>
+      <td>Q4 2024</td>
+      <td>2024</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST77215</td>
+      <td>Yvonne Gonzalez</td>
+      <td>21</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Port Charles</td>
+      <td>Idaho</td>
+      <td>East</td>
+      <td>4.5</td>
+      <td>238</td>
+      <td>Books</td>
+      <td>Academic</td>
+      <td>Universal leadingedge array</td>
+      <td>SKU-5518-ISTK</td>
+      <td>Mckinney, Graves and Thompson</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>31.53</td>
+      <td>17.66</td>
+      <td>31.53</td>
+      <td>30</td>
+      <td>9.46</td>
+      <td>3.97</td>
+      <td>4.93</td>
+      <td>26.04</td>
+      <td>4.41</td>
+      <td>13.99</td>
+      <td>New Year</td>
+      <td>45.72</td>
+      <td>11</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>ORD100091</td>
+      <td>2025-09-10</td>
+      <td>2025-09-15</td>
+      <td>2025-09-25</td>
+      <td>2025-09-01</td>
+      <td>Q3 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST64732</td>
+      <td>Danny Galloway</td>
+      <td>44</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>East Kristy</td>
+      <td>Alaska</td>
+      <td>South</td>
+      <td>2.2</td>
+      <td>0</td>
+      <td>Electronics</td>
+      <td>Accessories</td>
+      <td>Multi-lateral neutral orchestration</td>
+      <td>SKU-5782-NFET</td>
+      <td>Key-Higgins</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>991.25</td>
+      <td>401.32</td>
+      <td>991.25</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>178.42</td>
+      <td>0.00</td>
+      <td>1169.67</td>
+      <td>589.93</td>
+      <td>59.51</td>
+      <td>Clearance</td>
+      <td>28.49</td>
+      <td>7</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>15</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100092</td>
+      <td>2025-06-17</td>
+      <td>2025-06-23</td>
+      <td>2025-07-01</td>
+      <td>2025-06-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST56160</td>
+      <td>Patricia Morrow</td>
+      <td>35</td>
+      <td>Other</td>
+      <td>Returning</td>
+      <td>East Teresaland</td>
+      <td>New Hampshire</td>
+      <td>East</td>
+      <td>1.7</td>
+      <td>279</td>
+      <td>Toys</td>
+      <td>Board Games</td>
+      <td>Persistent systemic model</td>
+      <td>SKU-5289-LXIB</td>
+      <td>Bartlett, Brown and Martinez</td>
+      <td>Online</td>
+      <td>Net Banking</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>70.94</td>
+      <td>38.77</td>
+      <td>70.94</td>
+      <td>30</td>
+      <td>21.28</td>
+      <td>8.94</td>
+      <td>24.42</td>
+      <td>58.60</td>
+      <td>10.89</td>
+      <td>15.35</td>
+      <td>Summer Sale</td>
+      <td>26.20</td>
+      <td>2</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>14</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>ORD100093</td>
+      <td>2025-02-25</td>
+      <td>2025-02-26</td>
+      <td>2025-03-01</td>
+      <td>2025-02-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>True</td>
+      <td>CUST76287</td>
+      <td>Christopher Morris</td>
+      <td>27</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>West Stacey</td>
+      <td>North Dakota</td>
+      <td>West</td>
+      <td>2.8</td>
+      <td>0</td>
+      <td>Food</td>
+      <td>Snacks</td>
+      <td>Horizontal attitude-oriented extranet</td>
+      <td>SKU-3842-OTNI</td>
+      <td>Shaw and Sons</td>
+      <td>Mobile App</td>
+      <td>Net Banking</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>11.62</td>
+      <td>6.85</td>
+      <td>11.62</td>
+      <td>10</td>
+      <td>1.16</td>
+      <td>1.88</td>
+      <td>3.02</td>
+      <td>12.34</td>
+      <td>3.61</td>
+      <td>31.07</td>
+      <td>Clearance</td>
+      <td>32.96</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100094</td>
+      <td>2026-03-11</td>
+      <td>2026-03-16</td>
+      <td>2026-03-21</td>
+      <td>2026-03-01</td>
+      <td>Q1 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>True</td>
+      <td>CUST98346</td>
+      <td>Lauren Jackson</td>
+      <td>28</td>
+      <td>Male</td>
+      <td>New</td>
+      <td>Meganshire</td>
+      <td>Arizona</td>
+      <td>North</td>
+      <td>2.7</td>
+      <td>0</td>
+      <td>Books</td>
+      <td>Children</td>
+      <td>Assimilated attitude-oriented analyzer</td>
+      <td>SKU-9439-ANOB</td>
+      <td>Small-Gardner</td>
+      <td>Retail Store</td>
+      <td>Debit Card</td>
+      <td>Standard</td>
+      <td>2</td>
+      <td>13.34</td>
+      <td>8.23</td>
+      <td>26.68</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>4.80</td>
+      <td>46.99</td>
+      <td>31.48</td>
+      <td>10.22</td>
+      <td>38.31</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>10</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ORD100095</td>
+      <td>2026-04-29</td>
+      <td>2026-05-06</td>
+      <td>2026-05-13</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST63218</td>
+      <td>Elizabeth Sanchez</td>
+      <td>18</td>
+      <td>Female</td>
+      <td>Returning</td>
+      <td>Evansland</td>
+      <td>Vermont</td>
+      <td>Central</td>
+      <td>2.8</td>
+      <td>124</td>
+      <td>Clothing</td>
+      <td>Bags</td>
+      <td>Centralized cohesive intranet</td>
+      <td>SKU-6773-VMJU</td>
+      <td>Flores, Travis and Reed</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Standard</td>
+      <td>1</td>
+      <td>60.29</td>
+      <td>30.53</td>
+      <td>60.29</td>
+      <td>5</td>
+      <td>3.01</td>
+      <td>10.31</td>
+      <td>49.51</td>
+      <td>67.59</td>
+      <td>26.75</td>
+      <td>44.37</td>
+      <td>Summer Sale</td>
+      <td>4.68</td>
+      <td>12</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>14</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100096</td>
+      <td>2025-12-16</td>
+      <td>2025-12-23</td>
+      <td>2025-12-30</td>
+      <td>2025-12-01</td>
+      <td>Q4 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST53420</td>
+      <td>Philip Robertson</td>
+      <td>50</td>
+      <td>Female</td>
+      <td>New</td>
+      <td>West Johnville</td>
+      <td>Louisiana</td>
+      <td>North</td>
+      <td>3.3</td>
+      <td>0</td>
+      <td>Sports</td>
+      <td>Fitness</td>
+      <td>Organized dynamic circuit</td>
+      <td>SKU-1046-NAPK</td>
+      <td>Peck-Griffith</td>
+      <td>Retail Store</td>
+      <td>Credit Card</td>
+      <td>Express</td>
+      <td>1</td>
+      <td>152.46</td>
+      <td>64.77</td>
+      <td>152.46</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>27.44</td>
+      <td>42.90</td>
+      <td>179.90</td>
+      <td>87.69</td>
+      <td>57.52</td>
+      <td>Summer Sale</td>
+      <td>11.49</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>14</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100097</td>
+      <td>2025-01-04</td>
+      <td>2025-01-05</td>
+      <td>2025-01-08</td>
+      <td>2025-01-01</td>
+      <td>Q1 2025</td>
+      <td>2025</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST51220</td>
+      <td>Christopher Ferrell</td>
+      <td>31</td>
+      <td>Male</td>
+      <td>Returning</td>
+      <td>Jimenezport</td>
+      <td>New York</td>
+      <td>East</td>
+      <td>1.1</td>
+      <td>106</td>
+      <td>Electronics</td>
+      <td>Phones</td>
+      <td>Ameliorated background infrastructure</td>
+      <td>SKU-8733-LWDD</td>
+      <td>Simpson-Khan</td>
+      <td>Mobile App</td>
+      <td>Credit Card</td>
+      <td>Same Day</td>
+      <td>1</td>
+      <td>1149.31</td>
+      <td>654.02</td>
+      <td>1149.31</td>
+      <td>5</td>
+      <td>57.47</td>
+      <td>196.53</td>
+      <td>0.00</td>
+      <td>1288.37</td>
+      <td>437.82</td>
+      <td>38.09</td>
+      <td>Summer Sale</td>
+      <td>14.96</td>
+      <td>18</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>ORD100098</td>
+      <td>2026-04-26</td>
+      <td>2026-04-28</td>
+      <td>2026-04-30</td>
+      <td>2026-04-01</td>
+      <td>Q2 2026</td>
+      <td>2026</td>
+      <td>True</td>
+      <td>False</td>
+      <td>CUST55332</td>
+      <td>Julie Herrera</td>
+      <td>39</td>
+      <td>Female</td>
+      <td>Corporate</td>
+      <td>South Dennisview</td>
+      <td>Washington</td>
+      <td>Central</td>
+      <td>1.2</td>
+      <td>223</td>
+      <td>Food</td>
+      <td>Frozen</td>
+      <td>Multi-lateral well-modulated initiative</td>
+      <td>SKU-5060-KJMX</td>
+      <td>Roberts, Hughes and Cole</td>
+      <td>Mobile App</td>
+      <td>PayPal</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>17.45</td>
+      <td>10.94</td>
+      <td>17.45</td>
+      <td>10</td>
+      <td>1.74</td>
+      <td>2.83</td>
+      <td>11.61</td>
+      <td>18.54</td>
+      <td>4.77</td>
+      <td>27.34</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>True</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ORD100099</td>
+      <td>2025-04-22</td>
+      <td>2025-04-26</td>
+      <td>2025-05-03</td>
+      <td>2025-04-01</td>
+      <td>Q2 2025</td>
+      <td>2025</td>
+      <td>False</td>
+      <td>False</td>
+      <td>CUST86791</td>
+      <td>Samantha Hanson</td>
+      <td>36</td>
+      <td>Female</td>
+      <td>VIP</td>
+      <td>East Theresafurt</td>
+      <td>Mississippi</td>
+      <td>West</td>
+      <td>3.6</td>
+      <td>43</td>
+      <td>Electronics</td>
+      <td>Cameras</td>
+      <td>Mandatory next generation hierarchy</td>
+      <td>SKU-2398-ZGCC</td>
+      <td>Taylor LLC</td>
+      <td>Online</td>
+      <td>Credit Card</td>
+      <td>Overnight</td>
+      <td>1</td>
+      <td>740.60</td>
+      <td>375.29</td>
+      <td>740.60</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>133.31</td>
+      <td>0.00</td>
+      <td>873.91</td>
+      <td>365.31</td>
+      <td>49.33</td>
+      <td>Black Friday</td>
+      <td>35.66</td>
+      <td>2</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<h2>KPI Overview</h2>
+<table><tr><th>Measure</th><th>Total</th><th>Avg</th></tr><tr><td>Customer_Age</td><td>37,631.00</td><td>37.63</td></tr><tr><td>Customer_Rating</td><td>3,036.80</td><td>3.04</td></tr><tr><td>Days_Since_Last_Order</td><td>123,737.00</td><td>123.74</td></tr><tr><td>Unit_Price</td><td>183,321.42</td><td>183.32</td></tr><tr><td>Unit_Cost</td><td>102,637.86</td><td>102.64</td></tr></table>
+<h2>Sample Distribution Plots</h2>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="5c8a96ba-6cbd-4dce-973f-59b93a0355be" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5c8a96ba-6cbd-4dce-973f-59b93a0355be")) {                    Plotly.newPlot(                        "5c8a96ba-6cbd-4dce-973f-59b93a0355be",                        [{"bingroup":"x","hovertemplate":"Customer_Age=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#000001","pattern":{"shape":""}},"name":"","nbinsx":30,"orientation":"v","showlegend":false,"x":{"dtype":"i1","bdata":"IyMSHx4iLigdLRgXJyIwKSYjEiUzLxMmKDUdKBovKS8jLigqLCwgJh0oLDATICIXJiEpHhwfNSYZFyofHSMsOCccQBwbKxI2IC00JjISEiUfGR8XHx8kGiU3FSwjGxwSMh8nJDQhFDMrKio8Jy4mMyE6IhgdJxg7Fy4pFigkKCMpMR4VHyctMSwyGTIoICYyOB8xIx4fHy0tPkQfMjQmNSQpHyorHxMdKisdOxIvIyY2MTUoLB8iEjIlHx0WMzgwJSUwKh48MzQ5KxgUMSIvKTETJSwXHSMkOh8eFzorMy0nJCpDHTE2LCYSJyExFB8SJxodMiYcFRoxHCYpIyItNCk6IxscLRQSPjQYIyMaKSQ5ICMqLiIpFSsuLT4pIikcJjAaKyMxGTMhGiAoLCgSMBozGRkmMx4SQCMVJRInHRM5MBg2JSMXMTIzEhwgJDQqEh8SIikrMyUsLS0oMSwlGyYcIhIoIB8nHiISJC00KSkXOSMaKyYnJiM5NSwiJyM2EiseKxYtHjUmGhsWEigqIC4YHjcyGi0rGCEsJi4hGRUnLCMaHSgvODI0JSMfKR8oLiM9HCA3GBwjGywaHRYSEhshNzEcJTQgLRgqGxkqGzgrFSoTLy0tNRw4Hic0OiYsKBwpLyMTICEsEiQeJRU8OR8wGC4lGx82EjogNR0uGzExICMSMSMSKSk1OC0SGxYVEiEhKBUdEykdOxInJCwrEiAeJiEwEhIhIScxLDA7KDUwKzYuGTwSMhsdKC0mLDcSKBkhKjMrFSQiORgSJRcoMiw3KxI9HCk2Jx4SPigVMRI4LTQeOhIaOTc8NiktJygwPRdBFD4mGiItHhwYJ0AyMC0bHykrJjE6LyQpKDUgHC8cHCQiLSEVEhYSJSgyFDMgFS0pOTEoJzAfJBQkMSshHCwbJi8qKD0cOSomFR8kOS8SKRkoFzItHRg3NjA5IRs7LTkxIzEdKR8qKSgYIh88IDwrEjAoGC8iEiQgKDQTHi4lJC8oJRMtLhgnHSgwFSsyGRIbGDQiGycYFjArIC8rHxoVFzIgMiwbEh4wGi8fHiIoGiUnISsmIjMrLycuPxsmMCklKC0sKiouJxkrOSIfKRciGBIkKSISKSMnLxInEh8wMScfHTEcOS4tHzU5KTgzLSMpFRozFzAkLC4WEj4XNUAdMyMiMi0TMUEkISgmJCwiJSsuMCcbJRwYKCAsHjMfHxcZIh4TIR0VLh4tNSMcGiMsHygcIBIfKDMjFCsuMCYWEhIpHDAjLS4eKRUzHSM5HSEnFScuHR4kRD4rJS8lHzQdMxIjMTInKTEhKCMmJhQWJh8UIR0xKQ=="},"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Customer_Age"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"tracegroupgap":0},"title":{"text":"Customer_Age Distribution"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="f2228b99-84e1-444e-9d97-23314d65a35e" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f2228b99-84e1-444e-9d97-23314d65a35e")) {                    Plotly.newPlot(                        "f2228b99-84e1-444e-9d97-23314d65a35e",                        [{"bingroup":"x","hovertemplate":"Customer_Rating=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#000001","pattern":{"shape":""}},"name":"","nbinsx":30,"orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"zczMzMzMEEAAAAAAAAAAQAAAAAAAAAxAZmZmZmZmAkDNzMzMzMwAQAAAAAAAABRAAAAAAAAAEEAzMzMzMzMDQM3MzMzMzBBAmpmZmZmZE0AAAAAAAAASQJqZmZmZmQVAAAAAAAAA8D9mZmZmZmYKQGZmZmZmZv4\u002fMzMzMzMz+z\u002fNzMzMzMwQQDMzMzMzMxNAmpmZmZmZAUAAAAAAAAAMQM3MzMzMzAxAAAAAAAAA8D8AAAAAAAD4P5qZmZmZmRNAZmZmZmZmDkDNzMzMzMwEQDMzMzMzMxNAMzMzMzMzA0CamZmZmZnxPwAAAAAAAARAmpmZmZmZBUBmZmZmZmYQQJqZmZmZmRFAmpmZmZmZBUAzMzMzMzMRQGZmZmZmZgJAzczMzMzMDECamZmZmZkTQM3MzMzMzBBAmpmZmZmZAUDNzMzMzMz8P83MzMzMzBBAAAAAAAAABEDNzMzMzMwSQJqZmZmZmQVAZmZmZmZmBkAzMzMzMzMRQM3MzMzMzAhAzczMzMzMEEAAAAAAAAAMQM3MzMzMzPw\u002fMzMzMzMzD0AzMzMzMzMDQJqZmZmZmRFAZmZmZmZmAkCamZmZmZkRQDMzMzMzM\u002fs\u002fmpmZmZmZAUBmZmZmZmYQQDMzMzMzMxNAzczMzMzM9D\u002fNzMzMzMwEQAAAAAAAAABAMzMzMzMzB0CamZmZmZkRQDMzMzMzMxFAzczMzMzMEECamZmZmZkBQGZmZmZmZgpAAAAAAAAACEBmZmZmZmYQQGZmZmZmZgJAzczMzMzMDEAzMzMzMzPzP83MzMzMzAhAmpmZmZmZCUAzMzMzMzP7P2ZmZmZmZgZAzczMzMzMEkAAAAAAAAAQQGZmZmZmZgpAMzMzMzMz8z+amZmZmZkTQAAAAAAAAPg\u002fmpmZmZmZ8T+amZmZmZkJQM3MzMzMzABAMzMzMzMzB0DNzMzMzMwIQM3MzMzMzPw\u002fAAAAAAAAEkCamZmZmZkBQDMzMzMzM\u002fs\u002fZmZmZmZmBkCamZmZmZkFQGZmZmZmZgZAZmZmZmZmCkCamZmZmZnxPzMzMzMzM\u002fM\u002fzczMzMzMDEBmZmZmZmb2P5qZmZmZmQFAmpmZmZmZAUBmZmZmZmYGQGZmZmZmZgJAMzMzMzMzEUAAAAAAAAAIQJqZmZmZmRNAMzMzMzMzA0BmZmZmZmYCQM3MzMzMzBBAMzMzMzMz+z9mZmZmZmYOQAAAAAAAAAxAAAAAAAAA+D+amZmZmZkJQAAAAAAAABBAZmZmZmZmEEDNzMzMzMwAQDMzMzMzMxFAAAAAAAAAEkCamZmZmZkRQAAAAAAAABJAZmZmZmZmDkAAAAAAAAAEQAAAAAAAABBAAAAAAAAAAEAAAAAAAAAAQGZmZmZmZv4\u002fAAAAAAAACEAzMzMzMzPzPzMzMzMzMw9AAAAAAAAAAECamZmZmZkFQAAAAAAAABJAAAAAAAAAEECamZmZmZkFQM3MzMzMzPQ\u002fMzMzMzMz+z+amZmZmZn5PwAAAAAAAPg\u002fzczMzMzMEEDNzMzMzMwAQM3MzMzMzBBAzczMzMzMCEBmZmZmZmYCQDMzMzMzM\u002fM\u002fmpmZmZmZEUBmZmZmZmYOQJqZmZmZmfE\u002fzczMzMzMDECamZmZmZkJQJqZmZmZmQlAzczMzMzMAECamZmZmZnxPzMzMzMzM\u002fM\u002fmpmZmZmZEUCamZmZmZkNQGZmZmZmZgJAZmZmZmZmCkCamZmZmZkNQAAAAAAAAPg\u002fzczMzMzMCEDNzMzMzMwAQM3MzMzMzABAAAAAAAAAAEAAAAAAAAAUQGZmZmZmZhBAMzMzMzMzEUBmZmZmZmYQQGZmZmZmZgpAmpmZmZmZ+T8AAAAAAAAMQJqZmZmZmQFAMzMzMzMzA0AAAAAAAAAAQAAAAAAAAAxAMzMzMzMzEUAzMzMzMzMTQGZmZmZmZvY\u002fMzMzMzMzEUAzMzMzMzMLQDMzMzMzMw9AZmZmZmZmEkAzMzMzMzMRQJqZmZmZmRNAZmZmZmZm9j\u002fNzMzMzMz8P5qZmZmZmRNAmpmZmZmZE0DNzMzMzMz8P83MzMzMzABAmpmZmZmZ8T+amZmZmZnxP83MzMzMzPQ\u002fMzMzMzMzC0DNzMzMzMwIQAAAAAAAAABAMzMzMzMzB0CamZmZmZkJQDMzMzMzMxFAZmZmZmZm9j+amZmZmZn5P83MzMzMzPw\u002fmpmZmZmZAUAAAAAAAAAMQAAAAAAAABJAmpmZmZmZEUAzMzMzMzMPQJqZmZmZmfk\u002fzczMzMzMBEBmZmZmZmYSQDMzMzMzM\u002fs\u002fmpmZmZmZ+T+amZmZmZnxP83MzMzMzABAMzMzMzMzB0AAAAAAAAASQM3MzMzMzABAmpmZmZmZBUAzMzMzMzMHQGZmZmZmZg5AAAAAAAAADEAAAAAAAAAIQJqZmZmZmfE\u002fzczMzMzMBECamZmZmZkNQM3MzMzMzARAMzMzMzMzEUAAAAAAAAASQGZmZmZmZgZAMzMzMzMzA0CamZmZmZkJQDMzMzMzM\u002fM\u002fAAAAAAAA+D8AAAAAAAAMQM3MzMzMzABAzczMzMzM\u002fD9mZmZmZmYGQGZmZmZmZgZAmpmZmZmZ+T+amZmZmZkJQM3MzMzMzABAMzMzMzMz8z8AAAAAAAAUQAAAAAAAAARAzczMzMzMCEAAAAAAAADwPzMzMzMzM\u002fM\u002fZmZmZmZmEkDNzMzMzMwSQGZmZmZmZgJAMzMzMzMzEUCamZmZmZnxPzMzMzMzMxFAZmZmZmZmEECamZmZmZkRQDMzMzMzMxNAmpmZmZmZCUAzMzMzMzP7P5qZmZmZmQVAmpmZmZmZ+T8AAAAAAAAQQAAAAAAAAABAAAAAAAAADECamZmZmZnxP83MzMzMzAhAAAAAAAAACECamZmZmZkBQGZmZmZmZv4\u002fzczMzMzM\u002fD8zMzMzMzP7PzMzMzMzMwtAMzMzMzMz+z8AAAAAAAASQM3MzMzMzAhAAAAAAAAAEkAAAAAAAAD4PzMzMzMzMw9AMzMzMzMzD0AzMzMzMzMHQJqZmZmZmQ1AZmZmZmZm9j9mZmZmZmYKQAAAAAAAAAhAzczMzMzM\u002fD\u002fNzMzMzMwSQGZmZmZmZgJAZmZmZmZmDkBmZmZmZmYGQGZmZmZmZgZAzczMzMzMDEDNzMzMzMz8PzMzMzMzM\u002fM\u002fZmZmZmZmCkBmZmZmZmYCQM3MzMzMzPQ\u002fmpmZmZmZCUBmZmZmZmYQQJqZmZmZmQ1AmpmZmZmZE0DNzMzMzMwMQM3MzMzMzBBAZmZmZmZmDkCamZmZmZkTQGZmZmZmZhJAAAAAAAAAFEAAAAAAAAAQQM3MzMzMzAxAZmZmZmZm\u002fj8AAAAAAAAMQGZmZmZmZgJAzczMzMzMDEBmZmZmZmYQQAAAAAAAAAhAZmZmZmZmEECamZmZmZkJQM3MzMzMzAxAAAAAAAAAAEDNzMzMzMwIQDMzMzMzM\u002fM\u002fZmZmZmZmAkAzMzMzMzP7P83MzMzMzBJAMzMzMzMzC0DNzMzMzMwMQDMzMzMzM\u002fM\u002fZmZmZmZm\u002fj8AAAAAAAAMQJqZmZmZmRNAZmZmZmZmCkDNzMzMzMz0PzMzMzMzMwdAzczMzMzMEEBmZmZmZmYOQAAAAAAAAAhAzczMzMzM9D\u002fNzMzMzMwSQGZmZmZmZg5AZmZmZmZmBkDNzMzMzMz8PwAAAAAAAPA\u002fAAAAAAAA+D+amZmZmZkJQAAAAAAAAARAmpmZmZmZ+T9mZmZmZmYOQJqZmZmZmfk\u002fMzMzMzMzB0DNzMzMzMwAQM3MzMzMzBBAZmZmZmZm9j8zMzMzMzMRQAAAAAAAAPg\u002fAAAAAAAA8D9mZmZmZmYQQJqZmZmZmRFAAAAAAAAA+D\u002fNzMzMzMz8P5qZmZmZmRNAMzMzMzMzE0AzMzMzMzMRQJqZmZmZmQFAZmZmZmZmBkCamZmZmZkJQM3MzMzMzBBAAAAAAAAAEkBmZmZmZmYKQGZmZmZmZv4\u002fzczMzMzMEEAzMzMzMzP7PzMzMzMzM\u002fM\u002fzczMzMzMBEDNzMzMzMwMQGZmZmZmZv4\u002fzczMzMzMEECamZmZmZkNQJqZmZmZmQFAmpmZmZmZAUAzMzMzMzMRQAAAAAAAAAxAMzMzMzMzEUAzMzMzMzPzP83MzMzMzPw\u002fzczMzMzMEEBmZmZmZmYOQAAAAAAAAPA\u002fmpmZmZmZBUCamZmZmZkJQAAAAAAAABRAzczMzMzMCEBmZmZmZmYGQM3MzMzMzBBAMzMzMzMz+z8AAAAAAAASQM3MzMzMzBJAzczMzMzMCECamZmZmZkRQAAAAAAAAABAmpmZmZmZE0CamZmZmZkRQGZmZmZmZgpAzczMzMzMCEAzMzMzMzMTQDMzMzMzMw9AMzMzMzMzE0BmZmZmZmb+P5qZmZmZmRNAAAAAAAAACEAAAAAAAAAEQDMzMzMzMxNAmpmZmZmZE0BmZmZmZmYSQGZmZmZmZv4\u002fMzMzMzMzA0AzMzMzMzMDQDMzMzMzMxFAmpmZmZmZBUAAAAAAAAAEQGZmZmZmZhBAZmZmZmZmEEAAAAAAAAAEQJqZmZmZmQlAZmZmZmZmEECamZmZmZkRQDMzMzMzM\u002fs\u002fAAAAAAAABECamZmZmZkBQDMzMzMzMxNAAAAAAAAAEEDNzMzMzMwAQAAAAAAAABBAAAAAAAAA+D9mZmZmZmYSQJqZmZmZmRFAmpmZmZmZBUDNzMzMzMwQQJqZmZmZmRFAzczMzMzMEkBmZmZmZmb2P83MzMzMzPw\u002fMzMzMzMz8z+amZmZmZn5P5qZmZmZmRFAMzMzMzMzD0AzMzMzMzPzPzMzMzMzMxFAAAAAAAAA+D9mZmZmZmYCQAAAAAAAABBAZmZmZmZmBkAAAAAAAAAMQJqZmZmZmRFAAAAAAAAAFEAAAAAAAAASQM3MzMzMzPw\u002fmpmZmZmZ8T8zMzMzMzMHQM3MzMzMzAxAmpmZmZmZAUDNzMzMzMwQQJqZmZmZmQVAZmZmZmZmDkDNzMzMzMwMQM3MzMzMzAxAmpmZmZmZDUAzMzMzMzPzP83MzMzMzBBAMzMzMzMzA0CamZmZmZkTQDMzMzMzMwdAAAAAAAAAEEDNzMzMzMwIQM3MzMzMzAhAMzMzMzMzD0DNzMzMzMwEQDMzMzMzMwtAmpmZmZmZ8T\u002fNzMzMzMz8P83MzMzMzBJAmpmZmZmZE0BmZmZmZmYQQDMzMzMzM\u002fs\u002fZmZmZmZmBkAAAAAAAAAQQAAAAAAAABRAzczMzMzMAEAAAAAAAAASQDMzMzMzMwtAMzMzMzMzE0CamZmZmZkNQJqZmZmZmRNAMzMzMzMz8z8zMzMzMzMRQAAAAAAAAAhAzczMzMzMBECamZmZmZkRQDMzMzMzMwNAMzMzMzMzA0AAAAAAAAAEQAAAAAAAAARAZmZmZmZmEEDNzMzMzMz8P2ZmZmZmZhJAmpmZmZmZ+T8zMzMzMzMTQGZmZmZmZgJAAAAAAAAAEkCamZmZmZkJQJqZmZmZmQ1AzczMzMzMEEAzMzMzMzMTQJqZmZmZmfE\u002fzczMzMzM9D9mZmZmZmb+PzMzMzMzMwNAAAAAAAAABEAzMzMzMzPzPwAAAAAAAAhAzczMzMzMAEBmZmZmZmYOQM3MzMzMzPw\u002fMzMzMzMz+z9mZmZmZmYCQAAAAAAAAPg\u002fAAAAAAAA+D9mZmZmZmYOQDMzMzMzMwtAZmZmZmZmDkDNzMzMzMwMQDMzMzMzMw9AAAAAAAAADEDNzMzMzMwMQDMzMzMzMw9AmpmZmZmZCUBmZmZmZmb2PwAAAAAAAAhAmpmZmZmZ+T9mZmZmZmYGQDMzMzMzMwdAMzMzMzMzD0CamZmZmZkBQJqZmZmZmQ1AAAAAAAAAEEDNzMzMzMwEQAAAAAAAAARAzczMzMzMDEAAAAAAAADwPzMzMzMzMxNAZmZmZmZmCkBmZmZmZmYGQGZmZmZmZhBAAAAAAAAAAECamZmZmZkRQAAAAAAAAPA\u002fZmZmZmZm9j+amZmZmZn5PzMzMzMzM\u002fs\u002fMzMzMzMzE0CamZmZmZkNQDMzMzMzMxNAMzMzMzMzEUCamZmZmZkFQM3MzMzMzBJAMzMzMzMzE0CamZmZmZnxPwAAAAAAAAxAZmZmZmZmCkBmZmZmZmYOQM3MzMzMzPQ\u002fzczMzMzMBEAAAAAAAAD4PwAAAAAAABBAAAAAAAAAEECamZmZmZkFQDMzMzMzMwtAZmZmZmZmDkCamZmZmZkFQM3MzMzMzABAZmZmZmZmAkBmZmZmZmb2P2ZmZmZmZg5AzczMzMzMCECamZmZmZkTQGZmZmZmZvY\u002fzczMzMzMDECamZmZmZn5PwAAAAAAAAhAZmZmZmZm\u002fj8zMzMzMzP7PzMzMzMzMwtAZmZmZmZmBkCamZmZmZkNQJqZmZmZmQ1AmpmZmZmZBUDNzMzMzMz0P2ZmZmZmZhBAAAAAAAAABECamZmZmZkBQDMzMzMzMwdAmpmZmZmZCUAzMzMzMzMRQM3MzMzMzAxAMzMzMzMzEUCamZmZmZn5PwAAAAAAAARAmpmZmZmZE0AzMzMzMzMDQDMzMzMzMwtAZmZmZmZm9j9mZmZmZmb2P83MzMzMzBBAZmZmZmZmCkAzMzMzMzPzPzMzMzMzM\u002fM\u002fMzMzMzMzEUDNzMzMzMwAQAAAAAAAAARAAAAAAAAA8D8zMzMzMzMLQGZmZmZmZhJAMzMzMzMzB0AAAAAAAAAIQAAAAAAAAARAmpmZmZmZBUAAAAAAAAD4PwAAAAAAAPA\u002fzczMzMzMAEAzMzMzMzP7PzMzMzMzMwtAmpmZmZmZ+T\u002fNzMzMzMwQQGZmZmZmZgpAMzMzMzMzEUBmZmZmZmb+P5qZmZmZmQVAmpmZmZmZ8T9mZmZmZmb2PzMzMzMzMwtAzczMzMzMAEBmZmZmZmYGQDMzMzMzMxNAAAAAAAAACEBmZmZmZmYOQJqZmZmZmQ1AmpmZmZmZBUBmZmZmZmb+P5qZmZmZmfE\u002fMzMzMzMzA0BmZmZmZmYQQGZmZmZmZhJAmpmZmZmZ8T8zMzMzMzMPQGZmZmZmZv4\u002fmpmZmZmZE0CamZmZmZn5P2ZmZmZmZg5AMzMzMzMz+z\u002fNzMzMzMwAQAAAAAAAAPA\u002fmpmZmZmZCUBmZmZmZmb2P5qZmZmZmQ1AmpmZmZmZBUAzMzMzMzMRQDMzMzMzMw9AzczMzMzMEkAAAAAAAAAQQJqZmZmZmRNAmpmZmZmZ+T9mZmZmZmYKQM3MzMzMzAxAAAAAAAAAAEAzMzMzMzMDQDMzMzMzM\u002fs\u002fZmZmZmZmEkAzMzMzMzMLQAAAAAAAABJAzczMzMzMBEAzMzMzMzMDQDMzMzMzMxFAzczMzMzMEkAzMzMzMzP7PzMzMzMzMwdAZmZmZmZmEEAAAAAAAAAEQDMzMzMzMw9AZmZmZmZmCkAzMzMzMzMTQGZmZmZmZv4\u002fzczMzMzMAEAzMzMzMzMHQDMzMzMzMwdAAAAAAAAAEEBmZmZmZmYQQM3MzMzMzABAAAAAAAAADEAAAAAAAAAQQGZmZmZmZhJAAAAAAAAAAEAzMzMzMzMPQAAAAAAAABBAmpmZmZmZAUAzMzMzMzMTQAAAAAAAAPA\u002fMzMzMzMz+z9mZmZmZmYSQAAAAAAAAABAzczMzMzMCEAzMzMzMzMHQAAAAAAAAAxAAAAAAAAAAEDNzMzMzMwSQGZmZmZmZgpAMzMzMzMzB0AzMzMzMzMDQAAAAAAAAAhAZmZmZmZmCkAzMzMzMzMLQGZmZmZmZhJAzczMzMzMBEBmZmZmZmYCQM3MzMzMzAxAmpmZmZmZBUDNzMzMzMz8P2ZmZmZmZhBAMzMzMzMzEUCamZmZmZkTQDMzMzMzMxFAZmZmZmZmCkAzMzMzMzP7P5qZmZmZmQlAzczMzMzMEEAAAAAAAAD4P83MzMzMzAhAmpmZmZmZ+T\u002fNzMzMzMwSQGZmZmZmZvY\u002fZmZmZmZm\u002fj8zMzMzMzP7P5qZmZmZmRNAZmZmZmZmEEDNzMzMzMz8P2ZmZmZmZgZAzczMzMzMCEBmZmZmZmYSQJqZmZmZmQlAMzMzMzMzD0DNzMzMzMwQQM3MzMzMzAxAAAAAAAAADECamZmZmZkJQJqZmZmZmRFAzczMzMzMDEBmZmZmZmYKQAAAAAAAAPg\u002fAAAAAAAADEBmZmZmZmYKQJqZmZmZmRNAzczMzMzMDEAAAAAAAAASQJqZmZmZmQ1AmpmZmZmZE0DNzMzMzMwSQDMzMzMzMxFAZmZmZmZm9j8zMzMzMzMTQM3MzMzMzPw\u002fMzMzMzMz8z8AAAAAAAAMQAAAAAAAAAxAAAAAAAAAAEAzMzMzMzMTQAAAAAAAAPg\u002fmpmZmZmZDUAzMzMzMzMTQGZmZmZmZvY\u002fMzMzMzMzEUAAAAAAAAAAQJqZmZmZmfk\u002fAAAAAAAABEBmZmZmZmb+P5qZmZmZmfE\u002fZmZmZmZmAkCamZmZmZkBQM3MzMzMzARAZmZmZmZmCkDNzMzMzMwSQM3MzMzMzAhAmpmZmZmZCUAAAAAAAAAEQJqZmZmZmRFAzczMzMzM9D8AAAAAAADwP5qZmZmZmQFAAAAAAAAAEEBmZmZmZmYSQGZmZmZmZvY\u002fZmZmZmZm\u002fj8AAAAAAAAUQM3MzMzMzARAZmZmZmZmDkDNzMzMzMwQQDMzMzMzMwNAAAAAAAAABEAAAAAAAAAMQDMzMzMzMw9AZmZmZmZmEEBmZmZmZmYCQAAAAAAAAAxAmpmZmZmZE0BmZmZmZmb+PwAAAAAAAAhAzczMzMzMBEBmZmZmZmYGQGZmZmZmZv4\u002fMzMzMzMzD0AzMzMzMzMTQJqZmZmZmfk\u002fZmZmZmZmDkBmZmZmZmYOQM3MzMzMzABAzczMzMzMBECamZmZmZkRQM3MzMzMzPQ\u002fAAAAAAAACEBmZmZmZmYGQDMzMzMzMxNAAAAAAAAABECamZmZmZkFQAAAAAAAAABAMzMzMzMzB0CamZmZmZkNQM3MzMzMzBBAAAAAAAAADEDNzMzMzMz0P2ZmZmZmZv4\u002fmpmZmZmZEUAzMzMzMzMHQM3MzMzMzARAmpmZmZmZCUBmZmZmZmYOQDMzMzMzMwtAZmZmZmZmEEAzMzMzMzMLQDMzMzMzMxFAmpmZmZmZBUBmZmZmZmYKQGZmZmZmZgpAMzMzMzMzC0CamZmZmZn5P83MzMzMzARAAAAAAAAABECamZmZmZkFQGZmZmZmZg5AzczMzMzM9D\u002fNzMzMzMwIQM3MzMzMzARAzczMzMzM9D8zMzMzMzMPQAAAAAAAAARAZmZmZmZmEkBmZmZmZmYSQJqZmZmZmfk\u002fzczMzMzMEEAzMzMzMzMPQJqZmZmZmQVAZmZmZmZmBkDNzMzMzMwQQAAAAAAAABJAzczMzMzM9D+amZmZmZkRQGZmZmZmZhJAzczMzMzM9D8zMzMzMzMLQJqZmZmZmQFAmpmZmZmZ+T\u002fNzMzMzMwSQGZmZmZmZgZAAAAAAAAAAEDNzMzMzMz8P5qZmZmZmQlAZmZmZmZmBkCamZmZmZkFQJqZmZmZmRFAmpmZmZmZDUBmZmZmZmYQQM3MzMzMzBBAMzMzMzMzA0CamZmZmZkJQM3MzMzMzPQ\u002fMzMzMzMzEUCamZmZmZkBQDMzMzMzM\u002fs\u002fAAAAAAAAEEDNzMzMzMwEQAAAAAAAAAhAmpmZmZmZAUBmZmZmZmYKQDMzMzMzMw9AmpmZmZmZEUCamZmZmZkBQJqZmZmZmRFAAAAAAAAAAEDNzMzMzMwSQGZmZmZmZgpAMzMzMzMzB0BmZmZmZmb2P2ZmZmZmZvY\u002fMzMzMzMzEUCamZmZmZnxP2ZmZmZmZv4\u002fmpmZmZmZEUBmZmZmZmYSQGZmZmZmZv4\u002fZmZmZmZmDkBmZmZmZmb2P2ZmZmZmZgZAMzMzMzMzB0CamZmZmZn5P2ZmZmZmZgJAzczMzMzMBEAzMzMzMzMHQDMzMzMzM\u002fM\u002fAAAAAAAACEAzMzMzMzMPQM3MzMzMzPQ\u002fmpmZmZmZDUBmZmZmZmYCQGZmZmZmZgpAAAAAAAAAAEAAAAAAAAAUQGZmZmZmZhBAAAAAAAAA+D+amZmZmZkBQM3MzMzMzABAzczMzMzMCEBmZmZmZmYGQJqZmZmZmQVAMzMzMzMzA0BmZmZmZmYGQM3MzMzMzBBAmpmZmZmZAUBmZmZmZmb2P83MzMzMzAxAMzMzMzMzEUCamZmZmZkNQJqZmZmZmQ1AAAAAAAAADEAAAAAAAAAIQM3MzMzMzPQ\u002fZmZmZmZmBkDNzMzMzMwSQDMzMzMzMxNAAAAAAAAA8D8zMzMzMzMLQGZmZmZmZvY\u002fZmZmZmZm9j8AAAAAAAAAQGZmZmZmZgZAMzMzMzMzA0CamZmZmZn5PzMzMzMzMxNAzczMzMzMDEBmZmZmZmYOQGZmZmZmZhBAZmZmZmZmAkCamZmZmZkNQJqZmZmZmRFAzczMzMzMEEAzMzMzMzMPQGZmZmZmZvY\u002fmpmZmZmZAUDNzMzMzMwQQDMzMzMzMwdAAAAAAAAADEDNzMzMzMwSQAAAAAAAAAhAAAAAAAAA+D\u002fNzMzMzMwMQM3MzMzMzAhAmpmZmZmZE0DNzMzMzMz8PzMzMzMzMwdAMzMzMzMzB0DNzMzMzMwMQAAAAAAAABJAzczMzMzMEEAAAAAAAAASQGZmZmZmZhJAzczMzMzMBECamZmZmZkNQGZmZmZmZgJAmpmZmZmZAUDNzMzMzMwEQM3MzMzMzARAzczMzMzMEkAzMzMzMzP7P83MzMzMzPw\u002fZmZmZmZm\u002fj8="},"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Customer_Rating"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"tracegroupgap":0},"title":{"text":"Customer_Rating Distribution"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="cc12b0b2-51c7-4dae-88a4-8a87991bf92c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("cc12b0b2-51c7-4dae-88a4-8a87991bf92c")) {                    Plotly.newPlot(                        "cc12b0b2-51c7-4dae-88a4-8a87991bf92c",                        [{"bingroup":"x","hovertemplate":"Days_Since_Last_Order=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#000001","pattern":{"shape":""}},"name":"","nbinsx":30,"orientation":"v","showlegend":false,"x":{"dtype":"i2","bdata":"MAEuAAAApQAAADoARQAaAU0BJgASAH0A7gAAAAAAQwDvADcA\u002fACPADEBSgAAAB8AwwAwAB8BAACLAKYAAACCAAAAzQB4AEEBLgArAEsBwABGAFQAAAAAAMoAAAAAAAAAAABFALYAAAAVAFsBjgAAALkA9QBCAIwASAHoAAAAnQDcAD8BAAAIAFcAOQEAALIA9QDTABMA\u002fAAAAIgAlwBcAQAAAAAAABMBAAAcAB0BcwBhAGEA7gAAABcBAAAAAHwAAABqAN8AKwAsAMYAJwDcAI8AIwBiAdwADAAAAEIBpgCYAAAAxABWAAAAeQATAVoBAACvAJoAAAA0ANIAMwEAAB4AaABVAQAAAACkAJ8AAAAeACIB7gBsAR8ALwDkAMMAKwEAABwAAAAfATQBqwAzAC8AAAAAAOEACwE9ASIAMwAAAOIAUQDtAMUAnAC\u002fAAAArwBdAD0BXAAAAAAAYAARAZoAZwAFARcAAABeAXIAOQEoAEYBAAA9AAIAYgFtAdgA5wAAAAAAQAEvAEgBlwBnAYQAXwEAAEoBIgCcAOwAQwGUAAAAAAAnAAAA0gAAAF8BAAAAABYBKwGdAFIACgEAAGgBNgAsAa8APAH7AD0AAADDAAAAWwEAAOMAywBAAAAABQBgAEwBEQHtAOIAAAAAAAAAAAAbASAAQgBqACcAJwEAAAAAJAFhAQAAAAAYASQAAABjAYIAAAD6AK4ARgBKAAAAAAAAAOcAAADTAAUB5ADRAAAAmQBCAVwARwH1ABIBoQAMAAAAawCzAMQALwCmAJoAeAAAAKIAAADzAOkAAACPAAAAPwFRAQAAAADdAAUAbwBiAQAACQABAFoAxwBbAQAAWwG9AGkBAAAAABoAeQCKAAAALgEAAAAAAAAfAdgAyADyAAAAVQBqARcBAAAAAL4AAABGAJkAAADWAIoAAAAIAAAAMQA5AfMAuAAjAFYAAAD\u002fAP4AAABQACoBAAD6AIcAAAAJAGYAOgAVACQBeAAAAGYBAABlAQAAkAA8AQAADgAxAQIBhQAAAAAAAABqAZAAAADzAA0BAAAXAAAAAAAAAGcAOQGxAAAA\u002fACEADgBMgAAAAAAbQE\u002fAQUBAACRACkA4QA8ANcAAAAAAGIAfQCiAAAAOgDQAD0BAABTARMBvQBpAQAAAABzAAAAwQDSADQAnwB5AAAAAAAPAEYAAAAAAL8AAADaAAYBAAAAAOYAEACoACMAAAANAQAAbwAAAAAATgACAFQBWAAAAKsAPQHUAF0AnwBVAE4AAAHfALkAAAAAAF8AAAADAAAAZgEAAAAA9gBXAd8AEgH\u002fAGgB2AAAAAAA3gAAAAAAAAAAAAAAbgBaAQAAAAAAAG0BAQFUAAAARABDAV8AAADKAMcAKgABARoAAAAAACwB1gBCAAAAGgFDAY8AygAKAAYArQAAADgAVQEAAAAADQEAAAAAZQEAAAAAAAAAAAABEwBDAAAAAAAAAAAAAADwAEgAAAAAAAAACAAAADUAswANAMkAyAAoAAAAAACvAAAA\u002fQAAAEoBqADeAAAAsQClAAAAJwEeAEIAAAABAd0AYgFcAQAAAAAAAOYA6ACWAAEBzAArANoAIQEhAU8A4wBQATYA7wBHAAAAAADmAGIA8gAAAGUBqAAVAMEA0wAAAAAAKAAAAFEB2gAHAJ0AOAEDAbMApwAAAAAAlgAAAEsAVQAXAL0AAAAAABQBLAChAAAAhgCTAAAAFwCqAAAAPwDIANAAywAAAB8BAAClANUAAABuAAAAAAAAAG0AAAAAAGMAiADtAAAA4QAAAEcAAAD3AAAA6wDxANkASgEAAFcB2QAyARABFACDAAAAMgEAALAAkQDNAOYAAABOAQAAAADgADkA4wBRALoAwgAAAIMAAAAAAOkAAADiAE8AAABHAIwAHgAlAQAA+QAiACUAAABcAA0ALwAAAAAAQQA4ADIBAABJAAAApQCsAOoACABRAPMAfABIACQALQBHASEBFADpAAAARwHLAJYAbgDGAAAA\u002fgAOACwB\u002fQAAAAAAMQAAAOUAAADaAC0AXgEXAIQABQCDAAAAAQEAAAAAIgFFAQAApgAAAGkAOQEhAAAAuQAAAAoBQgAGAToAKgEAAFoBAAAAAC0BVwAAAJsANwEAAKkAAACnAGMASwAIABEArQAcAFYBTQDkAC8B6gAAAAAA9QD1AC0A7wAAAAAApgBjAWEAmwAAAAAAAAAnADsANgBfAEsAAAAlAAAAaAFdAXQARwBEAckAoAAAAHAAWADEAOIAAACyAFEALwAAAAAAwQAAAL8AgQAAAGwBAABFASIBrwB9AH8AoACSAGUBFAAAAAAA5QBrAAAAAABLABMBAAAmAMcA1AAAALQArgDqAAAAAACZAAAAAAAAAAAARQBIAQAASgAAAMcAMgBBAUEBAAAYAXkAbgAxAEQAAAArAQoARQCFAFwBMgAXAQAAAADQABgAfwALARQA8ABEAAAALgAwADkA1AB2AAAAMQCkAB8BeQBjAc4AEgFyAAAAsAAAAF8BFAAmAKQAAAAYAKAAOQBWAAAAYwAAAGYBWQEiAUAAmAAAADoBJwEAAIkAAAD3AAAAPwEAAAwBPgAdAQAAOgE7AAAAAABJAAAAAAAAAAAAFAEnAQAAGwC2AOsA9AAAAAAAbQAAALsA6AA="},"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Days_Since_Last_Order"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"tracegroupgap":0},"title":{"text":"Days_Since_Last_Order Distribution"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="c6394a3b-7d76-461b-9179-baeafe320bfd" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("c6394a3b-7d76-461b-9179-baeafe320bfd")) {                    Plotly.newPlot(                        "c6394a3b-7d76-461b-9179-baeafe320bfd",                        [{"bingroup":"x","hovertemplate":"Unit_Price=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#000001","pattern":{"shape":""}},"name":"","nbinsx":30,"orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"rkfhehT+UkC4HoXrUVBmQKRwPQrXA0JAuB6F61FAYkAK16NwPR6DQOxRuB6Fy1BAAAAAAADAU0D2KFyPwuVoQOxRuB6FC1FASOF6FK5HN0AK16NwPUpTQJqZmZmZEWdAmpmZmZlZVEA9CtejcL1IQOF6FK5H4UhApHA9CtfjOED2KFyPwnVBQFyPwvUo3C5AXI\u002fC9ShkYUCkcD0K18NaQBSuR+F6NEBAFK5H4XrkX0AfhetRuDZhQHE9Ctej6GdAZmZmZmbSikDhehSuRyE9QPYoXI\u002fCdTRAZmZmZmbWaEApXI\u002fC9eg5QFyPwvUoXHVAXI\u002fC9Sj8QUC4HoXrUXhAQJqZmZmZGTBAexSuR+E6QECamZmZmZlKQFK4HoXrIV5AAAAAAADQYEBcj8L1KNxWQM3MzMzMhGFAAAAAAAA7kkDhehSuR6E+QM3MzMzM0HdAhetRuB6FZ0CuR+F6FE5HQNejcD0KFzFAzczMzMxMIUAzMzMzMzmBQJqZmZmZ8WlAFK5H4XpYckDhehSuR+FXQArXo3A9cmNAKVyPwvXYXUCPwvUoXHeMQB+F61G4HlBAKVyPwvWoUkDhehSuR+ErQJqZmZmZuUtAj8L1KFzvQUBI4XoUrsdXQGZmZmZm9nFAH4XrUbgeXUAfhetRuO5TQD0K16NwYXJAmpmZmZnBYUDsUbgehetBQBSuR+F6FERAUrgeheuROUAAAAAAAOBgQM3MzMzMbE5AFK5H4XrUMkAK16NwPSpOQBSuR+F6dFBA9ihcj8I1MEAK16NwPbpdQClcj8L12FZAZmZmZmYmMkAzMzMzM\u002fNQQArXo3A9omhAFK5H4XpmgUCuR+F6FE5HQD0K16NwbVRAUrgehevRW0DXo3A9CtdAQGZmZmZmBllASOF6FK53ZUBcj8L1KNCMQNejcD0KlztApHA9CtdjPEDNzMzMzExOQIXrUbgeBUxASOF6FK6HP0AAAAAAAPqOQFyPwvUovFFAPQrXo3A9J0CuR+F6FK4qQIXrUbgeJU5AH4XrUbgOY0AK16NwPfWRQDMzMzMzczFAzczMzMwkh0B7FK5H4apWQPYoXI\u002fCIYlAKVyPwvWIUEAAAAAAADBWQMP1KFyPSmhAMzMzMzOzK0CPwvUoXC9SQD0K16NwBXpAzczMzMyMN0AK16NwPSJnQPYoXI\u002fCtT1AcT0K16NwKUBxPQrXoxBAQI\u002fC9ShcJ2NAAAAAAADwYEAfhetRuE5gQOF6FK5HoUlAw\u002fUoXI\u002fCLkDsUbgehQtfQDMzMzMzo2JAzczMzMzkYkCuR+F6FL5UQDMzMzMzMzVAH4XrUbieRkA9CtejcKyQQOxRuB6FJ3BAFK5H4XpUTkA9CtejcF1PQFyPwvUoHE5A7FG4HoUrT0CamZmZmXlSQD0K16Nw\u002fW5ArkfhehSuSEDsUbgehWtSQClcj8L1qDdAAAAAAABAWUBcj8L1KHxwQK5H4XoUblVAFK5H4XoEXUDD9Shcj9GQQJqZmZmZL4lAj8L1KFwvTUBI4XoUrqdCQHE9CtejMFVA9ihcj8IVRkAzMzMzM3NAQM3MzMzMTGBAw\u002fUoXI+SUkCPwvUoXGNyQHE9Ctej8D1Aj8L1KFznYUBxPQrXo7SOQHE9CtejxpJAXI\u002fC9ShcLkBSuB6F60FUQGZmZmZm1mFACtejcD2KO0AfhetRuEpxQDMzMzMzs0NArkfhehQuN0D2KFyPwi1hQJqZmZmZh4FA7FG4HoVzYUCuR+F6FE5gQArXo3A9ClhAmpmZmZkZQkBxPQrXo9BbQOxRuB6Fq15AFK5H4XrUQUBcj8L1KNwpQArXo3A9UmBAPQrXo3D9TkCPwvUoXG9eQOF6FK5HiXtA16NwPQr3XkApXI\u002fC9agyQKRwPQrX401ApHA9CtejOkBI4XoUrodPQMP1KFyPkJFAMzMzMzOjUkDsUbgehQtlQPYoXI\u002fCR4xAPQrXo3DfhkDhehSuR01yQDMzMzMzI1pAzczMzMxMOEAzMzMzM2d4QDMzMzMz41FAj8L1KFwfU0AzMzMzM1NLQClcj8L16DVAAAAAAAAAPEApXI\u002fC9WhNQEjhehSup0lAcT0K16NwYECPwvUoXF99QNejcD0K10pAKVyPwvUITUAfhetRuMKMQOF6FK5HoTdAUrgehetRL0DsUbgehetIQDMzMzMzdYpAAAAAAAA5kUBxPQrXowBVQPYoXI\u002fC3WxAMzMzMzPVkUCamZmZmallQOF6FK5HYWtAhetRuB7FQkAUrkfhetQ3QEjhehSuRz9AUrgeheuRUkAfhetRuH5OQGZmZmZmhllAj8L1KFxWkUBSuB6F6\u002f+RQMP1KFyP4kBAPQrXo3CdRkA9CtejcOVjQKRwPQrXk1JAH4XrUbhmg0B7FK5H4QJmQKRwPQrX415AKVyPwvWwaUCF61G4HmVoQBSuR+F6FEJAZmZmZmZGUUC4HoXrUXhAQD0K16NwvU1APQrXo3CtcEC4HoXrUXBiQK5H4XoUHl1Aw\u002fUoXI9iRUAAAAAAACBmQOxRuB6F431APQrXo3AVZkC4HoXrUVR5QOF6FK5H8V9AcT0K16OwZ0AUrkfhehQfQHsUrkfhKlRAXI\u002fC9Sj2hUCF61G4HsU\u002fQFK4HoXr6WZA4XoUrke5Z0CuR+F6FPSBQPYoXI\u002fCdShAAAAAAACAPUAfhetRuM5XQOF6FK5HvY5AH4XrUbh+QEDXo3A9CpdOQGZmZmZmRlJAmpmZmZmZWECamZmZmZlDQIXrUbgeZUlAzczMzMxMQEA9CtejcJ1oQEjhehSuh3RAexSuR+EyckAK16NwPd6AQMP1KFyPIkBArkfhehTWYUAAAAAAALBdQLgehetR+ENA4XoUrkdJZkC4HoXrUUBiQK5H4XoU7nBAXI\u002fC9SgcUEDhehSuR4FBQIXrUbge5UZAXI\u002fC9SjcPEAfhetRuJ4pQEjhehSuJ05Aj8L1KFxPRkDNzMzMzGxEQOF6FK5H4TdASOF6FK7HQECuR+F6FCZlQJqZmZmZGSpAj8L1KFzvSUBxPQrXo2BRQK5H4XoUbk1A7FG4HoXbVUBmZmZmZjCEQB+F61G4qnFAexSuR+FicEAAAAAAAEA3QPYoXI\u002fClW5Aw\u002fUoXI\u002fSXkAzMzMzM\u002fM7QClcj8L12JFAH4XrUbgePUAAAAAAAIBPQDMzMzMz80JAFK5H4XpUUkCPwvUoXE81QNejcD0KFzVAmpmZmZlxhEDD9Shcj6JOQB+F61G4Wo5AhetRuB5FPkCPwvUoXA9NQKRwPQrX4zlAPQrXo3DdQUDsUbgehdtfQPYoXI\u002fCf5JAj8L1KFwPKUCamZmZmdk7QEjhehSur2NAPQrXo3AdXkAfhetRuF48QDMzMzMz62hAw\u002fUoXI8iSEA9CtejcJ1eQD0K16NwnVhAzczMzMy0Y0AK16NwPSJvQM3MzMzMJGdAhetRuB5Zh0B7FK5H4UppQBSuR+F61D5A9ihcj8J1OECPwvUoXCeLQLgehetR2FpAmpmZmZm5QEAfhetRuI5nQOxRuB6Fy1JAw\u002fUoXI\u002fCH0DD9ShcjyKEQM3MzMzMvHlAPQrXo3CdRkAfhetRuDyDQB+F61G4nlNAUrgeheuRSECkcD0K19NeQOF6FK5HAU1A16NwPQoHVkC4HoXrUXhBQHsUrkfhomNAKVyPwvWoMUDNzMzMzCxLQFK4HoXrGWFAcT0K16NwUkApXI\u002fC9agpQB+F61G4njBAzczMzMyMTUCF61G4HsVHQGZmZmZmdllAuB6F61E4J0BSuB6F65E8QPYoXI\u002fC1V1APQrXo3BZikA9CtejcB+RQK5H4XoUTklACtejcD26U0D2KFyPwr1iQKRwPQrXK2JAuB6F61G4L0Bcj8L1KFqHQOF6FK5HQUlAMzMzMzPzQEAAAAAAAIBiQNejcD0K90NA7FG4HoXbXUAzMzMzM+tiQHsUrkfhGltAexSuR+FagEDD9Shcj4I\u002fQGZmZmZmxlRAuB6F61EYQkCPwvUoXC9HQEjhehSuM3FA16NwPQr\u002fYECuR+F6FDZmQJqZmZmZGVNAzczMzMyMZ0BSuB6F66FlQKRwPQrX02FAzczMzMyMSEDXo3A9CmWLQOF6FK5HaYVAcT0K16PwK0AzMzMzM\u002fN3QOxRuB6FX3FAzczMzMycVkBmZmZmZiY8QM3MzMzM2HlAH4XrUbgWYEDNzMzMzLRiQOxRuB6FA3JACtejcD2aU0BxPQrXo1BFQBSuR+F6VDRA4XoUrkcxV0CPwvUoXI9uQOxRuB6Fa05AzczMzMyEY0DD9Shcj6JAQEjhehSuAZJAw\u002fUoXI\u002fqYEBcj8L1KFwvQOF6FK5HIVlAH4XrUbi+VkAUrkfherRfQBSuR+F6lDtAFK5H4XqDkUAK16NwPbJlQIXrUbgehWFA16NwPQovZEDNzMzMzEBxQAAAAAAAYEhA9ihcj8KNYkBxPQrXo\u002fBcQClcj8L1AopA16NwPQpXTUD2KFyPwhVGQK5H4XoUZJNAw\u002fUoXI8CTEBxPQrXo\u002fAnQK5H4XoUzk5AFK5H4Xo0QUApXI\u002fC9ahdQM3MzMzMjF5AKVyPwvUoK0B7FK5H4fWSQFK4HoXrCWJA16NwPQpjcEAUrkfhehxiQI\u002fC9ShcD05Aw\u002fUoXI9iVUAAAAAAAMA\u002fQBSuR+F6dFhAFK5H4XpUTEDhehSuR3OIQFyPwvUorFBAKVyPwvWoNEDXo3A9CpcxQGZmZmZmhkZA4XoUrkfxZUDXo3A9CrdXQFyPwvUoXCpAZmZmZmbGYUDsUbgehSWJQGZmZmZmtllArkfhehTecUB7FK5H4UJkQHsUrkfhOl9AmpmZmZkJWkBmZmZmZgiBQHsUrkfhqltAcT0K16PAW0AUrkfhehRAQOxRuB6FO1JAPQrXo3BFZEDhehSuR8FOQB+F61G4niBA4XoUrkfjhEDXo3A9Cpc2QMP1KFyPgmxAMzMzMzObfkBI4XoUrgc1QLgehetRUGFAZmZmZmZid0CPwvUoXC9PQFyPwvUoXZNAXI\u002fC9SjcNkAUrkfhepQ0QB+F61G4XkRAexSuR+H6MkA9CtejcK1dQJqZmZmZWWFAzczMzMz2iEAAAAAAAERyQK5H4XoULiBAKVyPwvUoPUDsUbgehcNjQEjhehSuh09APQrXo3A9KkBmZmZmZuZEQFK4HoXr\u002fY9Aj8L1KFwPK0AzMzMzMx2KQBSuR+F6FEJA9ihcj8J5jkBSuB6F66FVQNejcD0KVzRA9ihcj8KlZUBSuB6F66FUQFK4HoXr0TpAuB6F61GIUkDD9ShcjyJAQLgehetRaF9AUrgehetRPUCPwvUoXE84QKRwPQrXE1RAcT0K16Mgk0A9CtejcBVrQHE9CtejsFhASOF6FK4XWkCkcD0K16M+QK5H4XoUrk5AFK5H4Xq0Q0D2KFyPwnVDQOF6FK5HwU9AH4XrUbgeNkCPwvUoXL9SQNejcD0KVzlA9ihcj8IBjUBSuB6F67FjQI\u002fC9ShcL11Aw\u002fUoXI8CTkAzMzMzM0NTQArXo3A9Sj5ArkfhehRaeUCamZmZmeldQClcj8L1AIlAmpmZmZnZO0BSuB6F66lyQJqZmZmZiVNArkfhehTOTEC4HoXrUWhSQEjhehSuB1lAw\u002fUoXI9iSEDD9Shcj8JaQHE9Ctej8ChAXI\u002fC9SicNkD2KFyPwsVaQFyPwvUo\u002fFZASOF6FK4HTEBI4XoUrvdfQNejcD0Kt01Aj8L1KFyPR0BxPQrXo6BdQFK4HoXrIVhAmpmZmZkReUApXI\u002fC9axwQKRwPQrXq2JAzczMzMyMX0DhehSuRx1yQHE9CtejuI5A4XoUrkfkkECamZmZmZlSQFyPwvUo\u002fEdAUrgehesZYUAfhetRuK5QQHsUrkfhenJAMzMzMzNTSkAfhetRuKZiQDMzMzMzM05A7FG4HoXLWEA9CtejcMVjQHsUrkfhelVAMzMzMzOTW0BSuB6F68FbQM3MzMzMzCtAFK5H4XosYUDhehSuR6lkQMP1KFyPQj9AFK5H4XrUMkBmZmZmZkZkQOxRuB6Fy1VACtejcD0qQEApXI\u002fC9bhgQDMzMzMzI3JAZmZmZmZWUEAK16NwPYpAQArXo3A9Sl1AMzMzMzMrYUDXo3A9Chc+QK5H4XoUpmFAFK5H4Xr0WkBI4XoUrsc0QOxRuB6F+2RAKVyPwvXoW0DNzMzMzCxFQM3MzMzMHFxAH4XrUbheRkApXI\u002fC9cBnQIXrUbge1VNAcT0K16MQQUDXo3A9ChdiQOxRuB6F6zZAH4XrUbgeI0CF61G4HvWFQBSuR+F6FD9Aj8L1KFwPRUCF61G4HheSQJqZmZmZGVFAw\u002fUoXI8iS0AUrkfherxuQHE9Ctej8D9AuB6F61H4O0A9CtejcFVoQOF6FK5HEWJAUrgeheuhVUA9CtejcD07QFK4HoXrUSdAexSuR+FaQUBI4XoUrkciQNejcD0KlztAmpmZmZmnkUCkcD0K16NwQFK4HoXrWWJA4XoUrkfBcUAUrkfherRKQD0K16NwhWBAmpmZmZm5VEAK16NwPZyFQD0K16Nw3WtACtejcD2KPUCuR+F6FK4jQGZmZmZmtn5ArkfhehTuf0BSuB6F63FpQOxRuB6FgYhArkfhehQuNkCamZmZmZkjQJqZmZmZ2TZAUrgeheuxR0AzMzMzM2tyQFyPwvUoXDZA4XoUrkeBSkDhehSuR2FkQKRwPQrXo0VAhetRuB41XUBxPQrXo9BHQFK4HoXroXBApHA9CtejUkCamZmZmTlQQBSuR+F69EBA9ihcj8K1OUAAAAAAAGBKQFK4HoXr8U1ACtejcD06Y0D2KFyPwtVQQArXo3A9ClFA7FG4HoW7UUBmZmZmZu5gQLgehetRODhAFK5H4XpUOkCPwvUoXI9hQD0K16Nw\u002fUFAXI\u002fC9SgcQUDXo3A9CmdvQPYoXI\u002fCtW5AUrgehesBW0AAAAAAAGBFQBSuR+F6NEtAuB6F61E4LUBmZmZmZuJwQFK4HoXrkVRApHA9CtfFkkApXI\u002fC9bhUQHE9CtejMFFAhetRuB5FNEDsUbgehXtTQK5H4XoUDkJAPQrXo3A9MUBI4XoUrsNxQNejcD0K1zpAMzMzMzMzUUAK16NwPQJhQGZmZmZmZjVAzczMzMysTkCuR+F6FC5PQFyPwvUovFtAKVyPwvWoQEDD9Shcj3JWQI\u002fC9ShcDyxA7FG4HoXrU0AfhetRuP5BQI\u002fC9Shcw39AZmZmZmaWU0CkcD0K1+NiQBSuR+F6FGhAexSuR+FaVUAK16NwPSpQQLgehetRuCZA9ihcj8L1PkDNzMzMzAw8QMP1KFyPwjxArkfhehSuMkAfhetRuB5BQDMzMzMzA1RA16NwPQrXR0DD9Shcj4JXQM3MzMzMrGdAXI\u002fC9SicPkDNzMzMzOxKQHE9CtejsFtA7FG4HoUXikCF61G4HiVAQBSuR+F6VEpArkfhehQOTUDXo3A9Cj9\u002fQGZmZmZmRklAw\u002fUoXI+CNkAAAAAAAABBQAAAAAAAwEdAUrgeheshhkCuR+F6FI5AQArXo3A9mmpA9ihcj8JVQ0AUrkfhelQ+QNejcD0Kc3BAH4XrUbheOkB7FK5H4caBQAAAAAAAQEhA4XoUrkeBSkBI4XoUrl9mQClcj8L1aElAexSuR+Eaa0Bcj8L1KERgQEjhehSuQ5BAmpmZmZnBYkAfhetRuA5XQOxRuB6FaydA7FG4HoWbWUAfhetRuD5OQFK4HoXrCWRAFK5H4Xr+gEAAAAAAAIBJQGZmZmZmllBA9ihcj8L1IUBcj8L1KNxBQHE9CtejdZBASOF6FK6XY0DhehSuRxlwQAAAAAAAaHFAPQrXo3BThkAAAAAAAABKQGZmZmZmZl1A9ihcj8JFUkCF61G4HsVOQDMzMzMz80FA4XoUrkehNUBSuB6F69EhQArXo3A96kdA7FG4HoUjYkCkcD0K1yNhQHsUrkfhIn5ApHA9CtcXikBmZmZmZiY0QClcj8L1SExA7FG4HoVrTkAUrkfheqRSQAAAAAAAQDVA16NwPQr3SkBxPQrXo7BFQHsUrkfh+jxA9ihcj8JVVkBI4XoUrvdoQDMzMzMzM05AH4XrUbi+UkCuR+F6FG5JQKRwPQrX40BAcT0K16OQSECkcD0K1zNTQI\u002fC9ShcN2dAhetRuB4lTkAK16NwPQosQPYoXI\u002fCNVBAAAAAAABAUkAUrkfhelRGQHE9CtejsEJA9ihcj8J1M0BI4XoUrj9jQNejcD0Kp1JAcT0K16N4ZUAfhetRuI55QOxRuB6Fw5BA4XoUrkeBTUAAAAAAAAAyQBSuR+F6VIhA9ihcj8JFcUCkcD0K12NHQHE9CtejvHJAKVyPwvUAYUDhehSuR0FBQM3MzMzMDFhASOF6FK6HQEAK16NwPYpAQOF6FK5H+5FAmpmZmZnZTkBcj8L1KAxxQClcj8L1KDpAmpmZmZnpVEAzMzMzMzNZQBSuR+F6lDpA16NwPQrXS0AAAAAAAECSQClcj8L1aElAMzMzMzPDaEB7FK5H4bpSQJqZmZmZGUdAPQrXo3A9SkBSuB6F68FjQLgehetR+D9ArkfhehR+XUAfhetRuF5kQNejcD0KZ2FA16NwPQp3QkCF61G4Hj1jQHsUrkfh2kpApHA9CteDQECamZmZmW+AQOF6FK5HAVhAUrgehesxT0CPwvUoXO9LQPYoXI\u002fCFVFAuB6F61H4PUAAAAAAAGBOQAAAAAAAACtAH4XrUbgmfUD2KFyPwv1pQDMzMzMzM1VAFK5H4Xp2jkCPwvUoXH9aQIXrUbgeRThAzczMzMysS0CuR+F6FLuRQFyPwvUohHBA7FG4HoWLf0BSuB6F6\u002fFMQMP1KFyPgk1A9ihcj8LlZ0AAAAAAAMyCQB+F61G4Hi5AKVyPwvV4U0Bcj8L1KLxVQB+F61G4ln1AexSuR+HiZEDXo3A9CqWGQFyPwvUoUHJApHA9CteDQ0CPwvUoXM8zQI\u002fC9Shcz0BA4XoUrkchUEAAAAAAAFBhQPYoXI\u002fC\u002fWlASOF6FK7HO0CamZmZmRk3QFK4HoXrkT1A9ihcj8J1NkAfhetRuN4yQOxRuB6FC0lAPQrXo3B9SkDNzMzMzMwrQOF6FK5HMVJAMzMzMzMTTEDhehSuR2FYQGZmZmZmZktA9ihcj8K1X0AK16NwPRSOQM3MzMzMlGBA4XoUrkcBUUAUrkfhehRJQKRwPQrXq2JAuB6F61H4OkBcj8L1KOyRQOxRuB6Fa0lAuB6F61H4ZED2KFyPwjU2QPYoXI\u002fCYXBA7FG4HoVrQECkcD0K12M8QEjhehSubpBAFK5H4XqUTEBcj8L1KASHQOxRuB6F6yNA4XoUrkehN0DsUbgehStLQK5H4XoUmIxAzczMzMzsR0ApXI\u002fC9ZhnQClcj8L1SHtAZmZmZmbOhEBxPQrXo2BSQB+F61G4fklAuB6F61FIZ0BxPQrXo8BcQK5H4XoUrlVAMzMzMzPzMkDXo3A9Ctc2QFK4HoXr0TZAH4XrUbieSEAUrkfherReQK5H4XoU9mpAAAAAAADgRUDXo3A9CtcvQOxRuB6FKzJArkfhehTOQEBcj8L1KPxhQPYoXI\u002fCNUlAAAAAAADASEDNzMzMzCxOQI\u002fC9ShczzpAKVyPwvVoQkC4HoXrUWhlQNejcD0KFzlAMzMzMzNjXkDsUbgehTtuQHsUrkfhmlpAKVyPwvVUi0DNzMzMzBR+QM3MzMzMQJJAcT0K16O4iEBcj8L1KGRsQArXo3A92lJAZmZmZma2VUApXI\u002fC9ehcQBSuR+F6VElACtejcD2+kkCkcD0K1wNBQJqZmZmZ2TtA7FG4HoUrMUAK16NwPaprQI\u002fC9ShcZ3FAmpmZmZmZWkD2KFyPwg1vQKRwPQrX225ApHA9CtfjRUBSuB6F6zFQQOxRuB6FKz1AUrgeheshXUDNzMzMzIwyQClcj8L1iEtAzczMzMxsY0BI4XoUrh9oQDMzMzMzq3xASOF6FK5HSUDD9Shcjw50QEjhehSu32FA16NwPQrXPkBxPQrXowRxQMP1KFyPAjhAmpmZmZk5QUCF61G4HvmLQLgehetRuDhASOF6FK5HPkCkcD0K15uJQDMzMzMzE0JAAAAAAABQV0AzMzMzM6NvQK5H4XoUmnFAPQrXo3C9N0A9CtejcCVnQBSuR+F6TohAZmZmZmYGSEBxPQrXo\u002fAqQLgehetRuC9Aj8L1KFwPKkBcj8L1KGxaQHE9CtejMF1AFK5H4XrIi0AK16NwPQotQEjhehSuRzZAAAAAAAC4Z0A9CtejcJuJQMP1KFyPQjhAAAAAAABwVUDD9Shcj+JEQFK4HoXrYWRAexSuR+F6YUAfhetRuCKNQDMzMzMzE0dApHA9CtcjKkAUrkfheqReQBSuR+F6ZFdAUrgehetvj0BI4XoUrpdQQB+F61G4blVAUrgehesBVUCamZmZmRldQAAAAAAAsFtA4XoUrkdBVUDNzMzMzKxaQKRwPQrXI0RAw\u002fUoXI9CT0B7FK5H4bo\u002fQLgehetRyF5A16NwPQrnVUCPwvUoXJdjQEjhehSu50lA4XoUrkehR0CPwvUoXM88QKRwPQrXa2BASOF6FK4HM0DXo3A9CtdLQMP1KFyPlnFACtejcD0KKUB7FK5H4WpSQGZmZmZm5iVApHA9Ctc7YkCF61G4HoVPQMP1KFyPAjRA9ihcj8LVREA="},"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Unit_Price"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"tracegroupgap":0},"title":{"text":"Unit_Price Distribution"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="1531060c-76c7-45d9-abdb-48223331998c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1531060c-76c7-45d9-abdb-48223331998c")) {                    Plotly.newPlot(                        "1531060c-76c7-45d9-abdb-48223331998c",                        [{"bingroup":"x","hovertemplate":"Unit_Cost=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#000001","pattern":{"shape":""}},"name":"","nbinsx":30,"orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"pHA9CtfjQEA9CtejcO1SQDMzMzMzczVAzczMzMz8UkDNzMzMzPh3QHE9CtejkEBAFK5H4XpURkDXo3A9CsddQJqZmZmZeUJAAAAAAAAAKUDhehSuR2FJQEjhehSuF1NAZmZmZmYGQkBI4XoUrkc4QOxRuB6FK0BA16NwPQrXLkBcj8L1KNw3QPYoXI\u002fC9RpA4XoUrkcRUUAK16NwPapQQB+F61G4ni1AmpmZmZn5TUCkcD0K1yNPQAAAAAAAwFNASOF6FK6DdkCPwvUoXA8rQAAAAAAAgClACtejcD0KV0C4HoXrUbguQHsUrkfh4mdACtejcD2KLkBmZmZmZuY2QDMzMzMzMyVAcT0K16PwNUAfhetRuN5BQFyPwvUo7FJAUrgehesBUkCPwvUoXM9IQGZmZmZmFlJAuB6F61H6gUBSuB6F69ErQI\u002fC9Shcb2hAH4XrUbguV0CkcD0K1yM2QAAAAAAAACdAXI\u002fC9ShcF0DsUbgehYtsQAAAAAAAgFhAj8L1KFzvYkDD9Shcj8JOQFK4HoXrEVlAhetRuB5lUECuR+F6FAJ8QDMzMzMz00BAuB6F61F4R0DD9Shcj0IgQOF6FK5HgUJArkfhehTuOEDNzMzMzIxPQGZmZmZm9mNAj8L1KFzvUEC4HoXrUXhGQD0K16NwJWBAMzMzMzPjVUBcj8L1KFwxQDMzMzMz8zBAH4XrUbieKkAzMzMzM6NSQHE9CtejUENAmpmZmZmZIkCamZmZmTlAQPYoXI\u002fCdUZAhetRuB6FH0DNzMzMzAxMQOF6FK5HIUtAMzMzMzOzJEApXI\u002fC9Wg7QKRwPQrXw1pAMzMzMzMnckBSuB6F61E6QNejcD0Kt0FAj8L1KFwvR0DNzMzMzIw0QIXrUbgeRU5AzczMzMxcVEDD9ShcjxCDQHE9CtejcChAKVyPwvWoLUA9CtejcD0+QK5H4XoU7jlAKVyPwvWoMUCF61G4HhV5QMP1KFyPYkNAZmZmZmZmG0D2KFyPwnUgQEjhehSuhz5A4XoUrkcxUEBcj8L1KHCEQOF6FK5H4SVAcT0K16N0d0D2KFyPwpVDQI\u002fC9ShcG31AH4XrUbgeQkDhehSuR2FOQB+F61G4xmBAH4XrUbgeIUD2KFyPwrU+QFK4HoXrYW5AH4XrUbgeKEBI4XoUrldXQB+F61G4nipApHA9CtejF0BmZmZmZuYrQD0K16NwLVZAUrgeheshUkCF61G4HtVUQBSuR+F6lEBAw\u002fUoXI9CJEAfhetRuP5TQHsUrkfhmlhAj8L1KFwPWUBI4XoUrudKQBSuR+F6lC1APQrXo3A9NkA9CtejcDmHQOF6FK5HOWNAPQrXo3D9PUDsUbgehetDQOF6FK5HAUNAH4XrUbh+QUC4HoXrUXg\u002fQClcj8L1GGNAFK5H4XoUOUBI4XoUrudIQD0K16NwPSpAzczMzMysS0CamZmZmWFkQFyPwvUoPEJAUrgehevRU0AfhetRuHyEQArXo3A9dnxAKVyPwvWoOED2KFyPwjUzQFK4HoXrsUJAFK5H4XqUOUBI4XoUrgc1QNejcD0K91RA4XoUrkeBQEAK16NwPcpmQHsUrkfh+idA4XoUrkfBUUCamZmZmTWFQMP1KFyPtn9AUrgehetRHkC4HoXrUThKQHsUrkfhalJAcT0K16OwMUAfhetRuD5lQBSuR+F61DdA4XoUrkdhKEDD9Shcj0JMQOxRuB6F43ZAmpmZmZk5UkC4HoXrUfhOQFK4HoXrMUhA16NwPQrXL0DhehSuRwFSQI\u002fC9Shcz1JAPQrXo3C9MkAzMzMzMzMWQBSuR+F6ZFVAhetRuB6FPECF61G4HqVQQHsUrkfhmnBACtejcD1qUEDhehSuR+EmQHE9CtejcDxArkfhehTuMEApXI\u002fC9eg6QMP1KFyPCIdAFK5H4Xr0QEDXo3A9CmdZQD0K16Nw1XZAXI\u002fC9Shoe0CkcD0K12NeQLgehetReEVAexSuR+F6LEDNzMzMzARuQIXrUbgeJUNAcT0K16MwRkDXo3A9Ctc+QIXrUbgeBSlAXI\u002fC9SjcKEAfhetRuF4+QI\u002fC9Shcr0FACtejcD1qSkCF61G4Hr1qQMP1KFyPokJAZmZmZmbGQkD2KFyPwi2CQK5H4XoUriNACtejcD2KI0CamZmZmdk\u002fQD0K16NwsX1APQrXo3CThkBcj8L1KJxIQHE9CtejGGFACtejcD1egEBI4XoUrmdbQHsUrkfh6mFArkfhehQuM0AK16NwPYolQNejcD0K1zRA4XoUrkfhRkBxPQrXo7A7QOxRuB6FS1BApHA9Ctcdg0CPwvUoXDmEQNejcD0KFzBA7FG4HoVrO0D2KFyPwkVZQDMzMzMzU0NAuB6F61GcdkDXo3A9CuddQOF6FK5HQU9APQrXo3CNV0ApXI\u002fC9cheQFK4HoXrETRA4XoUrkdBQEDXo3A9CtcwQB+F61G4XjhArkfhehRuXkDXo3A9CldWQFK4HoXrgVJAzczMzMxMOEAK16NwPXpbQAAAAAAAmG1AMzMzMzNTU0DXo3A9CjduQIXrUbgeJUxApHA9CtdjXkBxPQrXo3AQQClcj8L1CENAcT0K16PMekCPwvUoXI8tQIXrUbgexVVAzczMzMw8VUBmZmZmZipwQOxRuB6F6xRAexSuR+H6J0DsUbgehatHQFyPwvUocIRA4XoUrkdhMEBI4XoUrqdBQIXrUbgehT5AhetRuB7VUEA9CtejcL02QNejcD0KN0FAFK5H4XoUNUApXI\u002fC9RhcQM3MzMzMHGFAFK5H4Xp0ZEC4HoXrUXxxQHE9CtejcDJAuB6F61FIVUAUrkfhehRMQHE9CtejcDdA9ihcj8IVUkA9CtejcL1UQB+F61G4lmZAhetRuB5FRkDXo3A9ClcxQK5H4XoUrjJAj8L1KFyPLUAUrkfhepQhQEjhehSux0JA16NwPQoXPEB7FK5H4Xo2QLgehetROC1AcT0K16NwLkDD9Shcj6JYQMP1KFyPwhVAw\u002fUoXI+CN0DXo3A9CjdCQFK4HoXrMUFACtejcD3qRkDXo3A9Cgt3QBSuR+F6dF1AKVyPwvW4YkAK16NwPQolQIXrUbgeRVpAXI\u002fC9ShsUkBxPQrXo\u002fAqQIXrUbgeEYRAw\u002fUoXI\u002fCKkBxPQrXoxBFQIXrUbgexTNA7FG4HoVLRkDD9Shcj0ItQI\u002fC9ShcjyRAj8L1KFzrcUDsUbgehctCQHsUrkfhkoBAmpmZmZmZK0DD9ShcjwJEQB+F61G4XjFACtejcD0KNUDhehSuR\u002fFUQHE9CtejgoBACtejcD0KGkCuR+F6FC4zQKRwPQrXs1ZAFK5H4Xq0SEAAAAAAAAArQOxRuB6Fy1dAzczMzMzMNEBxPQrXo+BUQPYoXI\u002fCJVBA7FG4HoVrUUCF61G4HrVZQArXo3A9GltASOF6FK7ffUAzMzMzM1NZQPYoXI\u002fC9ShAH4XrUbgeJkBI4XoUruOBQFK4HoXrEUpA4XoUrkfhNEDXo3A9CkdZQD0K16NwXUJAzczMzMzMEECkcD0K1+N5QB+F61G4rmtAH4XrUbjeN0DhehSuR4l2QLgehetR+EdAFK5H4XoUOUBSuB6F6yFSQI\u002fC9ShcT0FAMzMzMzNzTkAK16NwPUoxQEjhehSul1VApHA9CtejHkA9CtejcD1BQFyPwvUoXFdAUrgehevxQUBcj8L1KFweQOF6FK5H4SJAj8L1KFyPPEDXo3A9Cpc5QM3MzMzM7EZAexSuR+F6FkCPwvUoXE8yQD0K16Nw\u002fUlAexSuR+F+fECkcD0K11+HQHE9CtejsD9A7FG4HoXLSEAzMzMzM3NYQK5H4XoU7k5AexSuR+F6I0AUrkfhenx7QLgehetROD5ACtejcD2KLUBxPQrXoyBWQI\u002fC9ShcTzBAj8L1KFy\u002fUUCPwvUoXM9VQMP1KFyPAlBAFK5H4XqkckApXI\u002fC9WgwQMP1KFyPQkdA16NwPQqXMUCkcD0K1yM2QJqZmZmZsWRA7FG4HoV7VUAzMzMzM8NWQB+F61G43kZAj8L1KFzPX0AK16NwPapWQArXo3A9OlBA4XoUrkdBQECF61G4HmmCQB+F61G48nxAFK5H4XoUIkCuR+F6FM5nQFK4HoXrSWhA9ihcj8K1TkDNzMzMzMwyQKRwPQrX62tAH4XrUbhOUkAUrkfhemRZQFyPwvUo7GFAAAAAAADASEBI4XoUrkcyQHE9CtejcCRACtejcD2qRkCPwvUoXL9YQB+F61G4HkRAKVyPwvUoU0DNzMzMzMwuQNejcD0KY4ZAKVyPwvUoU0BxPQrXo\u002fAkQK5H4XoUbk5A7FG4HoXrREAK16NwPcpPQOF6FK5H4TBAPQrXo3CVh0D2KFyPwoVXQIXrUbgedVdAFK5H4XokWEDXo3A9Ch9kQFK4HoXrUT5Aw\u002fUoXI8SUEDXo3A9CrdTQI\u002fC9Shc04BArkfhehROQEA9CtejcH00QBSuR+F6CoNArkfhehRuPUCamZmZmZkdQBSuR+F6dENAhetRuB4FLkBcj8L1KCxUQKRwPQrXQ0tAAAAAAAAAIUAzMzMzM9mGQPYoXI\u002fC1VhA16NwPQpnXkDD9Shcj\u002fJRQOF6FK5HIThAj8L1KFzvRUAfhetRuJ4tQGZmZmZmhkRAMzMzMzOzNkDXo3A9CjN4QClcj8L1qEFAuB6F61G4IUBSuB6F61EdQGZmZmZmJjtACtejcD26WUC4HoXrUThIQJqZmZmZmRxAzczMzMycVUAAAAAAAER2QGZmZmZm5kRAzczMzMzEaECamZmZmVlXQHE9CtejQFJAXI\u002fC9SicUUCamZmZme1yQOxRuB6Fi0pAPQrXo3BdSkCuR+F6FC40QMP1KFyPAkJAH4XrUbheWUAfhetRuF48QI\u002fC9Shcjw5ArkfhehQGekAAAAAAAIAvQPYoXI\u002fCfWFAuB6F61E8dECF61G4HgUkQHE9CtejoFVAXI\u002fC9SgcbUDNzMzMzCxDQGZmZmZmaINAuB6F61G4KUBmZmZmZmYrQI\u002fC9ShcDzhAUrgehevRJ0C4HoXrUZhNQD0K16NwzVRAUrgehevhf0BSuB6F69FgQKRwPQrXoxBA7FG4HoXrMUD2KFyPwkVQQAAAAAAAYEVAj8L1KFyPIEDsUbgehes5QMP1KFyPzoBA7FG4HoXrIECF61G4HmF8QB+F61G4HjJA16NwPQpPhEBcj8L1KLxNQKRwPQrXoytAUrgehetBXkDNzMzMzIxEQIXrUbgehStAcT0K16NQSEAfhetRuB4yQM3MzMzMjFRAuB6F61G4LEApXI\u002fC9SgoQNejcD0Kl0JA16NwPQpdgUAUrkfhesRbQFyPwvUoPExAzczMzMzMUEAfhetRuF4wQBSuR+F6VEJAPQrXo3A9MkAK16NwPYoyQIXrUbgehURAMzMzMzMzKkDhehSuR4FEQNejcD0KlzBAAAAAAAB8fkCkcD0K13NTQB+F61G4LlBAcT0K16OwREAzMzMzM1NJQPYoXI\u002fCtTFAhetRuB5FbkApXI\u002fC9QhIQArXo3A9AIBAAAAAAAAALEDsUbgehbNhQNejcD0K10JAFK5H4XpUPUD2KFyPwhVCQPYoXI\u002fCVUVAH4XrUbj+QECuR+F6FC5SQDMzMzMzMx9AXI\u002fC9SjcK0DsUbgehWtJQK5H4XoULkNAFK5H4XoUQkAzMzMzM\u002fNMQD0K16Nw\u002fUNAuB6F61G4O0AfhetRuK5QQPYoXI\u002fCdUdAcT0K16OAakC4HoXrUSBnQJqZmZmZ+VBAuB6F61FIUUAAAAAAAIBoQLgehetRtIJArkfhehS8gUDNzMzMzAxGQArXo3A9SjlAUrgehevxTEDsUbgehStAQPYoXI\u002fCRWJAZmZmZmamQEApXI\u002fC9YhUQNejcD0KN0FAuB6F61EYSUB7FK5H4SpXQOxRuB6F60FA9ihcj8LVS0BmZmZmZkZRQMP1KFyPwhlASOF6FK4nUkAfhetRuO5XQFK4HoXr0TJAAAAAAAAAI0BSuB6F6xFcQJqZmZmZ+UtAuB6F61F4NECPwvUoXG9WQHE9CtejUGlA7FG4HoWrPkAzMzMzM7MqQB+F61G4zlJA4XoUrkdhTUDD9Shcj0IoQClcj8L1KFBAzczMzMwMR0AzMzMzMzMjQOxRuB6F+1tAzczMzMyMTEC4HoXrUXg0QOF6FK5HUVBAFK5H4XrUMkBI4XoUrndUQOF6FK5HYUBACtejcD2KN0AK16NwPYpXQKRwPQrXoyZAKVyPwvUoFEBxPQrXoxB1QGZmZmZmZixA9ihcj8K1M0DsUbgehTmFQMP1KFyPYkBArkfhehRuOEAK16NwPTJkQMP1KFyPQitAj8L1KFwPJ0AzMzMzM5NcQB+F61G4fldAmpmZmZm5QUDsUbgehSsxQNejcD0K1xhAFK5H4XoUNkC4HoXrUbgXQClcj8L1KDFA4XoUrkehg0DhehSuR3ljQK5H4XoUPllAUrgeheshZUApXI\u002fC9Sg4QClcj8L1aFZA4XoUrkeBRkC4HoXrUSR2QAAAAAAAEFpAXI\u002fC9SjcMUAAAAAAAAAZQArXo3A9DnFAXI\u002fC9Sj0b0AUrkfherRdQMP1KFyPIIBAj8L1KFyPJ0ApXI\u002fC9SgRQKRwPQrXIy9AXI\u002fC9SgcOkCkcD0K13NmQPYoXI\u002fCdS1AmpmZmZmZPkBcj8L1KHxTQMP1KFyPAjZAFK5H4XoUU0DhehSuR+E7QM3MzMzMvGVAPQrXo3AdSEDhehSuR+E8QDMzMzMz8zRAPQrXo3C9LkC4HoXrUfg9QOF6FK5HIUNAPQrXo3DNVEDXo3A9Clc9QClcj8L1qENAcT0K16MwREDD9ShcjxJRQGZmZmZmZitAPQrXo3A9LEAzMzMzM9NSQClcj8L1KDVAexSuR+G6MkCamZmZmUFgQPYoXI\u002fCvWBAFK5H4XrUSUBcj8L1KFwxQLgehetRODxAUrgehetRHEAAAAAAAAhlQK5H4XoUjkhAUrgeheubh0CuR+F6FK5CQFyPwvUo3ERAKVyPwvUoIUCuR+F6FA5DQHsUrkfhujBAw\u002fUoXI9CJEDhehSuRzFkQKRwPQrXoytA4XoUrkcBR0CPwvUoXM9MQD0K16NwPSxAAAAAAABAPkDD9Shcj2JCQFK4HoXrAVFAAAAAAAAANEDD9Shcj4JJQMP1KFyPwhxA7FG4HoXrSUD2KFyPwrU0QD0K16NwKXFASOF6FK6HP0D2KFyPwmVXQK5H4XoUDllA7FG4HoULRUBSuB6F61FCQI\u002fC9ShcjxxAFK5H4XoUL0CuR+F6FK4rQLgehetROClAw\u002fUoXI9CJEC4HoXrUXgyQAAAAAAAYEVAAAAAAAAAN0AK16NwPcpLQNejcD0KN15AzczMzMxMLEAK16NwPQo\u002fQGZmZmZmZkpAPQrXo3ClfkDsUbgehestQHsUrkfhej1ASOF6FK6HPkD2KFyPwtVxQEjhehSuBz9AAAAAAACAI0AUrkfhehQzQIXrUbgexTRAj8L1KFwfe0A9CtejcP01QHsUrkfhulVAmpmZmZnZM0CPwvUoXE8wQI\u002fC9Shcd2JArkfhehRuMEBI4XoUrvt0QNejcD0K1zlA4XoUrkdhPUDNzMzMzExUQIXrUbgehTtAmpmZmZlBYUCF61G4HnVUQMP1KFyPMIBA7FG4HoU7WUBSuB6F69FMQI\u002fC9Shcjx1AuB6F61FoUUCF61G4HgVEQOF6FK5HQVlAuB6F61H0c0BxPQrXozA9QB+F61G4fkFAFK5H4XoUE0C4HoXrUTg2QClcj8L1HoFAKVyPwvU4WkD2KFyPwu1gQB+F61G41mJApHA9Ctdrd0DhehSuR+FAQBSuR+F61ExAexSuR+FaSUAfhetRuF5AQEjhehSuxzZAcT0K16PwK0D2KFyPwvUTQIXrUbgehUBAj8L1KFxPTkDXo3A9CvdNQLgehetRBHBAUrgehetLgUDXo3A9CtcnQD0K16Nw\u002fT1AcT0K16OwPECPwvUoXO9AQKRwPQrXoy1A9ihcj8I1N0DsUbgehes4QLgehetRODBAKVyPwvUITUB7FK5H4dpWQJqZmZmZmTpApHA9CteDQUAfhetRuB4\u002fQJqZmZmZmTVAUrgehetRN0C4HoXrUXhBQOxRuB6F21JASOF6FK6HO0AUrkfhehQXQK5H4XoU7kJAw\u002fUoXI+iSEBmZmZmZqY1QIXrUbgexTdAXI\u002fC9SjcKkCuR+F6FD5QQM3MzMzMTEhAKVyPwvUIVkCuR+F6FEpwQOxRuB6FTYZAAAAAAABAQUCPwvUoXI8gQKRwPQrXl3tAKVyPwvXoZECkcD0K1yM4QI\u002fC9Shc52hAPQrXo3BNUkB7FK5H4XozQAAAAAAAgEVAH4XrUbjeMUDXo3A9ClcwQBSuR+F6BoBAexSuR+G6P0CPwvUoXK9cQDMzMzMzMy5A16NwPQo3TUAUrkfherREQJqZmZmZmSZArkfhehRuNkApXI\u002fC9b6IQNejcD0KVzdAj8L1KFyfVkCuR+F6FM5BQHE9Ctej8D5A4XoUrkeBQEBxPQrXo2BUQFK4HoXrUTFAAAAAAACwUUApXI\u002fC9chRQLgehetRWFdAexSuR+H6M0DXo3A9CpdTQKRwPQrX4z9A7FG4HoWrM0CF61G4Hh10QMP1KFyPQkxAH4XrUbjeOkCamZmZmdk3QKRwPQrXo0FA7FG4HoVrKUAfhetRuN47QNejcD0K1x5AXI\u002fC9Sh8akB7FK5H4UphQGZmZmZmRklAFK5H4XpYgECF61G4HlVSQClcj8L1qC1AuB6F61F4O0CamZmZmbmBQK5H4XoU5mJASOF6FK7TcUDXo3A9ChdCQM3MzMzMzD5AexSuR+GaXEBcj8L1KOxxQMP1KFyPwhlAMzMzMzOzSEDD9Shcj4JDQM3MzMzMhHNAKVyPwvUYVkA9CtejcAF5QBSuR+F63GVAKVyPwvUoM0Bcj8L1KFwhQFK4HoXrUTVAw\u002fUoXI9iREDNzMzMzAxRQGZmZmZmxlVAXI\u002fC9SjcKkCamZmZmRkkQK5H4XoULixAKVyPwvWoIkCuR+F6FC4gQD0K16Nw\u002fUBA7FG4HoUrN0DsUbgehesXQGZmZmZmRkRAKVyPwvVoPECuR+F6FM5DQMP1KFyPAkNA9ihcj8JlVUDsUbgehUd5QKRwPQrX41RAMzMzMzNzPUCPwvUoXM89QB+F61G4XlhA9ihcj8J1KkAfhetRuEKIQKRwPQrXYzlA4XoUrkeRVkApXI\u002fC9aguQDMzMzMz01xAZmZmZmYmNkApXI\u002fC9SgxQDMzMzMzX39APQrXo3D9O0BxPQrXoxiAQHE9CtejcBlAPQrXo3A9JUBmZmZmZuY2QK5H4XoUZoFAH4XrUbheNUDXo3A9CldcQJqZmZmZ+W1AhetRuB65dkBxPQrXo9BCQBSuR+F6lD9A4XoUrkchW0AUrkfhetRKQB+F61G4HkRApHA9CtejIEBmZmZmZmYkQNejcD0K1yhAPQrXo3C9P0DsUbgehStTQArXo3A9SlxArkfhehTuMUBcj8L1KNwkQClcj8L1KClAMzMzMzPzMkDNzMzMzLxUQHE9CtejMD9ArkfhehTuNkC4HoXrUTg6QPYoXI\u002fC9ShAKVyPwvXoMkAK16NwPepRQM3MzMzMTClA7FG4HoWrVEAAAAAAAChiQKRwPQrXA0dA7FG4HoU7gkAK16NwPdpzQI\u002fC9ShcFYNAH4XrUbiGfUDhehSuR1FjQFK4HoXrUUFAuB6F61F4QUDhehSuR8FRQD0K16NwfUBAZmZmZmZEgEAUrkfhehQwQK5H4XoUri1ACtejcD2KJUDhehSuR6lhQFK4HoXrcV1AUrgeheuxRkD2KFyPwtVfQHsUrkfhKmVAKVyPwvXoNEBxPQrXozA7QI\u002fC9ShcDzNA4XoUrkfBTUCF61G4HgUlQPYoXI\u002fCVUFASOF6FK63WEAzMzMzM0tgQBSuR+F6ZGdA4XoUrkfhPkDXo3A9CodhQK5H4XoUzlRA7FG4HoXrLkApXI\u002fC9QhdQAAAAAAAgClACtejcD0KN0BxPQrXo1iAQFK4HoXr0TBApHA9CtfjMkDD9Shcj1SAQEjhehSuxzJAMzMzMzMzT0BxPQrXoxhkQB+F61G4XmBA7FG4HoVrJkBcj8L1KOxXQDMzMzMzX3xASOF6FK6HOEA9CtejcD0hQBSuR+F6FB1Aj8L1KFwPIUB7FK5H4TpMQHE9Ctej8EpAzczMzMxugkCkcD0K16MeQLgehetROCtAzczMzMwsVEA9CtejcL1\u002fQHsUrkfheixAuB6F61HYSEDNzMzMzIw4QGZmZmZmVlhACtejcD1KU0DD9Shcj5SCQEjhehSuxzRAzczMzMzMGEDNzMzMzIxSQI\u002fC9Shcr01A7FG4HoXdg0DD9Shcj4I+QIXrUbgehUpA7FG4HoXLSkDhehSuRyFQQFyPwvUoHEtACtejcD0qS0CamZmZmblOQI\u002fC9ShcTzJAUrgehevRO0BmZmZmZmYrQGZmZmZmJlBAPQrXo3C9RUCamZmZmUlUQKRwPQrXIzdAH4XrUbieP0DXo3A9CtctQClcj8L1eFFAFK5H4XoUH0DXo3A9Cpc9QJqZmZmZ4WRAexSuR+H6IEAK16NwPUpFQKRwPQrXoxtAZmZmZma2WEBmZmZmZuZCQPYoXI\u002fCdSNAKVyPwvVoOkA="},"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Unit_Cost"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"tracegroupgap":0},"title":{"text":"Unit_Cost Distribution"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+<h2>Correlation Heatmap</h2>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="0332daf0-4cfa-46ca-b720-7aafdd22a557" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("0332daf0-4cfa-46ca-b720-7aafdd22a557")) {                    Plotly.newPlot(                        "0332daf0-4cfa-46ca-b720-7aafdd22a557",                        [{"coloraxis":"coloraxis","name":"0","texttemplate":"%{z:.2f}","x":["Customer_Age","Customer_Rating","Days_Since_Last_Order","Unit_Price","Unit_Cost","Gross_Sales","Discount_Amount","Tax_Amount","Shipping_Cost","Net_Sales","Profit","Profit_Margin_Percent","Ad_Spend","Ad_Clicks"],"y":["Customer_Age","Customer_Rating","Days_Since_Last_Order","Unit_Price","Unit_Cost","Gross_Sales","Discount_Amount","Tax_Amount","Shipping_Cost","Net_Sales","Profit","Profit_Margin_Percent","Ad_Spend","Ad_Clicks"],"z":{"dtype":"f8","bdata":"AAAAAAAA8D9OG30Zo5+gP6+G74pb9IO\u002fxN9AOZx6ob\u002f3H8jgDJ6fvw9sg70icKK\u002fyIauW4HNNL+3peUsMq6jv81WgXW+fqk\u002ftvWugzyuo7+OXCKBojanv9LUqhJK2pG\u002fVGx+TOqgiD9\u002fpJ39FCR0P04bfRmjn6A\u002fAAAAAAAA8D\u002fRhvcD2OaBP\u002fPGTMMxXKe\u002fAFfPPWDRrL8kDPThKVuov9sWg5aWzqK\u002fEj021SnFp78EAtKswh6jP0dOo5Yoxae\u002fCGcn\u002ffXdlr8gqogLvoGdPxansFbkNaQ\u002fTYGb\u002ftlNf7+vhu+KW\u002fSDv9GG9wPY5oE\u002fAAAAAAAA8D8xbKpoezSUPy7FLdsqw5g\u002fCLxLKQYUjz\u002f7qVwFtqykP7fgvso5TIc\u002fAemy0j67bj91+jJURkyHP9KQO8bUi2g\u002fvqCXnQpsq7+GeaXWLDOLP9k0uM6eBmO\u002fxN9AOZx6ob\u002fzxkzDMVynvzFsqmh7NJQ\u002fAAAAAAAA8D+G6gQMzITvP9+mWcP4kOk\u002fVqWYtGxv3z8cTcpJ7G7pP5pJkrFdAN6\u002fHE407utu6T+Z0NnEBHLnP9+Mv9AULKO\u002fX7GPAqKMpD\u002fKb5MiocScP\u002fcfyOAMnp+\u002fAFfPPWDRrL8uxS3bKsOYP4bqBAzMhO8\u002fAAAAAAAA8D\u002fBPuVfl83oP1u311Iatt8\u002f+wi0MO+Z6D\u002fF+wFk4Hzdv2mmTP\u002fumeg\u002fd\u002fPYD7t35T+Ur4TarDC8v3r8mwJlr6A\u002fic0XCKTWnj8PbIO9InCivyQM9OEpW6i\u002fCLxLKQYUjz\u002ffplnD+JDpP8E+5V+Xzeg\u002fAAAAAAAA8D\u002fTYpMD4H3jP57N0+7v2u8\u002fT1PgpdH427+Wqntg8NrvP+inPuIvBO4\u002fHgm0bgGyiL+eHrFjbtOfP7FeDIOT6Xi\u002fyIauW4HNNL\u002fbFoOWls6iv\u002fupXAW2rKQ\u002fVqWYtGxv3z9bt9dSGrbfP9NikwPgfeM\u002fAAAAAAAA8D8kzVTD\u002fP3gP72L85AhTNG\u002f0WLptgD+4D9xoKbvjIDXP+pU1EpVZdS\u002flFkA6AtnoD+KRQnwhdGoP7el5SwyrqO\u002fEj021SnFp7+34L7KOUyHPxxNyknsbuk\u002f+wi0MO+Z6D+ezdPu79rvPyTNVMP8\u002feA\u002fAAAAAAAA8D89LO9BfNDbv\u002f3a0f\u002f\u002f\u002f+8\u002fF\u002fHBgcWp7j9xAeE5deeZP0SaS9v2Ep4\u002fvVmvGLAyib\u002fNVoF1vn6pPwQC0qzCHqM\u002fAemy0j67bj+aSZKxXQDev8X7AWTgfN2\u002fT1PgpdH427+9i\u002fOQIUzRvz0s70F80Nu\u002fAAAAAAAA8D8TWOR9edDbv0I3hA5Xptm\u002f++4lwpbmnz8uZxedOW+ZvzBSks0IuLC\u002ftvWugzyuo79HTqOWKMWnv3X6MlRGTIc\u002fHE407utu6T9ppkz\u002f7pnoP5aqe2Dw2u8\u002f0WLptgD+4D\u002f92tH\u002f\u002f\u002f\u002fvPxNY5H150Nu\u002fAAAAAAAA8D8twV7CxKnuP1qqK20s55k\u002faeDdwf8Snj+uYGznlDOJv45cIoGiNqe\u002fCGcn\u002ffXdlr\u002fSkDvG1ItoP5nQ2cQEcuc\u002fd\u002fPYD7t35T\u002fopz7iLwTuP3Ggpu+MgNc\u002fF\u002fHBgcWp7j9CN4QOV6bZvy3BXsLEqe4\u002fAAAAAAAA8D+XedHj4MbEP7Ck\u002fSAw6Z4\u002f6+ojO43Vmr\u002fS1KoSStqRvyCqiAu+gZ0\u002fvqCXnQpsq7\u002ffjL\u002fQFCyjv5SvhNqsMLy\u002fHgm0bgGyiL\u002fqVNRKVWXUv3EB4Tl155k\u002f++4lwpbmnz9aqittLOeZP5d50ePgxsQ\u002fAAAAAAAA8D9lIsQI1ZudvxP\u002fTfD7QKm\u002fVGx+TOqgiD8Wp7BW5DWkP4Z5pdYsM4s\u002fX7GPAqKMpD96\u002fJsCZa+gP54esWNu058\u002flFkA6AtnoD9Emkvb9hKePy5nF505b5m\u002faeDdwf8Snj+wpP0gMOmeP2UixAjVm52\u002fAAAAAAAA8D91LCAem1HWP3+knf0UJHQ\u002fTYGb\u002ftlNf7\u002fZNLjOngZjv8pvkyKhxJw\u002fic0XCKTWnj+xXgyDk+l4v4pFCfCF0ag\u002fvVmvGLAyib8wUpLNCLiwv65gbOeUM4m\u002f6+ojO43Vmr8T\u002f03w+0Cpv3UsIB6bUdY\u002fAAAAAAAA8D8=","shape":"14, 14"},"type":"heatmap","xaxis":"x","yaxis":"y","hovertemplate":"x: %{x}\u003cbr\u003ey: %{y}\u003cbr\u003ecolor: %{z}\u003cextra\u003e\u003c\u002fextra\u003e"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1,"#000022"],[0.2,"#000023"],[0.3,"#000024"],[0.4,"#000025"],[0.5,"#000026"],[0.6,"#000027"],[0.7,"#000028"],[0.8,"#000029"],[0.9,"#000030"],[1.0,"#000031"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"autorange":"reversed"},"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"title":{"text":"Correlation Heatmap"}},                        {"responsive": true}                    )                };            </script>        </div></body></html>
